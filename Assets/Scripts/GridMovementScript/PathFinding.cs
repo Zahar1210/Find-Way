@@ -44,7 +44,7 @@ public class PathFinding : MonoBehaviour
             visitedTiles.Add(t, new TileInfo(step, Vector3Int.Distance(t, targetSurface.tile.Pos)));
             foreach (var direction in dir.directions) {
                 if (_tiles.TryGetValue(t + direction, out var tile)) {
-                    if (!visitedTiles.ContainsKey(tile.Pos) && !queueTiles.Contains(tile.Pos)) {
+                    if (!visitedTiles.ContainsKey(tile.Pos) && !queueTiles.Contains(tile.Pos) && !tile.Barrier) {
                         queueTiles.Add(tile.Pos);
                         SetValues(tile.tileSurfaces, startSurface);
                     }
