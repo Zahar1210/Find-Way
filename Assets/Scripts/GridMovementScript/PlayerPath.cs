@@ -34,19 +34,14 @@ public class PlayerPath : MonoBehaviour
         playerMove.index = 0;
         Array.Clear(playerMove.surfaces, 0, playerMove.surfaces.Length);
         playerMove.PointRotations.Clear();
-        for (int i = 0; i < path.Length - 1; i++)
-        {
+        for (int i = 0; i < path.Length - 1; i++) {
             if (path[i].tile == path[i + 1].tile)
-                playerMove.PointRotations.Add(new PlayerMove.PointRotation(path[i].Dir, path[i + 1].Dir, path[i].tile,
-                    false));
+                playerMove.PointRotations.Add(new PlayerMove.PointRotation(path[i].Dir, path[i + 1].Dir, path[i].tile, false));
             else if (path[i].tile != path[i + 1].tile && path[i].type == path[i + 1].type)
-                playerMove.PointRotations.Add(new PlayerMove.PointRotation(path[i].tile.Pos - path[i + 1].tile.Pos,
-                    path[i + 1].Dir, path[i + 1].tile, false));
+                playerMove.PointRotations.Add(new PlayerMove.PointRotation(path[i].tile.Pos - path[i + 1].tile.Pos, path[i + 1].Dir, path[i + 1].tile, false));
             else if (path[i].tile != path[i + 1].tile && path[i].type != path[i + 1].type)
-                playerMove.PointRotations.Add(new PlayerMove.PointRotation(-path[i].Dir, path[i + 1].Dir,
-                    path[i + 1].tile, true));
+                playerMove.PointRotations.Add(new PlayerMove.PointRotation(-path[i].Dir, path[i + 1].Dir, path[i + 1].tile, true));
         }
-
         playerMove.surfaces = path;
         playerMove.Move();
     }
@@ -55,7 +50,7 @@ public class PlayerPath : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(_camera.ScreenPointToRay(Input.mousePosition), out hit)) {
             Surface targetSurface = hit.collider.GetComponent<Surface>();
-            if (targetSurface != null)
+            if (targetSurface != null && !targetSurface.barrier)
                 return targetSurface;
         }
         return null;

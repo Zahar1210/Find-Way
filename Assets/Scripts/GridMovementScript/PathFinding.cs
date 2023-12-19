@@ -73,7 +73,7 @@ public class PathFinding : MonoBehaviour
                 Vector3Int tilePos = currentSurface.tile.Pos + direction;
                 if (visited.TryGetValue(tilePos, out var tileSurface) && tileSurface.Step == visited[currentSurface.tile.Pos].Step - 1) {
                     if (_tiles.TryGetValue(tilePos, out Tile tile) && tile.surfaces.TryGetValue(currentSurface.type, out var surface)) {
-                        if (!path.Contains(surface) && surface.gameObject.activeSelf) {
+                        if (!path.Contains(surface) && surface.gameObject.activeSelf && !surface.barrier) {
                             selectTiles.Add(tile);
                             if (surface == a) {
                                 path.Add(surface);
@@ -105,7 +105,7 @@ public class PathFinding : MonoBehaviour
                 selectedSurfaces.Add(surface);
         }
         foreach (var s in currentSurface.tile.tileSurfaces) {
-            if (s.groupType != currentSurface.groupType && s.gameObject.activeSelf && s != currentSurface)
+            if (s.groupType != currentSurface.groupType && s.gameObject.activeSelf && !s.barrier)
                 selectedSurfaces.Add(s);
         }
         foreach (var tile in selectedTilesCopy) {
@@ -115,14 +115,18 @@ public class PathFinding : MonoBehaviour
     }
     private Surface GetSurface(Tile tile, SurfaceType surfaceType)
     {
-        if (tile.surfaces.TryGetValue(surfaceType, out Surface sur) && sur.gameObject.activeSelf) return sur;
+        if (tile.surfaces.TryGetValue(surfaceType, out Surface sur) && sur.gameObject.activeSelf && !sur.barrier) return sur;
         return null;
     }
     private void SetValues(List<Surface> surfaces, Surface startSurface)
     {
         foreach (var s in surfaces)
             if (s.gameObject.activeSelf)
-                s.distance = Vector3.Distance(s.Pos, startSurface.Pos);
+            {
+                float tileDis = Vector3.Distance(s.tile.Pos, startSurface.tile.Pos);
+                float surfaceDis = Vector3.Distance(s.Pos, startSurface.Pos);
+                s.distance = tileDis + surfaceDis;
+            }
     }
     private void SetFreeValue()
     {

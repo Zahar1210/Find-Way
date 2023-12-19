@@ -114,6 +114,7 @@ public class Pooler : MonoBehaviour
     {
         foreach (var area in _areaAbstracts) {
             if (area.transform.position.z <= pointReturnToPool.transform.position.z) {
+                Debug.Log("вернули в пул");
                 area.EnableArea(false);
             }
         }
