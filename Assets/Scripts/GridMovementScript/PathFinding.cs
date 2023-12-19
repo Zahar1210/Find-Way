@@ -71,7 +71,7 @@ public class PathFinding : MonoBehaviour
             path.Add(currentSurface);
             foreach (var direction in SelectDirection(currentSurface)) {
                 Vector3Int tilePos = currentSurface.tile.Pos + direction;
-                if (visited.TryGetValue(tilePos, out var tileSurface) && tileSurface.Step == visited[currentSurface.tile.Pos].Step -1 ) {
+                if (visited.TryGetValue(tilePos, out var tileSurface) && tileSurface.Step == visited[currentSurface.tile.Pos].Step - 1) {
                     if (_tiles.TryGetValue(tilePos, out Tile tile) && tile.surfaces.TryGetValue(currentSurface.type, out var surface)) {
                         if (!path.Contains(surface) && surface.gameObject.activeSelf) {
                             selectTiles.Add(tile);
@@ -105,7 +105,7 @@ public class PathFinding : MonoBehaviour
                 selectedSurfaces.Add(surface);
         }
         foreach (var s in currentSurface.tile.tileSurfaces) {
-            if (s.groupType != currentSurface.groupType && s.gameObject.activeSelf && s != currentSurface) 
+            if (s.groupType != currentSurface.groupType && s.gameObject.activeSelf && s != currentSurface)
                 selectedSurfaces.Add(s);
         }
         foreach (var tile in selectedTilesCopy) {
@@ -115,7 +115,7 @@ public class PathFinding : MonoBehaviour
     }
     private Surface GetSurface(Tile tile, SurfaceType surfaceType)
     {
-        if ( tile.surfaces.TryGetValue(surfaceType, out Surface sur) && sur.gameObject.activeSelf) return sur;
+        if (tile.surfaces.TryGetValue(surfaceType, out Surface sur) && sur.gameObject.activeSelf) return sur;
         return null;
     }
     private void SetValues(List<Surface> surfaces, Surface startSurface)

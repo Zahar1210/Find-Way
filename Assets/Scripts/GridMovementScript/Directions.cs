@@ -43,6 +43,6 @@ public class Directions : MonoBehaviour
         new Vector3Int(1, 0, -1), new Vector3Int(-1, 0, -1), new Vector3Int(0, 1, -1), new Vector3Int(0, -1, -1),
     };
     public Vector3Int[] directions = {
-        Vector3Int.forward, -Vector3Int.left, -Vector3Int.forward,Vector3Int.up, Vector3Int.left, Vector3Int.down,
+        Vector3Int.forward, Vector3Int.right, Vector3Int.back, Vector3Int.up, Vector3Int.left, Vector3Int.down,
     };
 }
