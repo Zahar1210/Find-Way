@@ -5,5 +5,5 @@ public abstract class AreaAbstract : MonoBehaviour
     public AreaTypes Type;
     public Tile[] Tiles;
     public abstract void Action();
-    public abstract void EnableArea();
+    public abstract void EnableArea(bool isActive);
 }

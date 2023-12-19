@@ -5,8 +5,8 @@ public class TrafficArea : AreaAbstract
    {
       
    }
-   public override void EnableArea()
+   public override void EnableArea(bool isActive)
    {
-      
+      gameObject.SetActive(isActive);
    }
 }

@@ -5,11 +5,18 @@ using UnityEngine;
 
 public class PathFinding : MonoBehaviour
 {
+    [SerializeField] private SetValues setValues;
     [SerializeField] private Directions dir;
     public Dictionary<Vector3Int, Tile> _tiles = new();
     private List<Tile> tiles = new();
     private void Start()
     {
+       FindTiles();
+    }
+
+    public void FindTiles()
+    {
+        setValues.Set();
         foreach (var tile in FindObjectsOfType<Tile>()) {
             Vector3Int pos = Vector3Int.RoundToInt(tile.transform.position);
             _tiles.Add(pos, tile);

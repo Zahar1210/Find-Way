@@ -3,11 +3,14 @@ using UnityEngine;
 public class SetValues : MonoBehaviour
 {
     [SerializeField] private Directions directions;
-    void Start()
+    public void Set()
     {
         foreach (var tile in FindObjectsOfType<Tile>()) {
-            SetTileDictionary(tile);
-            FindAndAddChildrenToList(tile);
+            if (tile.surfaces.Count == 0)
+            {
+                SetTileDictionary(tile);
+                FindAndAddChildrenToList(tile);
+            }
         }
     }
     private void SetTileDictionary(Tile tile)
