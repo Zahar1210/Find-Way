@@ -39,20 +39,21 @@ public class Pooler : MonoBehaviour
     private void Update()
     {
         _time += Time.deltaTime;
-        // Vector3Int currentXPosition = Vector3Int.RoundToInt(pointCheckInterval.position);//узнаем когда нужно спавнить новую терииторию
-        // if (currentXPosition.z - _lastSpawnPosition.z >= spawnInterval) {
-        //     SpawnArea(currentXPosition);
-        //     pathFinding.FindTiles();
-        //     _lastSpawnPosition.z = currentXPosition.z;
-        // }
-        if (Input.GetMouseButtonUp(1))
-        {
+        Vector3Int currentXPosition = Vector3Int.RoundToInt(pointCheckInterval.position);//узнаем когда нужно спавнить новую терииторию
+        if (currentXPosition.z - _lastSpawnPosition.z >= spawnInterval) {
             SpawnArea(currentXPosition);
             Debug.Log("заспавнили");
             pathFinding.FindTiles();
             _lastSpawnPosition.z = currentXPosition.z;
-            currentXPosition.z += 5;
         }
+        // if (Input.GetMouseButtonUp(1))
+        // {
+        //     SpawnArea(currentXPosition);
+        //     Debug.Log("заспавнили");
+        //     pathFinding.FindTiles();
+        //     _lastSpawnPosition.z = currentXPosition.z;
+        //     currentXPosition.z += 5;
+        // }
         if (_time >= checkInterval)
         {
             ReturnToPool();
