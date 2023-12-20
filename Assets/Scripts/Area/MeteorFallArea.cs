@@ -34,10 +34,9 @@ public class MeteorFallArea : AreaAbstract
         {
             foreach (var t in Tiles) {
                 if (_pathFinding._tiles.TryGetValue(t.Pos, out var Tile)) {
-                    Tile.step = 0;
-                    Tile.Pos = Vector3Int.zero;
                     _pathFinding.tiles.Remove(Tile);
                     _pathFinding._tiles.Remove(Tile.Pos);
+                    Tile.Pos = Vector3Int.zero;
                 }
             }
         }

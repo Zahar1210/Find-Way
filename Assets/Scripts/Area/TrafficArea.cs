@@ -25,10 +25,8 @@ public class TrafficArea : AreaAbstract
     {
         if (isActive)
         {
-            foreach (var t in Tiles)
-            {
+            foreach (var t in Tiles) {
                 t.SetValue();
-                Debug.Log(t.Pos);
             }
         }
         else if (!isActive)
@@ -37,10 +35,9 @@ public class TrafficArea : AreaAbstract
             {
                 if (_pathFinding._tiles.TryGetValue(t.Pos, out var Tile))
                 {
-                    Tile.Pos = Vector3Int.zero;
-                    Tile.step = 0;
                     _pathFinding.tiles.Remove(Tile);
                     _pathFinding._tiles.Remove(Tile.Pos);
+                    Tile.Pos = Vector3Int.zero;
                 }
             }
         }

@@ -40,12 +40,10 @@ public class Pooler : MonoBehaviour
     {
         _time += Time.deltaTime;
         // Vector3Int currentXPosition = Vector3Int.RoundToInt(pointCheckInterval.position);//узнаем когда нужно спавнить новую терииторию
-        
-        // if (currentXPosition.x - _lastSpawnPosition.x >= spawnInterval) {
+        // if (currentXPosition.z - _lastSpawnPosition.z >= spawnInterval) {
         //     SpawnArea(currentXPosition);
-        //     Debug.Log("заспавнили");
         //     pathFinding.FindTiles();
-        //     _lastSpawnPosition.x = currentXPosition.x;
+        //     _lastSpawnPosition.z = currentXPosition.z;
         // }
         if (Input.GetMouseButtonUp(1))
         {

@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class PathFinding : MonoBehaviour
 {
-    public static PathFinding Instance { get; set; }
     [SerializeField] private SetValues setValues;
     [SerializeField] private Directions dir;
+    public static PathFinding Instance { get; set; }
     public Dictionary<Vector3Int, Tile> _tiles = new();
     public List<Tile> tiles = new();
 
@@ -19,12 +19,9 @@ public class PathFinding : MonoBehaviour
         }
         Destroy(gameObject);
     }
-
-    private void Start()
-    {
+    private void Start() {
        FindTiles();
     }
-
     public void FindTiles()
     {
         setValues.Set();
@@ -37,7 +34,6 @@ public class PathFinding : MonoBehaviour
         }
         Debug.LogError(_tiles.Count + " " + tiles.Count);
     }
-    
     public Surface[] GetPath(Surface a, Surface b)
     {
         List<Vector3Int> queue = new();
@@ -68,7 +64,6 @@ public class PathFinding : MonoBehaviour
                 if (_tiles.TryGetValue(t + direction, out var tile)) {
                     if (!visitedTiles.ContainsKey(tile.Pos) && !queueTiles.Contains(tile.Pos) && !tile.Barrier) {
                         queueTiles.Add(tile.Pos);
-                        tile.step = step + 1;
                         SetValues(tile.tileSurfaces, startSurface);
                     }
                 }
