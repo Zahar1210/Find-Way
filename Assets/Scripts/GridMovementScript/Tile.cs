@@ -10,13 +10,16 @@ public class Tile : MonoBehaviour
     public Surface surfaceDown;
     public Surface surfaceFront;
     public Surface surfaceBack;
-    public Vector3Int Pos { get; set; }
+    public Vector3Int Pos;
     public Dictionary<SurfaceType, Surface> surfaces = new();
     public List<Surface> tileSurfaces = new();
     public bool Barrier;
     public int step;
     
     private void Start() {
+        SetValue();
+    }
+    public void SetValue() {
         Pos = Vector3Int.RoundToInt(transform.position);
     }
 }

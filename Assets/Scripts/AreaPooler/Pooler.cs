@@ -17,6 +17,8 @@ public class Pooler : MonoBehaviour
     private Dictionary<AreaTypes, int> _maps = new();
     private Vector3Int _lastSpawnPosition;
     private float _time;
+    private bool isSpawn;
+    private Vector3Int currentXPosition = new Vector3Int(0, 0 ,5);
 
     private void Start()//инициализация 
     {
@@ -37,7 +39,7 @@ public class Pooler : MonoBehaviour
     private void Update()
     {
         _time += Time.deltaTime;
-        Vector3Int currentXPosition = Vector3Int.RoundToInt(pointCheckInterval.position);//узнаем когда нужно спавнить новую терииторию
+        // Vector3Int currentXPosition = Vector3Int.RoundToInt(pointCheckInterval.position);//узнаем когда нужно спавнить новую терииторию
         
         // if (currentXPosition.x - _lastSpawnPosition.x >= spawnInterval) {
         //     SpawnArea(currentXPosition);
@@ -51,6 +53,7 @@ public class Pooler : MonoBehaviour
             Debug.Log("заспавнили");
             pathFinding.FindTiles();
             _lastSpawnPosition.z = currentXPosition.z;
+            currentXPosition.z += 5;
         }
         if (_time >= checkInterval)
         {
@@ -63,10 +66,11 @@ public class Pooler : MonoBehaviour
     {
         AreaAbstract area = GetArea();
         if (area != null) {
-            area.EnableArea(true);
+            
             Vector3 newPosition = area.transform.position;
             newPosition.z = areaPosition.z;
             area.transform.position = newPosition;
+            area.EnableArea(true);
         }
     }
 
@@ -76,7 +80,7 @@ public class Pooler : MonoBehaviour
         AreaAbstract area = GetAreaFromPool(type);//выбирае нужную территорию 
         if (area != null)
         {
-            Debug.Log("так быть не должно");
+            // Debug.LogError("так быть не должно");
             return area;
         }
 
@@ -97,7 +101,7 @@ public class Pooler : MonoBehaviour
         if (_maps.TryGetValue(type, out int index)) {
             AreaAbstract area = Instantiate(areaArray[index]);//спавним, добавляем и возвращаем
             _areaAbstracts.Add(area);
-            Debug.Log("так быть должно");
+            // Debug.Log("так быть должно");
             return area;
         }
         Debug.Log("ватафак так быть не долно вообще");
@@ -113,8 +117,8 @@ public class Pooler : MonoBehaviour
     private void ReturnToPool()
     {
         foreach (var area in _areaAbstracts) {
-            if (area.transform.position.z <= pointReturnToPool.transform.position.z) {
-                Debug.Log("вернули в пул");
+            if (area.transform.position.z <= pointReturnToPool.transform.position.z && area.gameObject.activeSelf) {
+                // Debug.Log("вернули в пул");
                 area.EnableArea(false);
             }
         }

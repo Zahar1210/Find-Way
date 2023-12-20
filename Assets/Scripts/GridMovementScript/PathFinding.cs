@@ -5,10 +5,21 @@ using UnityEngine;
 
 public class PathFinding : MonoBehaviour
 {
+    public static PathFinding Instance { get; set; }
     [SerializeField] private SetValues setValues;
     [SerializeField] private Directions dir;
     public Dictionary<Vector3Int, Tile> _tiles = new();
-    private List<Tile> tiles = new();
+    public List<Tile> tiles = new();
+
+    private void Awake()
+    {
+        if (Instance == null) {
+            Instance = this;
+            return;
+        }
+        Destroy(gameObject);
+    }
+
     private void Start()
     {
        FindTiles();
@@ -18,11 +29,15 @@ public class PathFinding : MonoBehaviour
     {
         setValues.Set();
         foreach (var tile in FindObjectsOfType<Tile>()) {
-            Vector3Int pos = Vector3Int.RoundToInt(tile.transform.position);
-            _tiles.Add(pos, tile);
-            tiles.Add(tile);
+            if (!_tiles.ContainsValue(tile)) {
+                Vector3Int pos = Vector3Int.RoundToInt(tile.transform.position);
+                _tiles.Add(pos, tile);
+                tiles.Add(tile);
+            }
         }
+        Debug.LogError(_tiles.Count + " " + tiles.Count);
     }
+    
     public Surface[] GetPath(Surface a, Surface b)
     {
         List<Vector3Int> queue = new();
@@ -53,6 +68,7 @@ public class PathFinding : MonoBehaviour
                 if (_tiles.TryGetValue(t + direction, out var tile)) {
                     if (!visitedTiles.ContainsKey(tile.Pos) && !queueTiles.Contains(tile.Pos) && !tile.Barrier) {
                         queueTiles.Add(tile.Pos);
+                        tile.step = step + 1;
                         SetValues(tile.tileSurfaces, startSurface);
                     }
                 }
