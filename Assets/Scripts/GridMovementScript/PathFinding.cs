@@ -32,7 +32,6 @@ public class PathFinding : MonoBehaviour
                 tiles.Add(tile);
             }
         }
-        Debug.LogError(_tiles.Count + " " + tiles.Count);
     }
     public Surface[] GetPath(Surface a, Surface b)
     {

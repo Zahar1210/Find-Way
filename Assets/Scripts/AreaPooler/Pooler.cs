@@ -18,7 +18,6 @@ public class Pooler : MonoBehaviour
     private Vector3Int _lastSpawnPosition;
     private float _time;
     private bool isSpawn;
-    private Vector3Int currentXPosition = new Vector3Int(0, 0 ,5);
 
     private void Start()//инициализация 
     {
@@ -39,21 +38,12 @@ public class Pooler : MonoBehaviour
     private void Update()
     {
         _time += Time.deltaTime;
-        Vector3Int currentXPosition = Vector3Int.RoundToInt(pointCheckInterval.position);//узнаем когда нужно спавнить новую терииторию
+        Vector3Int currentXPosition = Vector3Int.RoundToInt(pointCheckInterval.position);
         if (currentXPosition.z - _lastSpawnPosition.z >= spawnInterval) {
             SpawnArea(currentXPosition);
-            Debug.Log("заспавнили");
             pathFinding.FindTiles();
             _lastSpawnPosition.z = currentXPosition.z;
         }
-        // if (Input.GetMouseButtonUp(1))
-        // {
-        //     SpawnArea(currentXPosition);
-        //     Debug.Log("заспавнили");
-        //     pathFinding.FindTiles();
-        //     _lastSpawnPosition.z = currentXPosition.z;
-        //     currentXPosition.z += 5;
-        // }
         if (_time >= checkInterval)
         {
             ReturnToPool();
@@ -75,20 +65,18 @@ public class Pooler : MonoBehaviour
 
     private AreaAbstract GetArea()
     {
-        AreaTypes type = GetRandomTypeArea();//выбираем тип 
-        AreaAbstract area = GetAreaFromPool(type);//выбирае нужную территорию 
-        if (area != null)
-        {
-            // Debug.LogError("так быть не должно");
+        AreaTypes type = GetRandomTypeArea();
+        AreaAbstract area = GetAreaFromPool(type);
+        if (area != null) {
             return area;
         }
 
-        return AreaToSpawn(type);//справним в случае если не нашли нужную территорию
+        return AreaToSpawn(type);
     }
 
     private AreaAbstract GetAreaFromPool(AreaTypes type)
     {
-        foreach (AreaAbstract area in _areaAbstracts) {//находим нужную 
+        foreach (AreaAbstract area in _areaAbstracts) { 
             if (!area.gameObject.activeSelf && area.Type == type && area != null)
                 return area;
         }
@@ -98,9 +86,8 @@ public class Pooler : MonoBehaviour
     private AreaAbstract AreaToSpawn(AreaTypes type)
     {
         if (_maps.TryGetValue(type, out int index)) {
-            AreaAbstract area = Instantiate(areaArray[index]);//спавним, добавляем и возвращаем
+            AreaAbstract area = Instantiate(areaArray[index]);
             _areaAbstracts.Add(area);
-            // Debug.Log("так быть должно");
             return area;
         }
         Debug.Log("ватафак так быть не долно вообще");
@@ -117,7 +104,6 @@ public class Pooler : MonoBehaviour
     {
         foreach (var area in _areaAbstracts) {
             if (area.transform.position.z <= pointReturnToPool.transform.position.z && area.gameObject.activeSelf) {
-                // Debug.Log("вернули в пул");
                 area.EnableArea(false);
             }
         }
