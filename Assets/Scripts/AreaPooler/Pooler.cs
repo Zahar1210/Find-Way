@@ -5,78 +5,84 @@ using Random = UnityEngine.Random;
 
 public class Pooler : MonoBehaviour
 {
-    [SerializeField] private PathFinding pathFinding;
-    [SerializeField] private Transform pointReturnToPool;
-    [SerializeField] private Transform pointCheckInterval;
-    [SerializeField] private int spawnInterval;
+    [SerializeField] private float spawnInterval;
     [SerializeField] private float checkInterval;
+    [SerializeField] private Transform pointReturnToPool;
+    [SerializeField] private PathFinding pathFinding;
+    [SerializeField] private Transform pointCheckInterval;
     [SerializeField] private AreaAbstract[] areaArray;
-    
+
     private List<AreaAbstract> _areaAbstracts = new();
-    private Dictionary<int, AreaTypes> _typesMap = new();
-    private Dictionary<AreaTypes, int> _maps = new();
+    private Dictionary<int, AreaTypes> _typesArea = new();
+    private Dictionary<AreaTypes, int> _area = new();
     private Vector3Int _lastSpawnPosition;
     private float _time;
     private bool isSpawn;
+    private AreaAbstract queueArea;
 
-    private void Start()//инициализация 
+
+    private void Start()
     {
-        _lastSpawnPosition = Vector3Int.RoundToInt(transform.position); 
-        // _maps.Add(AreaTypes.Traffic, 0);
-        _maps.Add(AreaTypes.Slowdown, 0);
-        _maps.Add(AreaTypes.RisingSpikes, 1);
-        _maps.Add(AreaTypes.MeteorFall, 2);
-        _typesMap.Add(0, AreaTypes.MeteorFall);
-        _typesMap.Add(1, AreaTypes.Slowdown);
-        _typesMap.Add(2, AreaTypes.RisingSpikes);
-        // typesMap.Add(3, AreaTypes.Traffic);
-        foreach (var area in FindObjectsOfType<AreaAbstract>()) {
+        foreach (var area in FindObjectsOfType<AreaAbstract>())
+        {
             _areaAbstracts.Add(area);
         }
+        _lastSpawnPosition = Vector3Int.RoundToInt(transform.position);
+        _area.Add(AreaTypes.Slowdown, 0);
+        _area.Add(AreaTypes.RisingSpikes, 1);
+        _area.Add(AreaTypes.MeteorFall, 2);
+        _area.Add(AreaTypes.Traffic, 3);
+        _typesArea.Add(0, AreaTypes.MeteorFall);
+        _typesArea.Add(1, AreaTypes.Slowdown);
+        _typesArea.Add(2, AreaTypes.RisingSpikes);
+        _typesArea.Add(3, AreaTypes.Traffic);
+        queueArea = GetQueueArea();
     }
 
-    private void Update()
+    private void Timer()
     {
         _time += Time.deltaTime;
-        Vector3Int currentXPosition = Vector3Int.RoundToInt(pointCheckInterval.position);
-        if (currentXPosition.z - _lastSpawnPosition.z >= spawnInterval) {
-            SpawnArea(currentXPosition);
-            pathFinding.FindTiles();
-            _lastSpawnPosition.z = currentXPosition.z;
-        }
-        if (_time >= checkInterval)
-        {
+        if (_time >= checkInterval) {
             ReturnToPool();
             _time = 0f;
         }
     }
 
-    private void SpawnArea(Vector3Int areaPosition)
+    private void Update()
     {
-        AreaAbstract area = GetArea();
-        if (area != null) {
-            
-            Vector3 newPosition = area.transform.position;
-            newPosition.z = areaPosition.z;
-            area.transform.position = newPosition;
-            area.EnableArea(true);
+        Timer();
+        Vector3Int currentZPosition = Vector3Int.RoundToInt(pointCheckInterval.position);
+        if (currentZPosition.z - _lastSpawnPosition.z >= spawnInterval) {
+            _lastSpawnPosition.z = currentZPosition.z;
+            SpawnArea(currentZPosition);
+            pathFinding.FindTiles();//обновляем данные для поиска
         }
     }
 
-    private AreaAbstract GetArea()
+    private void SpawnArea(Vector3Int areaPosition)
+    {
+        AreaAbstract beforeArea = queueArea;
+        Vector3 newPosition = queueArea.transform.position;
+        newPosition.z = areaPosition.z;
+        queueArea.transform.position = newPosition;
+        queueArea.EnableArea(true);
+        queueArea = GetQueueArea();
+        SetSpawnInterval(beforeArea);
+    }
+
+    private AreaAbstract GetQueueArea()
     {
         AreaTypes type = GetRandomTypeArea();
         AreaAbstract area = GetAreaFromPool(type);
         if (area != null) {
             return area;
         }
-
         return AreaToSpawn(type);
     }
 
     private AreaAbstract GetAreaFromPool(AreaTypes type)
     {
-        foreach (AreaAbstract area in _areaAbstracts) { 
+        foreach (AreaAbstract area in _areaAbstracts) {
             if (!area.gameObject.activeSelf && area.Type == type && area != null)
                 return area;
         }
@@ -85,9 +91,10 @@ public class Pooler : MonoBehaviour
 
     private AreaAbstract AreaToSpawn(AreaTypes type)
     {
-        if (_maps.TryGetValue(type, out int index)) {
+        if (_area.TryGetValue(type, out int index)) {
             AreaAbstract area = Instantiate(areaArray[index]);
             _areaAbstracts.Add(area);
+            area.EnableArea(false);
             return area;
         }
         Debug.Log("ватафак так быть не долно вообще");
@@ -96,16 +103,20 @@ public class Pooler : MonoBehaviour
 
     private AreaTypes GetRandomTypeArea()
     {
-        if (_typesMap.TryGetValue(Random.Range(0, 3), out AreaTypes type)) return type; // пока так (значения _max) в Range
+        if (_typesArea.TryGetValue(Random.Range(0, 4), out AreaTypes type)) return type; // пока так (значения _max) в Range
         return AreaTypes.Slowdown;
     }
 
     private void ReturnToPool()
     {
         foreach (var area in _areaAbstracts) {
-            if (area.transform.position.z <= pointReturnToPool.transform.position.z && area.gameObject.activeSelf) {
+            if (area.transform.position.z <= pointReturnToPool.transform.position.z && area.gameObject.activeSelf)
                 area.EnableArea(false);
-            }
         }
+    }
+
+    private void SetSpawnInterval(AreaAbstract beforeArea) {
+        spawnInterval = (beforeArea.AreaLength + queueArea.AreaLength) / 2f;
+        if (spawnInterval % 1 != 0) { spawnInterval = beforeArea.AreaLength; }
     }
 }

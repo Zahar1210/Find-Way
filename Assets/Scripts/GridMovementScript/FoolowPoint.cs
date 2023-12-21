@@ -12,7 +12,7 @@ public class FoolowPoint : MonoBehaviour
         if (target.transform.position.z > _lastPosition.z)
         {
             _lastPosition.z = target.transform.position.z;
-            transform.position = new Vector3(transform.position.x, transform.position.y, target.position.z);
+            transform.position = new Vector3(transform.position.x, transform.position.y, target.position.z - 1);
         }
 
         if (_lastPosition.z - deathDistance >= target.transform.position.z && !isDead)
