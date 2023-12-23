@@ -226,6 +226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 1
   AreaLength: 5
+  Chance: 39
   Type: 0
   Areas:
   - {fileID: 3427113599266054152, guid: 71d0dfdad54fd43f88373dc0fe3b98c8, type: 3}

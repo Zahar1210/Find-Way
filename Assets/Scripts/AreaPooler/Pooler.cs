@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -23,10 +24,7 @@ public class Pooler : MonoBehaviour
 
     private void Start()
     {
-        foreach (var area in FindObjectsOfType<AreaAbstract>())
-        {
-            _areaAbstracts.Add(area);
-        }
+        foreach (var area in FindObjectsOfType<AreaAbstract>()) { _areaAbstracts.Add(area); }
         _lastSpawnPosition = Vector3Int.RoundToInt(transform.position);
         _area.Add(AreaTypes.Simple, 0);
         _area.Add(AreaTypes.Train, 1);
@@ -36,13 +34,13 @@ public class Pooler : MonoBehaviour
         _typesArea.Add(1, AreaTypes.Simple);
         _typesArea.Add(2, AreaTypes.Train);
         _typesArea.Add(3, AreaTypes.Traffic);
-        queueArea = GetQueueArea();
+        queueArea = areaArray[Random.Range(0, 10)];
     }
-
     private void Timer()
     {
         _time += Time.deltaTime;
-        if (_time >= checkInterval) {
+        if (_time >= checkInterval)
+        {
             ReturnToPool();
             _time = 0f;
         }
@@ -52,10 +50,11 @@ public class Pooler : MonoBehaviour
     {
         Timer();
         Vector3Int currentZPosition = Vector3Int.RoundToInt(pointCheckInterval.position);
-        if (currentZPosition.z - _lastSpawnPosition.z >= spawnInterval) {
+        if (currentZPosition.z - _lastSpawnPosition.z >= spawnInterval)
+        {
             _lastSpawnPosition.z = currentZPosition.z;
             SpawnArea(currentZPosition);
-            pathFinding.FindTiles();//обновляем данные для поиска
+            pathFinding.FindTiles(); //обновляем данные для поиска
         }
     }
 
@@ -72,39 +71,34 @@ public class Pooler : MonoBehaviour
 
     private AreaAbstract GetQueueArea()
     {
-        AreaTypes type = GetRandomTypeArea();
-        AreaAbstract area = GetAreaFromPool(type);
+        int indexToSpawn = new();
+        int index = GetIndex();
+        AreaAbstract area = GetAreaFromPool(index);
         if (area != null) {
             return area;
         }
-        return AreaToSpawn(type);
+        foreach (var a in queueArea.Areas) {
+            if (a.Index == index)
+                indexToSpawn = a.Index;
+        }
+        return AreaToSpawn(indexToSpawn);
     }
 
-    private AreaAbstract GetAreaFromPool(AreaTypes type)
+    private AreaAbstract GetAreaFromPool(int index)
     {
         foreach (AreaAbstract area in _areaAbstracts) {
-            if (!area.gameObject.activeSelf && area.Type == type && area != null)
+            if (!area.gameObject.activeSelf && area.Index == index && area != null)
                 return area;
         }
         return null;
     }
 
-    private AreaAbstract AreaToSpawn(AreaTypes type)
+    private AreaAbstract AreaToSpawn(int index)
     {
-        if (_area.TryGetValue(type, out int index)) {
-            AreaAbstract area = Instantiate(areaArray[index]);
-            _areaAbstracts.Add(area);
-            area.EnableArea(false);
-            return area;
-        }
-        Debug.Log("ватафак так быть не долно вообще");
-        return null;
-    }
-
-    private AreaTypes GetRandomTypeArea()
-    {
-        if (_typesArea.TryGetValue(Random.Range(0, 4), out AreaTypes type)) return type; // пока так (значения _max) в Range
-        return AreaTypes.Simple;
+        AreaAbstract area = Instantiate(areaArray[index]);
+        _areaAbstracts.Add(area);
+        area.EnableArea(false);
+        return area;
     }
 
     private void ReturnToPool()
@@ -115,7 +109,19 @@ public class Pooler : MonoBehaviour
         }
     }
 
-    private void SetSpawnInterval(AreaAbstract beforeArea) {
+    private int GetIndex()
+    {
+        float totalChance = Random.Range(0, queueArea.Areas.Sum(area => area.Chance));
+        for (int i = 0; i < queueArea.Areas.Length; i++) {
+            if (totalChance > queueArea.Areas[i].Chance) 
+                totalChance -= queueArea.Areas[i].Chance;
+            else 
+               return queueArea.Areas[i].Index;
+        }
+        return 0;
+    }
+    private void SetSpawnInterval(AreaAbstract beforeArea)
+    {
         spawnInterval = (beforeArea.AreaLength + queueArea.AreaLength) / 2f;
         if (spawnInterval % 1 != 0) { spawnInterval = beforeArea.AreaLength; }
     }

@@ -39792,7 +39792,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3555080815344312265}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.01, y: 0.5, z: 0.01}
+  m_LocalPosition: {x: 0, y: 0.505, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -83163,7 +83163,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7404244552848442869}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.43, y: 0.08, z: -25.29}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -83299,6 +83299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 15
   AreaLength: 5
+  Chance: 32
   Type: 1
   Areas:
   - {fileID: 7086428507554602331}
@@ -83307,7 +83308,7 @@ MonoBehaviour:
   - {fileID: 9101598404664476260, guid: 562e511bdabef4f4a8e31330da802d82, type: 3}
   - {fileID: 8116572173452632122, guid: 63f98ce82dc7f412b867ca4d7cab064d, type: 3}
   - {fileID: 4611613924099025491, guid: b3f4b01fde6d3469ab76ba1b93e51b51, type: 3}
-  - {fileID: 3902204569038946605, guid: 657b5bd2a8fb34a76963f704a566a057, type: 3}
+  - {fileID: 5073018694549214513, guid: 657b5bd2a8fb34a76963f704a566a057, type: 3}
   Tiles: []
 --- !u!1 &7409957349673415804
 GameObject:

@@ -5330,6 +5330,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Index: 14
   AreaLength: 5
+  Chance: 34
   Type: 1
   Areas:
   - {fileID: 1808945840341270423}
