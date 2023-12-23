@@ -219,10 +219,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f57bf89819c45b2a7567c6069c6d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Index: 4
   AreaLength: 5
   Type: 0
+  Areas:
+  - {fileID: 7211770072484490167, guid: 4d78d744ce4194970aa3e3b2c318470f, type: 3}
+  - {fileID: 3427113599266054152, guid: 71d0dfdad54fd43f88373dc0fe3b98c8, type: 3}
+  - {fileID: 546622776627699809, guid: 0edadb511ba2440b7b0cc02bf46affcf, type: 3}
+  - {fileID: 7050292149792642161, guid: 81846508a7d8d4bbc9512a42a72824b5, type: 3}
+  - {fileID: 569517908044317728, guid: f65a1f5166f2841f983b54ac13bcf571, type: 3}
+  - {fileID: 5145049181052253541, guid: eaf359f77463b48e8baf1c463e82d881, type: 3}
+  - {fileID: 1702722894791504170, guid: f38909d253b4c46899c5a61604fbfc2a, type: 3}
+  - {fileID: 1808945840341270423, guid: a3e5f4a27dcee4545848158ed21be805, type: 3}
   Tiles: []
-  AreaIndex: 
 --- !u!1001 &117189299986792029
 PrefabInstance:
   m_ObjectHideFlags: 0

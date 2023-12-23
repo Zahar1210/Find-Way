@@ -1,7 +1,7 @@
 public enum AreaTypes
 {
     MeteorFall,
-    RisingSpikes,
-    Slowdown,
+    Train,
+    Simple,
     Traffic,
 }

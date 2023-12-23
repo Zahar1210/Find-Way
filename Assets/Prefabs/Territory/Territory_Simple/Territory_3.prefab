@@ -1898,10 +1898,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f57bf89819c45b2a7567c6069c6d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Index: 8
   AreaLength: 3
   Type: 3
+  Areas:
+  - {fileID: 9101598404664476260, guid: 562e511bdabef4f4a8e31330da802d82, type: 3}
+  - {fileID: 8116572173452632122, guid: 63f98ce82dc7f412b867ca4d7cab064d, type: 3}
+  - {fileID: 4611613924099025491, guid: b3f4b01fde6d3469ab76ba1b93e51b51, type: 3}
+  - {fileID: 3902204569038946605, guid: 657b5bd2a8fb34a76963f704a566a057, type: 3}
+  - {fileID: 7086428507554602331, guid: 48723861df3014854a496e7fcd941b61, type: 3}
+  - {fileID: 7626572868098712805, guid: 5e403c55e2ae84595af039780c073150, type: 3}
+  - {fileID: 325693365252835818, guid: 87b3d55c5cf554582837702d6121fe07, type: 3}
   Tiles: []
-  AreaIndex: 
 --- !u!1 &275619190803316887
 GameObject:
   m_ObjectHideFlags: 0

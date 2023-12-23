@@ -28,13 +28,13 @@ public class Pooler : MonoBehaviour
             _areaAbstracts.Add(area);
         }
         _lastSpawnPosition = Vector3Int.RoundToInt(transform.position);
-        _area.Add(AreaTypes.Slowdown, 0);
-        _area.Add(AreaTypes.RisingSpikes, 1);
+        _area.Add(AreaTypes.Simple, 0);
+        _area.Add(AreaTypes.Train, 1);
         _area.Add(AreaTypes.MeteorFall, 2);
         _area.Add(AreaTypes.Traffic, 3);
         _typesArea.Add(0, AreaTypes.MeteorFall);
-        _typesArea.Add(1, AreaTypes.Slowdown);
-        _typesArea.Add(2, AreaTypes.RisingSpikes);
+        _typesArea.Add(1, AreaTypes.Simple);
+        _typesArea.Add(2, AreaTypes.Train);
         _typesArea.Add(3, AreaTypes.Traffic);
         queueArea = GetQueueArea();
     }
@@ -104,7 +104,7 @@ public class Pooler : MonoBehaviour
     private AreaTypes GetRandomTypeArea()
     {
         if (_typesArea.TryGetValue(Random.Range(0, 4), out AreaTypes type)) return type; // пока так (значения _max) в Range
-        return AreaTypes.Slowdown;
+        return AreaTypes.Simple;
     }
 
     private void ReturnToPool()
