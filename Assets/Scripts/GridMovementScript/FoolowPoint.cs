@@ -9,14 +9,15 @@ public class FoolowPoint : MonoBehaviour
 
     void Update()
     {
-        if (target.transform.position.z > _lastPosition.z)
-        {
+       FollowPoint();
+    }
+    private void FollowPoint()
+    {
+        if (target.transform.position.z > _lastPosition.z) {
             _lastPosition.z = target.transform.position.z;
             transform.position = new Vector3(transform.position.x, transform.position.y, target.position.z - 1);
         }
-
-        if (_lastPosition.z - deathDistance >= target.transform.position.z && !isDead)
-        {
+        if (_lastPosition.z - deathDistance >= target.transform.position.z && !isDead) {
             isDead = true;
             Debug.Log("умерли");
         }

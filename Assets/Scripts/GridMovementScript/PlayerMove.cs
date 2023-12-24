@@ -11,7 +11,6 @@ public class PlayerMove : MonoBehaviour
     public bool isMove{ get; set; }
     private bool findTarget{ get; set; }
     public bool isMoving{ get; set; }
-    
     public void StartMove()
     {
         if (isMoving) {
