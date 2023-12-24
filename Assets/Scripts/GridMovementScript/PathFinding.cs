@@ -40,7 +40,7 @@ public class PathFinding : MonoBehaviour
         Dictionary<Vector3Int, TileInfo> visited = new();
         int step = 0;
         queue.Add(a.tile.Pos);
-        SetValues(a.tile.tileSurfaces, a);
+        SetValue(a.tile.tileSurfaces, a);
         SetFreeValue();
         while (true) {
             if (queue.Count == 0)
@@ -65,7 +65,7 @@ public class PathFinding : MonoBehaviour
                     if (!visitedTiles.ContainsKey(tile.Pos) && !queueTiles.Contains(tile.Pos) && !tile.Barrier) {
                         queueTiles.Add(tile.Pos);
                         tile.step = step + 1;
-                        SetValues(tile.tileSurfaces, startSurface);
+                        SetValue(tile.tileSurfaces, startSurface);
                     }
                 }
             }
@@ -129,7 +129,7 @@ public class PathFinding : MonoBehaviour
         if (tile.surfaces.TryGetValue(surfaceType, out Surface sur) && sur.gameObject.activeSelf && !sur.barrier) return sur;
         return null;
     }
-    private void SetValues(List<Surface> surfaces, Surface startSurface)
+    private void SetValue(List<Surface> surfaces, Surface startSurface)
     {
         foreach (var s in surfaces)
             if (s.gameObject.activeSelf) {
@@ -189,7 +189,6 @@ public class PathFinding : MonoBehaviour
     {
         public int Step { get; }
         public float Distance { get; }
-
         public TileInfo(int step, float distance)
         {
             Step = step;

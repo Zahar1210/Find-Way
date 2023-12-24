@@ -14,15 +14,12 @@ public class PlayerPath : MonoBehaviour
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
+        if (Input.GetMouseButtonDown(0)) {
             playerMove.StartMove();
             isFindPath = true;
         }
 
-        if (!playerMove.isMoving && !playerMove.isMove && isFindPath && !playerMove.isMove)
-        {
-            
+        if (!playerMove.isMoving && !playerMove.isMove && isFindPath && !playerMove.isMove) {
             Surface currentSurface = GetCurrentSurface();
             Surface targetSurface = GetTargetSurface();
             if (currentSurface && targetSurface)
