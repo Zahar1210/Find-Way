@@ -22,6 +22,7 @@ public class PlayerPath : MonoBehaviour
 
         if (!playerMove.isMoving && !playerMove.isMove && isFindPath && !playerMove.isMove)
         {
+            
             Surface currentSurface = GetCurrentSurface();
             Surface targetSurface = GetTargetSurface();
             if (currentSurface && targetSurface)
@@ -29,6 +30,7 @@ public class PlayerPath : MonoBehaviour
             isFindPath = false;
         }
     }
+    
     private void MakePath(Surface[] path)
     {
         playerMove.index = 0;

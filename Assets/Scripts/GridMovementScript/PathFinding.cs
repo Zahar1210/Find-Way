@@ -25,7 +25,8 @@ public class PathFinding : MonoBehaviour
     public void FindTiles()
     {
         setValues.Set();
-        foreach (var tile in FindObjectsOfType<Tile>()) {
+        foreach (var tile in FindObjectsOfType<Tile>())
+        {
             if (!_tiles.ContainsValue(tile)) {
                 Vector3Int pos = Vector3Int.RoundToInt(tile.transform.position);
                 _tiles.Add(pos, tile);
@@ -63,6 +64,7 @@ public class PathFinding : MonoBehaviour
                 if (_tiles.TryGetValue(t + direction, out var tile)) {
                     if (!visitedTiles.ContainsKey(tile.Pos) && !queueTiles.Contains(tile.Pos) && !tile.Barrier) {
                         queueTiles.Add(tile.Pos);
+                        tile.step = step + 1;
                         SetValues(tile.tileSurfaces, startSurface);
                     }
                 }
@@ -98,7 +100,6 @@ public class PathFinding : MonoBehaviour
                 if (_tiles.TryGetValue(posTile, out Tile tile) && tile != null)
                     selectTilesCopy.Add(tile);
             }
-
             currentSurface = SelectTileSurfaces(selectTiles, currentSurface, selectTilesCopy).OrderBy(s => s.distance).FirstOrDefault();
             if (currentSurface == a) {
                 path.Add(currentSurface);
@@ -131,11 +132,10 @@ public class PathFinding : MonoBehaviour
     private void SetValues(List<Surface> surfaces, Surface startSurface)
     {
         foreach (var s in surfaces)
-            if (s.gameObject.activeSelf)
-            {
+            if (s.gameObject.activeSelf) {
                 float tileDis = Vector3.Distance(s.tile.Pos, startSurface.tile.Pos);
                 float surfaceDis = Vector3.Distance(s.Pos, startSurface.Pos);
-                s.distance = tileDis + surfaceDis;
+                s.distance = surfaceDis + tileDis;
             }
     }
     private void SetFreeValue()
