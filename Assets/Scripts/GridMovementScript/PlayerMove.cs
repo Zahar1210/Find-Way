@@ -8,9 +8,9 @@ public class PlayerMove : MonoBehaviour
     public List<PointRotation> PointRotations = new();
     public Surface[] surfaces;
     public int index { get; set; }
-    public bool isMove{ get; set; }
     private bool findTarget{ get; set; }
-    public bool isMoving{ get; set; }
+    public bool isMove;
+    public bool isMoving;
     public void StartMove()
     {
         if (isMoving) {

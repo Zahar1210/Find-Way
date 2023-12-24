@@ -20,11 +20,11 @@ public class PlayerPath : MonoBehaviour
         }
 
         if (!playerMove.isMoving && !playerMove.isMove && isFindPath && !playerMove.isMove) {
+            isFindPath = false;
             Surface currentSurface = GetCurrentSurface();
             Surface targetSurface = GetTargetSurface();
             if (currentSurface && targetSurface)
                 MakePath(pathFinder.GetPath(currentSurface, targetSurface));
-            isFindPath = false;
         }
     }
     
@@ -46,8 +46,7 @@ public class PlayerPath : MonoBehaviour
     }
     private Surface GetTargetSurface()
     {
-        RaycastHit hit;
-        if (Physics.Raycast(_camera.ScreenPointToRay(Input.mousePosition), out hit)) {
+        if (Physics.Raycast(_camera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit)) {
             Surface targetSurface = hit.collider.GetComponent<Surface>();
             if (targetSurface != null && !targetSurface.barrier)
                 return targetSurface;

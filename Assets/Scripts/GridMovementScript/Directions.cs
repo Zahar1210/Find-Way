@@ -16,13 +16,13 @@ public class Directions : MonoBehaviour
     }
 
     public Vector3Int[] dirHorizontal = {
-        new Vector3Int(0, 0, 1), new Vector3Int(0, 0, -1), new Vector3Int(0, 1, 0), new Vector3Int(0, -1, 0),
+        Vector3Int.forward, Vector3Int.back, Vector3Int.up, Vector3Int.down, 
     };
     public Vector3Int[] dirVertical = {
-        new Vector3Int(0, 0, -1), new Vector3Int(0, 0, 1), new Vector3Int(1, 0, 0), new Vector3Int(-1, 0, 0),
+        Vector3Int.back,Vector3Int.forward, Vector3Int.right,Vector3Int.left, 
     };
     public Vector3Int[] dirDepth = {
-        new Vector3Int(1, 0, 0), new Vector3Int(-1, 0, 0), new Vector3Int(0, 1, 0), new Vector3Int(0, -1, 0),
+       Vector3Int.right, Vector3Int.left,Vector3Int.up, Vector3Int.down, 
     };
     public Vector3Int[] dirRight = {
         new Vector3Int(1, 1, 0), new Vector3Int(1, 0, 1), new Vector3Int(1, -1, 0), new Vector3Int(1, 0, -1),

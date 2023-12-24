@@ -18,9 +18,7 @@ public class PathFinding : MonoBehaviour
             return;
         }
         Destroy(gameObject);
-    }
-    private void Start() {
-       FindTiles();
+        FindTiles();
     }
     public void FindTiles()
     {
@@ -47,8 +45,11 @@ public class PathFinding : MonoBehaviour
                 break;
             GetQueue(queue, visited, step, b, a);
             step++;
-            if (visited.ContainsKey(b.tile.Pos))
+            if (visited.ContainsKey(b.tile.Pos)) {
+                GetQueue(queue, visited, step, b, a);
+                Debug.Log("нашли аааа");
                 break;
+            }
         }
         Surface[] pointArray = GetFinalPath(visited, a, b).ToArray();
         Array.Reverse(pointArray);
@@ -59,12 +60,12 @@ public class PathFinding : MonoBehaviour
         Vector3Int[] tiles = queueTiles.ToArray();
         foreach (var t in tiles) {
             queueTiles.Remove(t);
-            visitedTiles.Add(t, new TileInfo(step, Vector3Int.Distance(t, targetSurface.tile.Pos)));
+            visitedTiles.Add(t, new TileInfo(step));
             foreach (var direction in dir.directions) {
                 if (_tiles.TryGetValue(t + direction, out var tile)) {
                     if (!visitedTiles.ContainsKey(tile.Pos) && !queueTiles.Contains(tile.Pos) && !tile.Barrier) {
                         queueTiles.Add(tile.Pos);
-                        tile.step = step + 1;
+                        tile.visited = true;
                         SetValue(tile.tileSurfaces, startSurface);
                     }
                 }
@@ -88,8 +89,8 @@ public class PathFinding : MonoBehaviour
                         if (!path.Contains(surface) && surface.gameObject.activeSelf && !surface.barrier) {
                             selectTiles.Add(tile);
                             if (surface == a) {
-                                path.Add(surface);
-                                return path;
+                                    path.Add(surface);
+                                    return path; 
                             }
                         }
                     }
@@ -100,7 +101,7 @@ public class PathFinding : MonoBehaviour
                 if (_tiles.TryGetValue(posTile, out Tile tile) && tile != null)
                     selectTilesCopy.Add(tile);
             }
-            currentSurface = SelectTileSurfaces(selectTiles, currentSurface, selectTilesCopy).OrderBy(s => s.distance).FirstOrDefault();
+            currentSurface = SelectTileSurfaces(selectTiles, currentSurface, selectTilesCopy, visited).OrderBy(s => s.distance).FirstOrDefault();
             if (currentSurface == a) {
                 path.Add(currentSurface);
                 return path;
@@ -108,7 +109,7 @@ public class PathFinding : MonoBehaviour
         }
         return path;
     }
-    private List<Surface> SelectTileSurfaces(List<Tile> tiles, Surface currentSurface, List<Tile> selectedTilesCopy)
+    private List<Surface> SelectTileSurfaces(List<Tile> tiles, Surface currentSurface, List<Tile> selectedTilesCopy,Dictionary<Vector3Int, TileInfo> visited)
     {
         List<Surface> selectedSurfaces = new();
         foreach (var tile in tiles) {
@@ -120,7 +121,9 @@ public class PathFinding : MonoBehaviour
                 selectedSurfaces.Add(s);
         }
         foreach (var tile in selectedTilesCopy) {
-            selectedSurfaces.Add(SelectSurfacesTile(tile,currentSurface));
+            if (visited.TryGetValue(tile.Pos, out TileInfo tileInfo) && tileInfo != null) {
+                selectedSurfaces.Add(SelectSurfacesTile(tile,currentSurface));
+            }
         }
         return selectedSurfaces;
     }
@@ -188,11 +191,8 @@ public class PathFinding : MonoBehaviour
     private class TileInfo
     {
         public int Step { get; }
-        public float Distance { get; }
-        public TileInfo(int step, float distance)
-        {
+        public TileInfo(int step) {
             Step = step;
-            Distance = distance;
         }
     }
 }

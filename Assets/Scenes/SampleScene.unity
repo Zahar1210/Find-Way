@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Follow: {fileID: 5044769}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 5
+    OrthographicSize: 6
     NearClipPlane: 0.01
     FarClipPlane: 5000
     Dutch: 0
@@ -231,7 +231,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48406615}
-  m_LocalRotation: {x: 0.48449618, y: -0.18230882, z: 0.10400816, w: 0.8492404}
+  m_LocalRotation: {x: 0.48367152, y: -0.18240972, z: 0.10383112, w: 0.8497104}
   m_LocalPosition: {x: 0.63525206, y: 13.4, z: -1.5005472}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -574,7 +574,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -597,7 +597,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.48449618, y: -0.18230882, z: 0.10400816, w: 0.8492404}
+  m_LocalRotation: {x: 0.48367152, y: -0.18240972, z: 0.10383112, w: 0.8497104}
   m_LocalPosition: {x: 0.63525206, y: 13.4, z: -1.5005472}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -899,8 +899,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d186d4eede54c029c30e18165995c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 200
+  speed: 300
   surfaces: []
+  isMove: 0
+  isMoving: 0
 --- !u!1001 &1059916513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1039,7 +1041,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266466368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0, z: -7}
+  m_LocalPosition: {x: 0, y: -0, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1053,6 +1055,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2880483000115915431, guid: 5e403c55e2ae84595af039780c073150, type: 3}
+      propertyPath: Barrier
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7876271841130495048, guid: 5e403c55e2ae84595af039780c073150, type: 3}
       propertyPath: m_RootOrder
       value: 6
