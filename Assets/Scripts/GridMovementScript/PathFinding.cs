@@ -46,8 +46,6 @@ public class PathFinding : MonoBehaviour
             GetQueue(queue, visited, step, b, a);
             step++;
             if (visited.ContainsKey(b.tile.Pos)) {
-                GetQueue(queue, visited, step, b, a);
-                Debug.Log("нашли аааа");
                 break;
             }
         }

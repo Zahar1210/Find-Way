@@ -5,6 +5,7 @@ public class PlayerPath : MonoBehaviour
     [SerializeField] private Directions dirs;
     [SerializeField] private PathFinding pathFinder;
     [SerializeField] private PlayerMove playerMove;
+    [SerializeField] private NavigationPath navigationPath;
     private Camera _camera;
     private bool isFindPath;
 
@@ -41,6 +42,7 @@ public class PlayerPath : MonoBehaviour
             else if (path[i].tile != path[i + 1].tile && path[i].type != path[i + 1].type)
                 playerMove.PointRotations.Add(new PlayerMove.PointRotation(-path[i].Dir, path[i + 1].Dir, path[i + 1].tile, true));
         }
+        navigationPath.PathNavigation(path);
         playerMove.surfaces = path;
         playerMove.Move();
     }
