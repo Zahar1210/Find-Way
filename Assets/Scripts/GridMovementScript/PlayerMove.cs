@@ -29,8 +29,7 @@ public class PlayerMove : MonoBehaviour
         while (index < PointRotations.Count)
         {
             if (!isMove && !findTarget)
-                yield return StartCoroutine(Roll((surfaces[index].tile == surfaces[index + 1].tile) ? 180 : 90,
-                    PointRotations[index]));
+                yield return StartCoroutine(Roll((surfaces[index].tile == surfaces[index + 1].tile) ? 180 : 90, PointRotations[index]));
             else
                 yield return new WaitForSeconds(0.1f);
         }
@@ -41,9 +40,8 @@ public class PlayerMove : MonoBehaviour
     {
         index++;
         isMove = true;
-        if (point.isIgnore) {
+        if (point.isIgnore) 
             isMove = false;
-        }
         else {
             while (remainingAngle > 0) {
                 float rotAngle = Mathf.Min(Time.fixedDeltaTime * speed, remainingAngle);

@@ -14,38 +14,24 @@ public class Pooler : MonoBehaviour
     [SerializeField] private AreaAbstract[] areaArray;
 
     private List<AreaAbstract> _areaAbstracts = new();
-    private Dictionary<int, AreaTypes> _typesArea = new();
-    private Dictionary<AreaTypes, int> _area = new();
+    private AreaAbstract queueArea;
     private Vector3Int _lastSpawnPosition;
     private float _time;
-    private bool isSpawn;
-    private AreaAbstract queueArea;
-
 
     private void Start()
     {
         foreach (var area in FindObjectsOfType<AreaAbstract>()) { _areaAbstracts.Add(area); }
         _lastSpawnPosition = Vector3Int.RoundToInt(transform.position);
-        _area.Add(AreaTypes.Simple, 0);
-        _area.Add(AreaTypes.Train, 1);
-        _area.Add(AreaTypes.MeteorFall, 2);
-        _area.Add(AreaTypes.Traffic, 3);
-        _typesArea.Add(0, AreaTypes.MeteorFall);
-        _typesArea.Add(1, AreaTypes.Simple);
-        _typesArea.Add(2, AreaTypes.Train);
-        _typesArea.Add(3, AreaTypes.Traffic);
         queueArea = areaArray[Random.Range(0, 10)];
     }
     private void Timer()
     {
         _time += Time.deltaTime;
-        if (_time >= checkInterval)
-        {
+        if (_time >= checkInterval) {
             ReturnToPool();
             _time = 0f;
         }
     }
-
     private void Update()
     {
         Timer();
@@ -54,10 +40,9 @@ public class Pooler : MonoBehaviour
         {
             _lastSpawnPosition.z = currentZPosition.z;
             SpawnArea(currentZPosition);
-            pathFinding.FindTiles(); //обновляем данные для поиска
+            pathFinding.FindTiles(); //обновляем данные для поиска пути :)
         }
     }
-
     private void SpawnArea(Vector3Int areaPosition)
     {
         AreaAbstract beforeArea = queueArea;
@@ -68,7 +53,6 @@ public class Pooler : MonoBehaviour
         queueArea = GetQueueArea();
         SetSpawnInterval(beforeArea);
     }
-
     private AreaAbstract GetQueueArea()
     {
         int indexToSpawn = new();
@@ -83,7 +67,6 @@ public class Pooler : MonoBehaviour
         }
         return AreaToSpawn(indexToSpawn);
     }
-
     private AreaAbstract GetAreaFromPool(int index)
     {
         foreach (AreaAbstract area in _areaAbstracts) {
@@ -92,7 +75,6 @@ public class Pooler : MonoBehaviour
         }
         return null;
     }
-
     private AreaAbstract AreaToSpawn(int index)
     {
         AreaAbstract area = Instantiate(areaArray[index]);
@@ -100,7 +82,6 @@ public class Pooler : MonoBehaviour
         area.EnableArea(false);
         return area;
     }
-
     private void ReturnToPool()
     {
         foreach (var area in _areaAbstracts) {
@@ -108,7 +89,6 @@ public class Pooler : MonoBehaviour
                 area.EnableArea(false);
         }
     }
-
     private int GetIndex()
     {
         float totalChance = Random.Range(0, queueArea.Areas.Sum(area => area.Chance));

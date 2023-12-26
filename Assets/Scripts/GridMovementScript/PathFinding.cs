@@ -11,8 +11,7 @@ public class PathFinding : MonoBehaviour
     public Dictionary<Vector3Int, Tile> _tiles = new();
     public List<Tile> tiles = new();
 
-    private void Awake()
-    {
+    private void Awake() {
         if (Instance == null) {
             Instance = this;
             return;
@@ -20,11 +19,9 @@ public class PathFinding : MonoBehaviour
         Destroy(gameObject);
         FindTiles();
     }
-    public void FindTiles()
-    {
+    public void FindTiles() {
         setValues.Set();
-        foreach (var tile in FindObjectsOfType<Tile>())
-        {
+        foreach (var tile in FindObjectsOfType<Tile>()) {
             if (!_tiles.ContainsValue(tile)) {
                 Vector3Int pos = Vector3Int.RoundToInt(tile.transform.position);
                 _tiles.Add(pos, tile);
@@ -32,8 +29,7 @@ public class PathFinding : MonoBehaviour
             }
         }
     }
-    public Surface[] GetPath(Surface a, Surface b)
-    {
+    public Surface[] GetPath(Surface a, Surface b) {
         List<Vector3Int> queue = new();
         Dictionary<Vector3Int, TileInfo> visited = new();
         int step = 0;
@@ -63,7 +59,6 @@ public class PathFinding : MonoBehaviour
                 if (_tiles.TryGetValue(t + direction, out var tile)) {
                     if (!visitedTiles.ContainsKey(tile.Pos) && !queueTiles.Contains(tile.Pos) && !tile.Barrier) {
                         queueTiles.Add(tile.Pos);
-                        tile.visited = true;
                         SetValue(tile.tileSurfaces, startSurface);
                     }
                 }
@@ -146,10 +141,8 @@ public class PathFinding : MonoBehaviour
                 surface.gameObject.SetActive(!CheckTileSurface(surface));
         }
     }
-    private bool CheckTileSurface(Surface surface)
-    {
-        Vector3Int dir = surface.Dir;
-        if (_tiles.TryGetValue(surface.tile.Pos + dir, out var t)) return t;
+    private bool CheckTileSurface(Surface surface) {
+        if (_tiles.TryGetValue(surface.tile.Pos + surface.Dir, out var t)) return t;
         return false;
     }
     private Surface SelectSurfacesTile(Tile tile, Surface currentSurface)
@@ -173,7 +166,6 @@ public class PathFinding : MonoBehaviour
             if (tile.Pos.x == currentSurface.tile.Pos.x)
                 type = currentSurface.tile.Pos.y < tile.Pos.y ? SurfaceType.Down : SurfaceType.Up;
         }
-        
         return GetSurface(tile, type);
     }
     private Vector3Int[] SelectDirection(Surface currentSurface)
@@ -186,8 +178,7 @@ public class PathFinding : MonoBehaviour
             return dir.dirDepth;
         return null;
     }
-    private class TileInfo
-    {
+    private class TileInfo {
         public int Step { get; }
         public TileInfo(int step) {
             Step = step;

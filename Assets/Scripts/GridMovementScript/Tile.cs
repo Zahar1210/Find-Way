@@ -14,12 +14,9 @@ public class Tile : MonoBehaviour
     public Dictionary<SurfaceType, Surface> surfaces = new();
     public List<Surface> tileSurfaces = new();
     public bool Barrier;
-    public Renderer renderer;
-    public bool visited;
     
     private void Start() {
         SetValue();
-        renderer = GetComponent<Renderer>();
     }
     public void SetValue() {
         Pos = Vector3Int.RoundToInt(transform.position);

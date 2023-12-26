@@ -5,7 +5,6 @@ using UnityEngine;
 public class Directions : MonoBehaviour
 {
     public Dictionary<SurfaceType, Vector3Int> DirRay = new();
-
     private void Start() {
         DirRay.Add(SurfaceType.Right, Vector3Int.left);
         DirRay.Add(SurfaceType.Left, Vector3Int.right);
@@ -14,7 +13,6 @@ public class Directions : MonoBehaviour
         DirRay.Add(SurfaceType.Front, Vector3Int.back);
         DirRay.Add(SurfaceType.Back, Vector3Int.forward);
     }
-
     public Vector3Int[] dirHorizontal = {
         Vector3Int.forward, Vector3Int.back, Vector3Int.up, Vector3Int.down, 
     };

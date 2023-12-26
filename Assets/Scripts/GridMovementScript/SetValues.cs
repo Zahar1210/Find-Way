@@ -12,7 +12,6 @@ public class SetValues : MonoBehaviour
             }
         }
     }
-
     private void SetTileDictionary(Tile tile)
     {
         tile.surfaces.Add(SurfaceType.Right, tile.surfaceRight);
@@ -22,7 +21,6 @@ public class SetValues : MonoBehaviour
         tile.surfaces.Add(SurfaceType.Front, tile.surfaceFront);
         tile.surfaces.Add(SurfaceType.Back, tile.surfaceBack);
     }
-
     private void FindAndAddChildrenToList(Tile tile)
     {
         foreach (Transform child in tile.transform)
@@ -35,7 +33,6 @@ public class SetValues : MonoBehaviour
             }
         }
     }
-
     private void GetSurfaceType(Surface sur)
     {
         Vector3 pos = sur.transform.localPosition;

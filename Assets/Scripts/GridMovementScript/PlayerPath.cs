@@ -28,7 +28,6 @@ public class PlayerPath : MonoBehaviour
                 MakePath(pathFinder.GetPath(currentSurface, targetSurface));
         }
     }
-    
     private void MakePath(Surface[] path)
     {
         playerMove.index = 0;

@@ -8,8 +8,9 @@ public class SlowdownArea : AreaAbstract
         _pathFinding = PathFinding.Instance;
         foreach (Transform child in transform) {
             Tile tile = child.GetComponent<Tile>();
-            if (tile)
+            if (tile) {
                 Tiles.Add(tile);
+            }
         }
     }
     public override void Action()
