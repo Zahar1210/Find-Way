@@ -268,20 +268,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f57bf89819c45b2a7567c6069c6d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 3
+  Index: 19
   AreaLength: 5
   Chance: 36
   Type: 0
   Areas:
-  - {fileID: 7211770072484490167, guid: 4d78d744ce4194970aa3e3b2c318470f, type: 3}
-  - {fileID: 3427113599266054152, guid: 71d0dfdad54fd43f88373dc0fe3b98c8, type: 3}
-  - {fileID: 3583510309609587395, guid: 53b73d3e63c234c528cbb6f2a3751ee1, type: 3}
-  - {fileID: 546622776627699809, guid: 0edadb511ba2440b7b0cc02bf46affcf, type: 3}
-  - {fileID: 7050292149792642161, guid: 81846508a7d8d4bbc9512a42a72824b5, type: 3}
-  - {fileID: 569517908044317728, guid: f65a1f5166f2841f983b54ac13bcf571, type: 3}
-  - {fileID: 5145049181052253541, guid: eaf359f77463b48e8baf1c463e82d881, type: 3}
-  - {fileID: 1702722894791504170, guid: f38909d253b4c46899c5a61604fbfc2a, type: 3}
-  - {fileID: 1808945840341270423, guid: a3e5f4a27dcee4545848158ed21be805, type: 3}
+  - {fileID: 7211770072484490167, guid: 97b140c02d68f4748a0b217822b49d26, type: 3}
+  - {fileID: 3583510309609587395, guid: e774522154f5549758cc618d2c5f23d0, type: 3}
+  - {fileID: 3427113599266054152, guid: 1745c79eace784defa082f9548ae17be, type: 3}
+  - {fileID: 546622776627699809, guid: bf5ea993b949c42328a67dcc7fd6f58b, type: 3}
+  - {fileID: 7050292149792642161, guid: 8f2fd7242ff7945979aee831d5869b34, type: 3}
+  - {fileID: 569517908044317728, guid: 32ff992c674ea45a594e93c1c6e6ce9a, type: 3}
+  - {fileID: 5145049181052253541, guid: 14acfe1f6a8af425eb2c95e0226d1d8d, type: 3}
+  - {fileID: 1702722894791504170, guid: 99f3552eddf904f358a2e18be685c189, type: 3}
+  - {fileID: 1808945840341270423, guid: d1715839b39584046916d7292409fe7b, type: 3}
   Tiles: []
 --- !u!1001 &7947802666401900
 PrefabInstance:
