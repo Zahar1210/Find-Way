@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class Pooler : MonoBehaviour
+public class AreaPooler : MonoBehaviour
 {
     [SerializeField] private float spawnInterval;
     [SerializeField] private float checkInterval;
