@@ -17,7 +17,6 @@ public class Pooler : MonoBehaviour
     private AreaAbstract queueArea;
     private Vector3Int _lastSpawnPosition;
     private float _time;
-
     private void Start()
     {
         foreach (var area in FindObjectsOfType<AreaAbstract>()) { _areaAbstracts.Add(area); }

@@ -113,7 +113,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &13639840068003129
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,7 +226,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &52351630281561131
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,7 +339,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &92259413481531022
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +452,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &101734184739744471
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,7 +565,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &186976419614669806
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,7 +678,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &200740186390818492
 GameObject:
   m_ObjectHideFlags: 0
@@ -797,7 +791,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &224876771750607444
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,8 +916,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &236437846635742267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,8 +1041,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &244603826694438630
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,7 +1154,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &271925927636731000
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,8 +1279,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &290876931015986642
 GameObject:
   m_ObjectHideFlags: 0
@@ -1406,7 +1392,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &306664382651591791
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,7 +1505,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &319671672240869290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,8 +1630,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &394058857452319745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1761,7 +1743,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &429404174650843722
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,8 +1868,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 1
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &448390552409469464
 GameObject:
   m_ObjectHideFlags: 0
@@ -2002,7 +1981,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &459123158709635829
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,7 +2094,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &474381084091207970
 GameObject:
   m_ObjectHideFlags: 0
@@ -2230,7 +2207,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &510107927346675144
 GameObject:
   m_ObjectHideFlags: 0
@@ -2344,7 +2320,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &514784913576692665
 GameObject:
   m_ObjectHideFlags: 0
@@ -2458,7 +2433,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &583798974993967236
 GameObject:
   m_ObjectHideFlags: 0
@@ -2584,8 +2558,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &584251072819976718
 GameObject:
   m_ObjectHideFlags: 0
@@ -2699,7 +2671,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &638251837923376611
 GameObject:
   m_ObjectHideFlags: 0
@@ -2825,8 +2796,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &689534109815792779
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,7 +2909,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &691132298448647889
 GameObject:
   m_ObjectHideFlags: 0
@@ -3054,7 +3022,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &706928648271944322
 GameObject:
   m_ObjectHideFlags: 0
@@ -3168,7 +3135,6 @@ MonoBehaviour:
   barrier: 1
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &722477866847137768
 GameObject:
   m_ObjectHideFlags: 0
@@ -3282,7 +3248,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &779494588522294372
 GameObject:
   m_ObjectHideFlags: 0
@@ -3396,7 +3361,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &789794751226877967
 GameObject:
   m_ObjectHideFlags: 0
@@ -3510,7 +3474,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &790218578638684660
 GameObject:
   m_ObjectHideFlags: 0
@@ -3624,7 +3587,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &824487527841468443
 GameObject:
   m_ObjectHideFlags: 0
@@ -3738,7 +3700,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &841669324058898556
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,7 +3813,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &842319527747520615
 GameObject:
   m_ObjectHideFlags: 0
@@ -3966,7 +3926,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &862480885543495841
 GameObject:
   m_ObjectHideFlags: 0
@@ -4080,7 +4039,6 @@ MonoBehaviour:
   barrier: 1
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &868427004606089370
 GameObject:
   m_ObjectHideFlags: 0
@@ -4206,8 +4164,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &872426041992901859
 GameObject:
   m_ObjectHideFlags: 0
@@ -4321,7 +4277,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &898856002427029473
 GameObject:
   m_ObjectHideFlags: 0
@@ -4435,7 +4390,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &924190869709455104
 GameObject:
   m_ObjectHideFlags: 0
@@ -4549,7 +4503,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1007041413967125042
 GameObject:
   m_ObjectHideFlags: 0
@@ -4663,7 +4616,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1013448371232451927
 GameObject:
   m_ObjectHideFlags: 0
@@ -4777,7 +4729,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1016816415237470081
 GameObject:
   m_ObjectHideFlags: 0
@@ -4891,7 +4842,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1019636333809489015
 GameObject:
   m_ObjectHideFlags: 0
@@ -5005,7 +4955,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1025237119239418124
 GameObject:
   m_ObjectHideFlags: 0
@@ -5119,7 +5068,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1074628976432788943
 GameObject:
   m_ObjectHideFlags: 0
@@ -5233,7 +5181,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1090066419365451938
 GameObject:
   m_ObjectHideFlags: 0
@@ -5347,7 +5294,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1106053726975480497
 GameObject:
   m_ObjectHideFlags: 0
@@ -5461,7 +5407,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1129175085349010805
 GameObject:
   m_ObjectHideFlags: 0
@@ -5575,7 +5520,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1134479067217561945
 GameObject:
   m_ObjectHideFlags: 0
@@ -5701,8 +5645,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &1172164668890227893
 GameObject:
   m_ObjectHideFlags: 0
@@ -5816,7 +5758,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1206237266074218881
 GameObject:
   m_ObjectHideFlags: 0
@@ -5930,7 +5871,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1259756957981148047
 GameObject:
   m_ObjectHideFlags: 0
@@ -6044,7 +5984,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1274944895587550510
 GameObject:
   m_ObjectHideFlags: 0
@@ -6158,7 +6097,6 @@ MonoBehaviour:
   barrier: 1
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1317492528491088414
 GameObject:
   m_ObjectHideFlags: 0
@@ -6272,7 +6210,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1322672900482371860
 GameObject:
   m_ObjectHideFlags: 0
@@ -6386,7 +6323,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1332634313030044823
 GameObject:
   m_ObjectHideFlags: 0
@@ -6500,7 +6436,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1338187804240584988
 GameObject:
   m_ObjectHideFlags: 0
@@ -6614,7 +6549,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1346088588449338500
 GameObject:
   m_ObjectHideFlags: 0
@@ -6740,8 +6674,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 1
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &1407835960299059201
 GameObject:
   m_ObjectHideFlags: 0
@@ -6855,7 +6787,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1408352798872191075
 GameObject:
   m_ObjectHideFlags: 0
@@ -6969,7 +6900,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1419386331945219354
 GameObject:
   m_ObjectHideFlags: 0
@@ -7083,7 +7013,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1421459158973234558
 GameObject:
   m_ObjectHideFlags: 0
@@ -7197,7 +7126,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1427757813369949153
 GameObject:
   m_ObjectHideFlags: 0
@@ -7311,7 +7239,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1462030915788207312
 GameObject:
   m_ObjectHideFlags: 0
@@ -7425,7 +7352,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1466286853283683718
 GameObject:
   m_ObjectHideFlags: 0
@@ -7539,7 +7465,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1508600143600377084
 GameObject:
   m_ObjectHideFlags: 0
@@ -7665,8 +7590,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &1541026600229976604
 GameObject:
   m_ObjectHideFlags: 0
@@ -7780,7 +7703,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1547499515722698986
 GameObject:
   m_ObjectHideFlags: 0
@@ -7894,7 +7816,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1555310981921883092
 GameObject:
   m_ObjectHideFlags: 0
@@ -8008,7 +7929,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1557969071463110211
 GameObject:
   m_ObjectHideFlags: 0
@@ -8134,8 +8054,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &1587762538854419523
 GameObject:
   m_ObjectHideFlags: 0
@@ -8249,7 +8167,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1601623316643119173
 GameObject:
   m_ObjectHideFlags: 0
@@ -8363,7 +8280,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1635856510347187004
 GameObject:
   m_ObjectHideFlags: 0
@@ -8477,7 +8393,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1636803064317600601
 GameObject:
   m_ObjectHideFlags: 0
@@ -8591,7 +8506,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1669563213635898822
 GameObject:
   m_ObjectHideFlags: 0
@@ -8705,7 +8619,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1677937183542124082
 GameObject:
   m_ObjectHideFlags: 0
@@ -8819,7 +8732,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1685422262213530138
 GameObject:
   m_ObjectHideFlags: 0
@@ -8933,7 +8845,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1702571861207275975
 GameObject:
   m_ObjectHideFlags: 0
@@ -9047,7 +8958,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1710455776474428323
 GameObject:
   m_ObjectHideFlags: 0
@@ -9161,7 +9071,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1718885774719751429
 GameObject:
   m_ObjectHideFlags: 0
@@ -9275,7 +9184,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1812689107083788958
 GameObject:
   m_ObjectHideFlags: 0
@@ -9389,7 +9297,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1852901573300528816
 GameObject:
   m_ObjectHideFlags: 0
@@ -9503,7 +9410,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1881570001790098628
 GameObject:
   m_ObjectHideFlags: 0
@@ -9629,8 +9535,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &1892139509971089878
 GameObject:
   m_ObjectHideFlags: 0
@@ -9839,8 +9743,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &1930181450950175102
 GameObject:
   m_ObjectHideFlags: 0
@@ -9954,7 +9856,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1967693072447749911
 GameObject:
   m_ObjectHideFlags: 0
@@ -10080,8 +9981,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &1972647870206380780
 GameObject:
   m_ObjectHideFlags: 0
@@ -10195,7 +10094,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1984173993786285482
 GameObject:
   m_ObjectHideFlags: 0
@@ -10321,8 +10219,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &1984359017072706707
 GameObject:
   m_ObjectHideFlags: 0
@@ -10519,7 +10415,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &1997009670561929602
 GameObject:
   m_ObjectHideFlags: 0
@@ -10633,7 +10528,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2126700369088046905
 GameObject:
   m_ObjectHideFlags: 0
@@ -10797,7 +10691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52f57bf89819c45b2a7567c6069c6d6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 14
+  Index: 13
   AreaLength: 5
   Chance: 34
   Type: 1
@@ -10924,7 +10818,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2142621632568701150
 GameObject:
   m_ObjectHideFlags: 0
@@ -11038,7 +10931,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2161062873733552623
 GameObject:
   m_ObjectHideFlags: 0
@@ -11152,7 +11044,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2210393651992752388
 GameObject:
   m_ObjectHideFlags: 0
@@ -11266,7 +11157,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2235777023218966647
 GameObject:
   m_ObjectHideFlags: 0
@@ -11380,7 +11270,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2263397823029565899
 GameObject:
   m_ObjectHideFlags: 0
@@ -11494,7 +11383,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2280480728076717679
 GameObject:
   m_ObjectHideFlags: 0
@@ -11608,7 +11496,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2292728101607113712
 GameObject:
   m_ObjectHideFlags: 0
@@ -11722,7 +11609,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2295665273237353938
 GameObject:
   m_ObjectHideFlags: 0
@@ -11836,7 +11722,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2320173556690707201
 GameObject:
   m_ObjectHideFlags: 0
@@ -11962,8 +11847,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &2331725696069190977
 GameObject:
   m_ObjectHideFlags: 0
@@ -12089,8 +11972,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &2382098665764744784
 GameObject:
   m_ObjectHideFlags: 0
@@ -12216,8 +12097,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &2386981864881170148
 GameObject:
   m_ObjectHideFlags: 0
@@ -12343,8 +12222,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &2388563535889028399
 GameObject:
   m_ObjectHideFlags: 0
@@ -12458,7 +12335,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2417363622336739617
 GameObject:
   m_ObjectHideFlags: 0
@@ -12572,7 +12448,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2426996410846778167
 GameObject:
   m_ObjectHideFlags: 0
@@ -12686,7 +12561,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2437140112742755961
 GameObject:
   m_ObjectHideFlags: 0
@@ -12800,7 +12674,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2441756748586657734
 GameObject:
   m_ObjectHideFlags: 0
@@ -12914,7 +12787,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2457478448435672077
 GameObject:
   m_ObjectHideFlags: 0
@@ -13028,7 +12900,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2492780323968166314
 GameObject:
   m_ObjectHideFlags: 0
@@ -13154,8 +13025,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &2518848407197444187
 GameObject:
   m_ObjectHideFlags: 0
@@ -13269,7 +13138,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2526364770654926789
 GameObject:
   m_ObjectHideFlags: 0
@@ -13383,7 +13251,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2536380682589600701
 GameObject:
   m_ObjectHideFlags: 0
@@ -13497,7 +13364,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2595070226892835357
 GameObject:
   m_ObjectHideFlags: 0
@@ -13611,7 +13477,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2603328432153379046
 GameObject:
   m_ObjectHideFlags: 0
@@ -13725,7 +13590,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2688691540096602913
 GameObject:
   m_ObjectHideFlags: 0
@@ -13839,7 +13703,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285119994615
 GameObject:
   m_ObjectHideFlags: 0
@@ -13953,7 +13816,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285138832872
 GameObject:
   m_ObjectHideFlags: 0
@@ -14067,7 +13929,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285144102861
 GameObject:
   m_ObjectHideFlags: 0
@@ -14181,7 +14042,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285151456313
 GameObject:
   m_ObjectHideFlags: 0
@@ -14295,7 +14155,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285166751839
 GameObject:
   m_ObjectHideFlags: 0
@@ -14409,7 +14268,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285167012145
 GameObject:
   m_ObjectHideFlags: 0
@@ -14523,7 +14381,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285183348130
 GameObject:
   m_ObjectHideFlags: 0
@@ -14637,7 +14494,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285187135481
 GameObject:
   m_ObjectHideFlags: 0
@@ -14751,7 +14607,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285187526295
 GameObject:
   m_ObjectHideFlags: 0
@@ -14865,7 +14720,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285203859972
 GameObject:
   m_ObjectHideFlags: 0
@@ -14979,7 +14833,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285229207167
 GameObject:
   m_ObjectHideFlags: 0
@@ -15093,7 +14946,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285230286159
 GameObject:
   m_ObjectHideFlags: 0
@@ -15207,7 +15059,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285253107586
 GameObject:
   m_ObjectHideFlags: 0
@@ -15321,7 +15172,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285262972736
 GameObject:
   m_ObjectHideFlags: 0
@@ -15435,7 +15285,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285267615533
 GameObject:
   m_ObjectHideFlags: 0
@@ -15549,7 +15398,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285272545684
 GameObject:
   m_ObjectHideFlags: 0
@@ -15663,7 +15511,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285308049724
 GameObject:
   m_ObjectHideFlags: 0
@@ -15777,7 +15624,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285318473226
 GameObject:
   m_ObjectHideFlags: 0
@@ -15891,7 +15737,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285330841028
 GameObject:
   m_ObjectHideFlags: 0
@@ -16005,7 +15850,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285337936300
 GameObject:
   m_ObjectHideFlags: 0
@@ -16119,7 +15963,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285355235467
 GameObject:
   m_ObjectHideFlags: 0
@@ -16233,7 +16076,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285376653995
 GameObject:
   m_ObjectHideFlags: 0
@@ -16347,7 +16189,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285378911794
 GameObject:
   m_ObjectHideFlags: 0
@@ -16461,7 +16302,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285392818982
 GameObject:
   m_ObjectHideFlags: 0
@@ -16575,7 +16415,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285405554964
 GameObject:
   m_ObjectHideFlags: 0
@@ -16689,7 +16528,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285417470087
 GameObject:
   m_ObjectHideFlags: 0
@@ -16803,7 +16641,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285423970720
 GameObject:
   m_ObjectHideFlags: 0
@@ -16917,7 +16754,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285429109637
 GameObject:
   m_ObjectHideFlags: 0
@@ -17031,7 +16867,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285452240026
 GameObject:
   m_ObjectHideFlags: 0
@@ -17145,7 +16980,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285476068130
 GameObject:
   m_ObjectHideFlags: 0
@@ -17259,7 +17093,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285507190561
 GameObject:
   m_ObjectHideFlags: 0
@@ -17373,7 +17206,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285513135894
 GameObject:
   m_ObjectHideFlags: 0
@@ -17487,7 +17319,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285519392434
 GameObject:
   m_ObjectHideFlags: 0
@@ -17601,7 +17432,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285528426321
 GameObject:
   m_ObjectHideFlags: 0
@@ -17715,7 +17545,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285540658697
 GameObject:
   m_ObjectHideFlags: 0
@@ -17829,7 +17658,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285561716893
 GameObject:
   m_ObjectHideFlags: 0
@@ -17943,7 +17771,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285577697581
 GameObject:
   m_ObjectHideFlags: 0
@@ -18057,7 +17884,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285581622243
 GameObject:
   m_ObjectHideFlags: 0
@@ -18171,7 +17997,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285598266566
 GameObject:
   m_ObjectHideFlags: 0
@@ -18285,7 +18110,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285611441221
 GameObject:
   m_ObjectHideFlags: 0
@@ -18399,7 +18223,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285612811437
 GameObject:
   m_ObjectHideFlags: 0
@@ -18513,7 +18336,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285652396463
 GameObject:
   m_ObjectHideFlags: 0
@@ -18627,7 +18449,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285655225577
 GameObject:
   m_ObjectHideFlags: 0
@@ -18741,7 +18562,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285655551367
 GameObject:
   m_ObjectHideFlags: 0
@@ -18855,7 +18675,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285669863905
 GameObject:
   m_ObjectHideFlags: 0
@@ -18969,7 +18788,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285700519915
 GameObject:
   m_ObjectHideFlags: 0
@@ -19083,7 +18901,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285705087081
 GameObject:
   m_ObjectHideFlags: 0
@@ -19197,7 +19014,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285721043143
 GameObject:
   m_ObjectHideFlags: 0
@@ -19311,7 +19127,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285758404167
 GameObject:
   m_ObjectHideFlags: 0
@@ -19425,7 +19240,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285768980200
 GameObject:
   m_ObjectHideFlags: 0
@@ -19539,7 +19353,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285778858065
 GameObject:
   m_ObjectHideFlags: 0
@@ -19653,7 +19466,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285785167836
 GameObject:
   m_ObjectHideFlags: 0
@@ -19767,7 +19579,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285797124026
 GameObject:
   m_ObjectHideFlags: 0
@@ -19881,7 +19692,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285806738386
 GameObject:
   m_ObjectHideFlags: 0
@@ -19995,7 +19805,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285822027602
 GameObject:
   m_ObjectHideFlags: 0
@@ -20109,7 +19918,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285822197308
 GameObject:
   m_ObjectHideFlags: 0
@@ -20223,7 +20031,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285823586857
 GameObject:
   m_ObjectHideFlags: 0
@@ -20337,7 +20144,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285868672339
 GameObject:
   m_ObjectHideFlags: 0
@@ -20451,7 +20257,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285880517610
 GameObject:
   m_ObjectHideFlags: 0
@@ -20565,7 +20370,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285886825575
 GameObject:
   m_ObjectHideFlags: 0
@@ -20679,7 +20483,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285895098396
 GameObject:
   m_ObjectHideFlags: 0
@@ -20793,7 +20596,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285895432730
 GameObject:
   m_ObjectHideFlags: 0
@@ -20907,7 +20709,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285924834986
 GameObject:
   m_ObjectHideFlags: 0
@@ -21021,7 +20822,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285941262726
 GameObject:
   m_ObjectHideFlags: 0
@@ -21135,7 +20935,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659285986059468
 GameObject:
   m_ObjectHideFlags: 0
@@ -21249,7 +21048,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286015058470
 GameObject:
   m_ObjectHideFlags: 0
@@ -21363,7 +21161,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286020870905
 GameObject:
   m_ObjectHideFlags: 0
@@ -21477,7 +21274,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286041204684
 GameObject:
   m_ObjectHideFlags: 0
@@ -21591,7 +21387,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286067006789
 GameObject:
   m_ObjectHideFlags: 0
@@ -21705,7 +21500,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286085512915
 GameObject:
   m_ObjectHideFlags: 0
@@ -21819,7 +21613,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286086630468
 GameObject:
   m_ObjectHideFlags: 0
@@ -21933,7 +21726,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286087833463
 GameObject:
   m_ObjectHideFlags: 0
@@ -22047,7 +21839,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286140888183
 GameObject:
   m_ObjectHideFlags: 0
@@ -22161,7 +21952,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286153229431
 GameObject:
   m_ObjectHideFlags: 0
@@ -22275,7 +22065,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286161836771
 GameObject:
   m_ObjectHideFlags: 0
@@ -22389,7 +22178,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286181521781
 GameObject:
   m_ObjectHideFlags: 0
@@ -22503,7 +22291,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286183809437
 GameObject:
   m_ObjectHideFlags: 0
@@ -22617,7 +22404,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286187532610
 GameObject:
   m_ObjectHideFlags: 0
@@ -22731,7 +22517,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286193996065
 GameObject:
   m_ObjectHideFlags: 0
@@ -22845,7 +22630,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286212653393
 GameObject:
   m_ObjectHideFlags: 0
@@ -22959,7 +22743,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286212834878
 GameObject:
   m_ObjectHideFlags: 0
@@ -23073,7 +22856,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286239954844
 GameObject:
   m_ObjectHideFlags: 0
@@ -23187,7 +22969,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286253287069
 GameObject:
   m_ObjectHideFlags: 0
@@ -23301,7 +23082,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286261514298
 GameObject:
   m_ObjectHideFlags: 0
@@ -23415,7 +23195,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286262502061
 GameObject:
   m_ObjectHideFlags: 0
@@ -23529,7 +23308,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286303208873
 GameObject:
   m_ObjectHideFlags: 0
@@ -23643,7 +23421,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286303768217
 GameObject:
   m_ObjectHideFlags: 0
@@ -23757,7 +23534,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286327108692
 GameObject:
   m_ObjectHideFlags: 0
@@ -23871,7 +23647,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286362763930
 GameObject:
   m_ObjectHideFlags: 0
@@ -23985,7 +23760,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286376584562
 GameObject:
   m_ObjectHideFlags: 0
@@ -24099,7 +23873,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286381527786
 GameObject:
   m_ObjectHideFlags: 0
@@ -24213,7 +23986,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286381708677
 GameObject:
   m_ObjectHideFlags: 0
@@ -24327,7 +24099,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286403435810
 GameObject:
   m_ObjectHideFlags: 0
@@ -24441,7 +24212,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286423179988
 GameObject:
   m_ObjectHideFlags: 0
@@ -24555,7 +24325,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286466300144
 GameObject:
   m_ObjectHideFlags: 0
@@ -24669,7 +24438,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286482825536
 GameObject:
   m_ObjectHideFlags: 0
@@ -24783,7 +24551,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286497448566
 GameObject:
   m_ObjectHideFlags: 0
@@ -24897,7 +24664,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286519559780
 GameObject:
   m_ObjectHideFlags: 0
@@ -25011,7 +24777,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286548328898
 GameObject:
   m_ObjectHideFlags: 0
@@ -25125,7 +24890,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286550760388
 GameObject:
   m_ObjectHideFlags: 0
@@ -25239,7 +25003,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286572588203
 GameObject:
   m_ObjectHideFlags: 0
@@ -25353,7 +25116,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286587141312
 GameObject:
   m_ObjectHideFlags: 0
@@ -25467,7 +25229,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286599098829
 GameObject:
   m_ObjectHideFlags: 0
@@ -25581,7 +25342,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286626065459
 GameObject:
   m_ObjectHideFlags: 0
@@ -25695,7 +25455,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286651699963
 GameObject:
   m_ObjectHideFlags: 0
@@ -25809,7 +25568,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286656719417
 GameObject:
   m_ObjectHideFlags: 0
@@ -25923,7 +25681,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286672273168
 GameObject:
   m_ObjectHideFlags: 0
@@ -26037,7 +25794,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286714735509
 GameObject:
   m_ObjectHideFlags: 0
@@ -26151,7 +25907,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286728718916
 GameObject:
   m_ObjectHideFlags: 0
@@ -26265,7 +26020,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286779089855
 GameObject:
   m_ObjectHideFlags: 0
@@ -26379,7 +26133,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286789508233
 GameObject:
   m_ObjectHideFlags: 0
@@ -26493,7 +26246,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286794525457
 GameObject:
   m_ObjectHideFlags: 0
@@ -26607,7 +26359,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286808142455
 GameObject:
   m_ObjectHideFlags: 0
@@ -26721,7 +26472,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286819457839
 GameObject:
   m_ObjectHideFlags: 0
@@ -26835,7 +26585,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286834419613
 GameObject:
   m_ObjectHideFlags: 0
@@ -26949,7 +26698,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286842985790
 GameObject:
   m_ObjectHideFlags: 0
@@ -27063,7 +26811,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286852340615
 GameObject:
   m_ObjectHideFlags: 0
@@ -27177,7 +26924,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286871947100
 GameObject:
   m_ObjectHideFlags: 0
@@ -27291,7 +27037,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286876442434
 GameObject:
   m_ObjectHideFlags: 0
@@ -27405,7 +27150,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286891182173
 GameObject:
   m_ObjectHideFlags: 0
@@ -27519,7 +27263,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286894209194
 GameObject:
   m_ObjectHideFlags: 0
@@ -27633,7 +27376,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286895674858
 GameObject:
   m_ObjectHideFlags: 0
@@ -27747,7 +27489,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286895862476
 GameObject:
   m_ObjectHideFlags: 0
@@ -27861,7 +27602,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286896032900
 GameObject:
   m_ObjectHideFlags: 0
@@ -27975,7 +27715,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286897592831
 GameObject:
   m_ObjectHideFlags: 0
@@ -28089,7 +27828,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286930281721
 GameObject:
   m_ObjectHideFlags: 0
@@ -28203,7 +27941,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286960308145
 GameObject:
   m_ObjectHideFlags: 0
@@ -28317,7 +28054,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286963013860
 GameObject:
   m_ObjectHideFlags: 0
@@ -28431,7 +28167,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286967955706
 GameObject:
   m_ObjectHideFlags: 0
@@ -28545,7 +28280,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659286986014715
 GameObject:
   m_ObjectHideFlags: 0
@@ -28659,7 +28393,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287010209234
 GameObject:
   m_ObjectHideFlags: 0
@@ -28773,7 +28506,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287014740560
 GameObject:
   m_ObjectHideFlags: 0
@@ -28887,7 +28619,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287038338773
 GameObject:
   m_ObjectHideFlags: 0
@@ -29001,7 +28732,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287055223960
 GameObject:
   m_ObjectHideFlags: 0
@@ -29115,7 +28845,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287069204851
 GameObject:
   m_ObjectHideFlags: 0
@@ -29229,7 +28958,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287075337706
 GameObject:
   m_ObjectHideFlags: 0
@@ -29343,7 +29071,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287080399699
 GameObject:
   m_ObjectHideFlags: 0
@@ -29457,7 +29184,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287086222142
 GameObject:
   m_ObjectHideFlags: 0
@@ -29571,7 +29297,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287089064432
 GameObject:
   m_ObjectHideFlags: 0
@@ -29685,7 +29410,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287115209754
 GameObject:
   m_ObjectHideFlags: 0
@@ -29799,7 +29523,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287124921370
 GameObject:
   m_ObjectHideFlags: 0
@@ -29913,7 +29636,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287161668329
 GameObject:
   m_ObjectHideFlags: 0
@@ -30027,7 +29749,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287161838753
 GameObject:
   m_ObjectHideFlags: 0
@@ -30141,7 +29862,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287161928583
 GameObject:
   m_ObjectHideFlags: 0
@@ -30255,7 +29975,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287175928853
 GameObject:
   m_ObjectHideFlags: 0
@@ -30369,7 +30088,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287181402603
 GameObject:
   m_ObjectHideFlags: 0
@@ -30483,7 +30201,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287204830131
 GameObject:
   m_ObjectHideFlags: 0
@@ -30597,7 +30314,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287226711969
 GameObject:
   m_ObjectHideFlags: 0
@@ -30711,7 +30427,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287231513052
 GameObject:
   m_ObjectHideFlags: 0
@@ -30825,7 +30540,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2699659287261538964
 GameObject:
   m_ObjectHideFlags: 0
@@ -30939,7 +30653,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2704968656663869983
 GameObject:
   m_ObjectHideFlags: 0
@@ -31053,7 +30766,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2716065726933634876
 GameObject:
   m_ObjectHideFlags: 0
@@ -31167,7 +30879,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2744247006289701776
 GameObject:
   m_ObjectHideFlags: 0
@@ -31281,7 +30992,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2746977272480036213
 GameObject:
   m_ObjectHideFlags: 0
@@ -31395,7 +31105,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2795370951898032860
 GameObject:
   m_ObjectHideFlags: 0
@@ -31509,7 +31218,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2822589568985342626
 GameObject:
   m_ObjectHideFlags: 0
@@ -31623,7 +31331,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2824018226737194641
 GameObject:
   m_ObjectHideFlags: 0
@@ -31737,7 +31444,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2829739183634659323
 GameObject:
   m_ObjectHideFlags: 0
@@ -31851,7 +31557,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2935616331034380627
 GameObject:
   m_ObjectHideFlags: 0
@@ -31977,8 +31682,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &2944205549752831970
 GameObject:
   m_ObjectHideFlags: 0
@@ -32092,7 +31795,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2983254494397236248
 GameObject:
   m_ObjectHideFlags: 0
@@ -32206,7 +31908,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &2991034683053537546
 GameObject:
   m_ObjectHideFlags: 0
@@ -32320,7 +32021,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3038837417202562292
 GameObject:
   m_ObjectHideFlags: 0
@@ -32434,7 +32134,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3050373111923666887
 GameObject:
   m_ObjectHideFlags: 0
@@ -32560,8 +32259,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373112037641207
 GameObject:
   m_ObjectHideFlags: 0
@@ -32687,8 +32384,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373112166885203
 GameObject:
   m_ObjectHideFlags: 0
@@ -32814,8 +32509,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373112210093742
 GameObject:
   m_ObjectHideFlags: 0
@@ -32941,8 +32634,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373112329562515
 GameObject:
   m_ObjectHideFlags: 0
@@ -33068,8 +32759,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373112431189926
 GameObject:
   m_ObjectHideFlags: 0
@@ -33195,8 +32884,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373112451735325
 GameObject:
   m_ObjectHideFlags: 0
@@ -33322,8 +33009,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373112492698359
 GameObject:
   m_ObjectHideFlags: 0
@@ -33449,8 +33134,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373112632376502
 GameObject:
   m_ObjectHideFlags: 0
@@ -33576,8 +33259,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373112668407533
 GameObject:
   m_ObjectHideFlags: 0
@@ -33703,8 +33384,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373112668700547
 GameObject:
   m_ObjectHideFlags: 0
@@ -33830,8 +33509,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373112725735552
 GameObject:
   m_ObjectHideFlags: 0
@@ -33957,8 +33634,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373112749936185
 GameObject:
   m_ObjectHideFlags: 0
@@ -34084,8 +33759,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373112786702520
 GameObject:
   m_ObjectHideFlags: 0
@@ -34211,8 +33884,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373112914503617
 GameObject:
   m_ObjectHideFlags: 0
@@ -34338,8 +34009,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373112927423018
 GameObject:
   m_ObjectHideFlags: 0
@@ -34465,8 +34134,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373113075686055
 GameObject:
   m_ObjectHideFlags: 0
@@ -34592,8 +34259,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373113194711611
 GameObject:
   m_ObjectHideFlags: 0
@@ -34719,8 +34384,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373113284720200
 GameObject:
   m_ObjectHideFlags: 0
@@ -34846,8 +34509,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373113360973551
 GameObject:
   m_ObjectHideFlags: 0
@@ -34973,8 +34634,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373113375689200
 GameObject:
   m_ObjectHideFlags: 0
@@ -35100,8 +34759,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373113435912048
 GameObject:
   m_ObjectHideFlags: 0
@@ -35227,8 +34884,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373113626598017
 GameObject:
   m_ObjectHideFlags: 0
@@ -35354,8 +35009,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373113743737134
 GameObject:
   m_ObjectHideFlags: 0
@@ -35481,8 +35134,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3050373113876075456
 GameObject:
   m_ObjectHideFlags: 0
@@ -35608,8 +35259,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3125866732487718333
 GameObject:
   m_ObjectHideFlags: 0
@@ -35723,7 +35372,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3164702843470484565
 GameObject:
   m_ObjectHideFlags: 0
@@ -35837,7 +35485,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3252650997195971907
 GameObject:
   m_ObjectHideFlags: 0
@@ -35951,7 +35598,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3282943660379390989
 GameObject:
   m_ObjectHideFlags: 0
@@ -36065,7 +35711,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3319939596497895147
 GameObject:
   m_ObjectHideFlags: 0
@@ -36179,7 +35824,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3346792976701834675
 GameObject:
   m_ObjectHideFlags: 0
@@ -36293,7 +35937,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3351807076158233221
 GameObject:
   m_ObjectHideFlags: 0
@@ -36407,7 +36050,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3385858964025519661
 GameObject:
   m_ObjectHideFlags: 0
@@ -36521,7 +36163,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3392464959810927092
 GameObject:
   m_ObjectHideFlags: 0
@@ -36635,7 +36276,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3414731661560392373
 GameObject:
   m_ObjectHideFlags: 0
@@ -36749,7 +36389,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3426766846277503912
 GameObject:
   m_ObjectHideFlags: 0
@@ -36875,8 +36514,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3466445533467382824
 GameObject:
   m_ObjectHideFlags: 0
@@ -36990,7 +36627,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3469543869745403212
 GameObject:
   m_ObjectHideFlags: 0
@@ -37104,7 +36740,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3494156566491589343
 GameObject:
   m_ObjectHideFlags: 0
@@ -37218,7 +36853,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3512973869775827301
 GameObject:
   m_ObjectHideFlags: 0
@@ -37332,7 +36966,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3518552346047503537
 GameObject:
   m_ObjectHideFlags: 0
@@ -37446,7 +37079,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3529830914344291279
 GameObject:
   m_ObjectHideFlags: 0
@@ -37560,7 +37192,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3538996740072032591
 GameObject:
   m_ObjectHideFlags: 0
@@ -37674,7 +37305,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3541286870511792367
 GameObject:
   m_ObjectHideFlags: 0
@@ -37788,7 +37418,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3553638593893480843
 GameObject:
   m_ObjectHideFlags: 0
@@ -37902,7 +37531,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3565115823770480410
 GameObject:
   m_ObjectHideFlags: 0
@@ -38016,7 +37644,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3595429218473941875
 GameObject:
   m_ObjectHideFlags: 0
@@ -38130,7 +37757,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3606012789236654506
 GameObject:
   m_ObjectHideFlags: 0
@@ -38244,7 +37870,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3644522906079934561
 GameObject:
   m_ObjectHideFlags: 0
@@ -38358,7 +37983,6 @@ MonoBehaviour:
   barrier: 1
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3647737942915122530
 GameObject:
   m_ObjectHideFlags: 0
@@ -38472,7 +38096,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3655042263361482710
 GameObject:
   m_ObjectHideFlags: 0
@@ -38586,7 +38209,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3710926448973064058
 GameObject:
   m_ObjectHideFlags: 0
@@ -38712,8 +38334,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3711711425183573247
 GameObject:
   m_ObjectHideFlags: 0
@@ -38827,7 +38447,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3712067440149319006
 GameObject:
   m_ObjectHideFlags: 0
@@ -38941,7 +38560,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3720074794521703825
 GameObject:
   m_ObjectHideFlags: 0
@@ -39055,7 +38673,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3733830517841302978
 GameObject:
   m_ObjectHideFlags: 0
@@ -39169,7 +38786,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3809645843270226915
 GameObject:
   m_ObjectHideFlags: 0
@@ -39283,7 +38899,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3821898659776714503
 GameObject:
   m_ObjectHideFlags: 0
@@ -39397,7 +39012,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3840480106249905401
 GameObject:
   m_ObjectHideFlags: 0
@@ -39511,7 +39125,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3843778620680939910
 GameObject:
   m_ObjectHideFlags: 0
@@ -39625,7 +39238,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575310972486437
 GameObject:
   m_ObjectHideFlags: 0
@@ -39739,7 +39351,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575311077399828
 GameObject:
   m_ObjectHideFlags: 0
@@ -39853,7 +39464,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575311095690400
 GameObject:
   m_ObjectHideFlags: 0
@@ -39967,7 +39577,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575311104188321
 GameObject:
   m_ObjectHideFlags: 0
@@ -40081,7 +39690,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575311117291556
 GameObject:
   m_ObjectHideFlags: 0
@@ -40207,8 +39815,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3919575311120907050
 GameObject:
   m_ObjectHideFlags: 0
@@ -40322,7 +39928,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575311218624061
 GameObject:
   m_ObjectHideFlags: 0
@@ -40436,7 +40041,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575311295018405
 GameObject:
   m_ObjectHideFlags: 0
@@ -40550,7 +40154,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575311378160476
 GameObject:
   m_ObjectHideFlags: 0
@@ -40664,7 +40267,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575311381489736
 GameObject:
   m_ObjectHideFlags: 0
@@ -40778,7 +40380,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575311405055616
 GameObject:
   m_ObjectHideFlags: 0
@@ -40892,7 +40493,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575311412010504
 GameObject:
   m_ObjectHideFlags: 0
@@ -41006,7 +40606,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575311429003702
 GameObject:
   m_ObjectHideFlags: 0
@@ -41120,7 +40719,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575311532778531
 GameObject:
   m_ObjectHideFlags: 0
@@ -41234,7 +40832,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575311682652165
 GameObject:
   m_ObjectHideFlags: 0
@@ -41348,7 +40945,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575311761498149
 GameObject:
   m_ObjectHideFlags: 0
@@ -41462,7 +41058,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575311772498817
 GameObject:
   m_ObjectHideFlags: 0
@@ -41576,7 +41171,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575311925252021
 GameObject:
   m_ObjectHideFlags: 0
@@ -41690,7 +41284,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575312025391036
 GameObject:
   m_ObjectHideFlags: 0
@@ -41804,7 +41397,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575312132666066
 GameObject:
   m_ObjectHideFlags: 0
@@ -41930,8 +41522,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3919575312245952817
 GameObject:
   m_ObjectHideFlags: 0
@@ -42045,7 +41635,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575312516485973
 GameObject:
   m_ObjectHideFlags: 0
@@ -42159,7 +41748,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575312582711735
 GameObject:
   m_ObjectHideFlags: 0
@@ -42285,8 +41873,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3919575312669867291
 GameObject:
   m_ObjectHideFlags: 0
@@ -42400,7 +41986,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575312690338762
 GameObject:
   m_ObjectHideFlags: 0
@@ -42526,8 +42111,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3919575312768388854
 GameObject:
   m_ObjectHideFlags: 0
@@ -42641,7 +42224,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575312781421124
 GameObject:
   m_ObjectHideFlags: 0
@@ -42755,7 +42337,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575312858934514
 GameObject:
   m_ObjectHideFlags: 0
@@ -42869,7 +42450,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575312881968626
 GameObject:
   m_ObjectHideFlags: 0
@@ -42983,7 +42563,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575312906011590
 GameObject:
   m_ObjectHideFlags: 0
@@ -43097,7 +42676,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575312909816257
 GameObject:
   m_ObjectHideFlags: 0
@@ -43223,8 +42801,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &3919575312987222253
 GameObject:
   m_ObjectHideFlags: 0
@@ -43338,7 +42914,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575313016755380
 GameObject:
   m_ObjectHideFlags: 0
@@ -43452,7 +43027,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575313024856087
 GameObject:
   m_ObjectHideFlags: 0
@@ -43566,7 +43140,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919575313045208528
 GameObject:
   m_ObjectHideFlags: 0
@@ -43680,7 +43253,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3919709972389803401
 GameObject:
   m_ObjectHideFlags: 0
@@ -43794,7 +43366,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &3971080915396629188
 GameObject:
   m_ObjectHideFlags: 0
@@ -43908,7 +43479,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4031946317058641712
 GameObject:
   m_ObjectHideFlags: 0
@@ -44034,8 +43604,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &4104608993107197302
 GameObject:
   m_ObjectHideFlags: 0
@@ -44149,7 +43717,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4178691232289563183
 GameObject:
   m_ObjectHideFlags: 0
@@ -44263,7 +43830,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4188660897437261246
 GameObject:
   m_ObjectHideFlags: 0
@@ -44377,7 +43943,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4231777847900850778
 GameObject:
   m_ObjectHideFlags: 0
@@ -44491,7 +44056,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4272866748483759070
 GameObject:
   m_ObjectHideFlags: 0
@@ -44617,8 +44181,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &4298797930871919479
 GameObject:
   m_ObjectHideFlags: 0
@@ -44732,7 +44294,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4303320693639049723
 GameObject:
   m_ObjectHideFlags: 0
@@ -44858,8 +44419,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 1
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &4303333301620635772
 GameObject:
   m_ObjectHideFlags: 0
@@ -44973,7 +44532,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4345382068504878285
 GameObject:
   m_ObjectHideFlags: 0
@@ -45087,7 +44645,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4464717563095316136
 GameObject:
   m_ObjectHideFlags: 0
@@ -45201,7 +44758,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4490020140693337317
 GameObject:
   m_ObjectHideFlags: 0
@@ -45315,7 +44871,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4517663296709020916
 GameObject:
   m_ObjectHideFlags: 0
@@ -45429,7 +44984,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4538464810184212980
 GameObject:
   m_ObjectHideFlags: 0
@@ -45543,7 +45097,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4564647611745498324
 GameObject:
   m_ObjectHideFlags: 0
@@ -45669,8 +45222,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &4593336529331839051
 GameObject:
   m_ObjectHideFlags: 0
@@ -45796,8 +45347,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 1
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &4715597978455250936
 GameObject:
   m_ObjectHideFlags: 0
@@ -45911,7 +45460,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4722297244776317451
 GameObject:
   m_ObjectHideFlags: 0
@@ -46025,7 +45573,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4748453248410912614
 GameObject:
   m_ObjectHideFlags: 0
@@ -46139,7 +45686,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4785169699029817002
 GameObject:
   m_ObjectHideFlags: 0
@@ -46253,7 +45799,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4813256553958064523
 GameObject:
   m_ObjectHideFlags: 0
@@ -46407,7 +45952,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4822050163987317304
 GameObject:
   m_ObjectHideFlags: 0
@@ -46521,7 +46065,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4880641845175232965
 GameObject:
   m_ObjectHideFlags: 0
@@ -46635,7 +46178,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4885380666884211596
 GameObject:
   m_ObjectHideFlags: 0
@@ -46749,7 +46291,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4910096183804138812
 GameObject:
   m_ObjectHideFlags: 0
@@ -46863,7 +46404,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4944211865726571597
 GameObject:
   m_ObjectHideFlags: 0
@@ -46977,7 +46517,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4945942896453059982
 GameObject:
   m_ObjectHideFlags: 0
@@ -47091,7 +46630,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &4977119148361672127
 GameObject:
   m_ObjectHideFlags: 0
@@ -47217,8 +46755,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &4996594649536067145
 GameObject:
   m_ObjectHideFlags: 0
@@ -47332,7 +46868,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5032120089285558524
 GameObject:
   m_ObjectHideFlags: 0
@@ -47446,7 +46981,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5044815605825226140
 GameObject:
   m_ObjectHideFlags: 0
@@ -47572,8 +47106,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5050707652406411239
 GameObject:
   m_ObjectHideFlags: 0
@@ -47687,7 +47219,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5053978072875822152
 GameObject:
   m_ObjectHideFlags: 0
@@ -47801,7 +47332,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5074412344846002770
 GameObject:
   m_ObjectHideFlags: 0
@@ -47915,7 +47445,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5084764676347242266
 GameObject:
   m_ObjectHideFlags: 0
@@ -48029,7 +47558,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5118654601445848955
 GameObject:
   m_ObjectHideFlags: 0
@@ -48143,7 +47671,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5148523302289920723
 GameObject:
   m_ObjectHideFlags: 0
@@ -48257,7 +47784,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5188725945969103873
 GameObject:
   m_ObjectHideFlags: 0
@@ -48371,7 +47897,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5205325702906595416
 GameObject:
   m_ObjectHideFlags: 0
@@ -48485,7 +48010,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5245158173746893621
 GameObject:
   m_ObjectHideFlags: 0
@@ -48599,7 +48123,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5245406159833973658
 GameObject:
   m_ObjectHideFlags: 0
@@ -48713,7 +48236,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5246078027418869750
 GameObject:
   m_ObjectHideFlags: 0
@@ -48827,7 +48349,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5282496307837737504
 GameObject:
   m_ObjectHideFlags: 0
@@ -48941,7 +48462,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5299772493923279136
 GameObject:
   m_ObjectHideFlags: 0
@@ -49055,7 +48575,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5302318057283061242
 GameObject:
   m_ObjectHideFlags: 0
@@ -49169,7 +48688,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5311933248107570688
 GameObject:
   m_ObjectHideFlags: 0
@@ -49283,7 +48801,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5313969896428924705
 GameObject:
   m_ObjectHideFlags: 0
@@ -49397,7 +48914,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732810442451
 GameObject:
   m_ObjectHideFlags: 0
@@ -49511,7 +49027,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732811095961
 GameObject:
   m_ObjectHideFlags: 0
@@ -49625,7 +49140,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732813107516
 GameObject:
   m_ObjectHideFlags: 0
@@ -49739,7 +49253,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732817392299
 GameObject:
   m_ObjectHideFlags: 0
@@ -49853,7 +49366,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732827195958
 GameObject:
   m_ObjectHideFlags: 0
@@ -49967,7 +49479,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732841154316
 GameObject:
   m_ObjectHideFlags: 0
@@ -50081,7 +49592,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732861258717
 GameObject:
   m_ObjectHideFlags: 0
@@ -50195,7 +49705,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732863059633
 GameObject:
   m_ObjectHideFlags: 0
@@ -50309,7 +49818,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732870238647
 GameObject:
   m_ObjectHideFlags: 0
@@ -50423,7 +49931,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732873918631
 GameObject:
   m_ObjectHideFlags: 0
@@ -50537,7 +50044,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732878400953
 GameObject:
   m_ObjectHideFlags: 0
@@ -50651,7 +50157,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732893134920
 GameObject:
   m_ObjectHideFlags: 0
@@ -50765,7 +50270,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732894060341
 GameObject:
   m_ObjectHideFlags: 0
@@ -50879,7 +50383,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732910148439
 GameObject:
   m_ObjectHideFlags: 0
@@ -51005,8 +50508,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041732910342884
 GameObject:
   m_ObjectHideFlags: 0
@@ -51120,7 +50621,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732911277597
 GameObject:
   m_ObjectHideFlags: 0
@@ -51234,7 +50734,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732923772854
 GameObject:
   m_ObjectHideFlags: 0
@@ -51348,7 +50847,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732927655168
 GameObject:
   m_ObjectHideFlags: 0
@@ -51462,7 +50960,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732944424533
 GameObject:
   m_ObjectHideFlags: 0
@@ -51576,7 +51073,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732965691360
 GameObject:
   m_ObjectHideFlags: 0
@@ -51702,8 +51198,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041732980021473
 GameObject:
   m_ObjectHideFlags: 0
@@ -51817,7 +51311,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732986580686
 GameObject:
   m_ObjectHideFlags: 0
@@ -51931,7 +51424,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041732988830981
 GameObject:
   m_ObjectHideFlags: 0
@@ -52045,7 +51537,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733025049736
 GameObject:
   m_ObjectHideFlags: 0
@@ -52159,7 +51650,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733045673498
 GameObject:
   m_ObjectHideFlags: 0
@@ -52273,7 +51763,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733046323834
 GameObject:
   m_ObjectHideFlags: 0
@@ -52399,8 +51888,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041733051681641
 GameObject:
   m_ObjectHideFlags: 0
@@ -52514,7 +52001,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733053074188
 GameObject:
   m_ObjectHideFlags: 0
@@ -52628,7 +52114,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733055244971
 GameObject:
   m_ObjectHideFlags: 0
@@ -52742,7 +52227,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733066359621
 GameObject:
   m_ObjectHideFlags: 0
@@ -52856,7 +52340,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733074280995
 GameObject:
   m_ObjectHideFlags: 0
@@ -52970,7 +52453,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733114826196
 GameObject:
   m_ObjectHideFlags: 0
@@ -53084,7 +52566,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733115900711
 GameObject:
   m_ObjectHideFlags: 0
@@ -53198,7 +52679,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733122062913
 GameObject:
   m_ObjectHideFlags: 0
@@ -53312,7 +52792,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733126099326
 GameObject:
   m_ObjectHideFlags: 0
@@ -53438,8 +52917,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041733184059955
 GameObject:
   m_ObjectHideFlags: 0
@@ -53565,8 +53042,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041733185005842
 GameObject:
   m_ObjectHideFlags: 0
@@ -53680,7 +53155,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733205548243
 GameObject:
   m_ObjectHideFlags: 0
@@ -53806,8 +53280,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041733214752239
 GameObject:
   m_ObjectHideFlags: 0
@@ -53921,7 +53393,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733272264832
 GameObject:
   m_ObjectHideFlags: 0
@@ -54035,7 +53506,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733285097703
 GameObject:
   m_ObjectHideFlags: 0
@@ -54149,7 +53619,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733288372739
 GameObject:
   m_ObjectHideFlags: 0
@@ -54263,7 +53732,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733290323228
 GameObject:
   m_ObjectHideFlags: 0
@@ -54377,7 +53845,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733294562372
 GameObject:
   m_ObjectHideFlags: 0
@@ -54491,7 +53958,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733299097387
 GameObject:
   m_ObjectHideFlags: 0
@@ -54605,7 +54071,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733307896422
 GameObject:
   m_ObjectHideFlags: 0
@@ -54719,7 +54184,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733308105686
 GameObject:
   m_ObjectHideFlags: 0
@@ -54833,7 +54297,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733313474013
 GameObject:
   m_ObjectHideFlags: 0
@@ -54959,8 +54422,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041733315265738
 GameObject:
   m_ObjectHideFlags: 0
@@ -55086,8 +54547,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041733328017799
 GameObject:
   m_ObjectHideFlags: 0
@@ -55201,7 +54660,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733328071581
 GameObject:
   m_ObjectHideFlags: 0
@@ -55315,7 +54773,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733360329304
 GameObject:
   m_ObjectHideFlags: 0
@@ -55429,7 +54886,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733362459065
 GameObject:
   m_ObjectHideFlags: 0
@@ -55543,7 +54999,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733381851651
 GameObject:
   m_ObjectHideFlags: 0
@@ -55657,7 +55112,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733384338058
 GameObject:
   m_ObjectHideFlags: 0
@@ -55771,7 +55225,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733388678851
 GameObject:
   m_ObjectHideFlags: 0
@@ -55885,7 +55338,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733392408956
 GameObject:
   m_ObjectHideFlags: 0
@@ -55999,7 +55451,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733399284412
 GameObject:
   m_ObjectHideFlags: 0
@@ -56113,7 +55564,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733405236366
 GameObject:
   m_ObjectHideFlags: 0
@@ -56239,8 +55689,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041733411120967
 GameObject:
   m_ObjectHideFlags: 0
@@ -56354,7 +55802,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733429346096
 GameObject:
   m_ObjectHideFlags: 0
@@ -56468,7 +55915,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733456529185
 GameObject:
   m_ObjectHideFlags: 0
@@ -56582,7 +56028,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733464944348
 GameObject:
   m_ObjectHideFlags: 0
@@ -56696,7 +56141,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733473784957
 GameObject:
   m_ObjectHideFlags: 0
@@ -56810,7 +56254,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733479853691
 GameObject:
   m_ObjectHideFlags: 0
@@ -56924,7 +56367,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733483890525
 GameObject:
   m_ObjectHideFlags: 0
@@ -57038,7 +56480,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733484439061
 GameObject:
   m_ObjectHideFlags: 0
@@ -57152,7 +56593,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733486383511
 GameObject:
   m_ObjectHideFlags: 0
@@ -57278,8 +56718,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041733486953914
 GameObject:
   m_ObjectHideFlags: 0
@@ -57393,7 +56831,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733502345587
 GameObject:
   m_ObjectHideFlags: 0
@@ -57507,7 +56944,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733509067455
 GameObject:
   m_ObjectHideFlags: 0
@@ -57621,7 +57057,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733511132605
 GameObject:
   m_ObjectHideFlags: 0
@@ -57735,7 +57170,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733512698968
 GameObject:
   m_ObjectHideFlags: 0
@@ -57861,8 +57295,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041733515074469
 GameObject:
   m_ObjectHideFlags: 0
@@ -57976,7 +57408,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733518667373
 GameObject:
   m_ObjectHideFlags: 0
@@ -58090,7 +57521,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733524580299
 GameObject:
   m_ObjectHideFlags: 0
@@ -58204,7 +57634,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733527871590
 GameObject:
   m_ObjectHideFlags: 0
@@ -58318,7 +57747,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733535314913
 GameObject:
   m_ObjectHideFlags: 0
@@ -58432,7 +57860,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733546731245
 GameObject:
   m_ObjectHideFlags: 0
@@ -58546,7 +57973,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733559647403
 GameObject:
   m_ObjectHideFlags: 0
@@ -58660,7 +58086,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733572214780
 GameObject:
   m_ObjectHideFlags: 0
@@ -58774,7 +58199,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733578277628
 GameObject:
   m_ObjectHideFlags: 0
@@ -58900,8 +58324,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041733582256052
 GameObject:
   m_ObjectHideFlags: 0
@@ -59015,7 +58437,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733585491117
 GameObject:
   m_ObjectHideFlags: 0
@@ -59129,7 +58550,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733587651809
 GameObject:
   m_ObjectHideFlags: 0
@@ -59243,7 +58663,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733596819556
 GameObject:
   m_ObjectHideFlags: 0
@@ -59357,7 +58776,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733600781530
 GameObject:
   m_ObjectHideFlags: 0
@@ -59483,8 +58901,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041733600970702
 GameObject:
   m_ObjectHideFlags: 0
@@ -59598,7 +59014,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733601993125
 GameObject:
   m_ObjectHideFlags: 0
@@ -59724,8 +59139,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041733618313634
 GameObject:
   m_ObjectHideFlags: 0
@@ -59851,8 +59264,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041733626190913
 GameObject:
   m_ObjectHideFlags: 0
@@ -59966,7 +59377,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733627867480
 GameObject:
   m_ObjectHideFlags: 0
@@ -60080,7 +59490,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733639013420
 GameObject:
   m_ObjectHideFlags: 0
@@ -60194,7 +59603,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733651037603
 GameObject:
   m_ObjectHideFlags: 0
@@ -60308,7 +59716,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733651444866
 GameObject:
   m_ObjectHideFlags: 0
@@ -60422,7 +59829,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733657044448
 GameObject:
   m_ObjectHideFlags: 0
@@ -60536,7 +59942,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733660343132
 GameObject:
   m_ObjectHideFlags: 0
@@ -60650,7 +60055,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733662498508
 GameObject:
   m_ObjectHideFlags: 0
@@ -60764,7 +60168,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733666796090
 GameObject:
   m_ObjectHideFlags: 0
@@ -60878,7 +60281,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733670257887
 GameObject:
   m_ObjectHideFlags: 0
@@ -61004,8 +60406,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041733675433221
 GameObject:
   m_ObjectHideFlags: 0
@@ -61119,7 +60519,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733678085032
 GameObject:
   m_ObjectHideFlags: 0
@@ -61233,7 +60632,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733678314301
 GameObject:
   m_ObjectHideFlags: 0
@@ -61347,7 +60745,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733692086063
 GameObject:
   m_ObjectHideFlags: 0
@@ -61461,7 +60858,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733702567786
 GameObject:
   m_ObjectHideFlags: 0
@@ -61575,7 +60971,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733704745144
 GameObject:
   m_ObjectHideFlags: 0
@@ -61689,7 +61084,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733707244301
 GameObject:
   m_ObjectHideFlags: 0
@@ -61803,7 +61197,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733708906586
 GameObject:
   m_ObjectHideFlags: 0
@@ -61917,7 +61310,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733732365363
 GameObject:
   m_ObjectHideFlags: 0
@@ -62031,7 +61423,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733736176862
 GameObject:
   m_ObjectHideFlags: 0
@@ -62145,7 +61536,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733740589247
 GameObject:
   m_ObjectHideFlags: 0
@@ -62259,7 +61649,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733761630285
 GameObject:
   m_ObjectHideFlags: 0
@@ -62385,8 +61774,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041733770084338
 GameObject:
   m_ObjectHideFlags: 0
@@ -62500,7 +61887,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733775580004
 GameObject:
   m_ObjectHideFlags: 0
@@ -62614,7 +62000,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733781802632
 GameObject:
   m_ObjectHideFlags: 0
@@ -62728,7 +62113,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733782022426
 GameObject:
   m_ObjectHideFlags: 0
@@ -62842,7 +62226,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733787211450
 GameObject:
   m_ObjectHideFlags: 0
@@ -62956,7 +62339,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733787307954
 GameObject:
   m_ObjectHideFlags: 0
@@ -63070,7 +62452,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733815859392
 GameObject:
   m_ObjectHideFlags: 0
@@ -63184,7 +62565,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733820157115
 GameObject:
   m_ObjectHideFlags: 0
@@ -63298,7 +62678,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733823202716
 GameObject:
   m_ObjectHideFlags: 0
@@ -63412,7 +62791,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733826164576
 GameObject:
   m_ObjectHideFlags: 0
@@ -63526,7 +62904,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733856282802
 GameObject:
   m_ObjectHideFlags: 0
@@ -63640,7 +63017,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733863121327
 GameObject:
   m_ObjectHideFlags: 0
@@ -63754,7 +63130,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733871298936
 GameObject:
   m_ObjectHideFlags: 0
@@ -63868,7 +63243,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733881370145
 GameObject:
   m_ObjectHideFlags: 0
@@ -63982,7 +63356,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733886954103
 GameObject:
   m_ObjectHideFlags: 0
@@ -64096,7 +63469,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733895992087
 GameObject:
   m_ObjectHideFlags: 0
@@ -64210,7 +63582,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733897678777
 GameObject:
   m_ObjectHideFlags: 0
@@ -64324,7 +63695,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733901170342
 GameObject:
   m_ObjectHideFlags: 0
@@ -64438,7 +63808,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733909085652
 GameObject:
   m_ObjectHideFlags: 0
@@ -64552,7 +63921,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733910314137
 GameObject:
   m_ObjectHideFlags: 0
@@ -64666,7 +64034,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733912614983
 GameObject:
   m_ObjectHideFlags: 0
@@ -64780,7 +64147,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733919085005
 GameObject:
   m_ObjectHideFlags: 0
@@ -64894,7 +64260,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733930205816
 GameObject:
   m_ObjectHideFlags: 0
@@ -65008,7 +64373,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733935040334
 GameObject:
   m_ObjectHideFlags: 0
@@ -65122,7 +64486,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733948975069
 GameObject:
   m_ObjectHideFlags: 0
@@ -65248,8 +64611,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041733972024358
 GameObject:
   m_ObjectHideFlags: 0
@@ -65363,7 +64724,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041733984321540
 GameObject:
   m_ObjectHideFlags: 0
@@ -65477,7 +64837,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734008203526
 GameObject:
   m_ObjectHideFlags: 0
@@ -65603,8 +64962,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734008277955
 GameObject:
   m_ObjectHideFlags: 0
@@ -65718,7 +65075,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734011685120
 GameObject:
   m_ObjectHideFlags: 0
@@ -65832,7 +65188,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734026614913
 GameObject:
   m_ObjectHideFlags: 0
@@ -65958,8 +65313,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734027017942
 GameObject:
   m_ObjectHideFlags: 0
@@ -66073,7 +65426,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734027173778
 GameObject:
   m_ObjectHideFlags: 0
@@ -66187,7 +65539,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734046306531
 GameObject:
   m_ObjectHideFlags: 0
@@ -66301,7 +65652,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734067793360
 GameObject:
   m_ObjectHideFlags: 0
@@ -66415,7 +65765,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734070916753
 GameObject:
   m_ObjectHideFlags: 0
@@ -66529,7 +65878,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734072305939
 GameObject:
   m_ObjectHideFlags: 0
@@ -66643,7 +65991,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734079336052
 GameObject:
   m_ObjectHideFlags: 0
@@ -66757,7 +66104,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734117824603
 GameObject:
   m_ObjectHideFlags: 0
@@ -66871,7 +66217,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734121425060
 GameObject:
   m_ObjectHideFlags: 0
@@ -66997,8 +66342,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734129287654
 GameObject:
   m_ObjectHideFlags: 0
@@ -67112,7 +66455,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734151282309
 GameObject:
   m_ObjectHideFlags: 0
@@ -67226,7 +66568,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734166349267
 GameObject:
   m_ObjectHideFlags: 0
@@ -67340,7 +66681,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734173282669
 GameObject:
   m_ObjectHideFlags: 0
@@ -67466,8 +66806,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734182867527
 GameObject:
   m_ObjectHideFlags: 0
@@ -67581,7 +66919,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734215127333
 GameObject:
   m_ObjectHideFlags: 0
@@ -67695,7 +67032,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734215938960
 GameObject:
   m_ObjectHideFlags: 0
@@ -67809,7 +67145,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734232883875
 GameObject:
   m_ObjectHideFlags: 0
@@ -67923,7 +67258,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734242937191
 GameObject:
   m_ObjectHideFlags: 0
@@ -68037,7 +67371,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734247325389
 GameObject:
   m_ObjectHideFlags: 0
@@ -68151,7 +67484,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734252288151
 GameObject:
   m_ObjectHideFlags: 0
@@ -68265,7 +67597,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734254445611
 GameObject:
   m_ObjectHideFlags: 0
@@ -68379,7 +67710,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734276803029
 GameObject:
   m_ObjectHideFlags: 0
@@ -68493,7 +67823,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734281380651
 GameObject:
   m_ObjectHideFlags: 0
@@ -68607,7 +67936,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734285844423
 GameObject:
   m_ObjectHideFlags: 0
@@ -68721,7 +68049,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734302148724
 GameObject:
   m_ObjectHideFlags: 0
@@ -68835,7 +68162,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734318477072
 GameObject:
   m_ObjectHideFlags: 0
@@ -68949,7 +68275,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734330086278
 GameObject:
   m_ObjectHideFlags: 0
@@ -69075,8 +68400,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734334532730
 GameObject:
   m_ObjectHideFlags: 0
@@ -69190,7 +68513,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734348084021
 GameObject:
   m_ObjectHideFlags: 0
@@ -69304,7 +68626,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734353275052
 GameObject:
   m_ObjectHideFlags: 0
@@ -69430,8 +68751,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734356949477
 GameObject:
   m_ObjectHideFlags: 0
@@ -69545,7 +68864,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734369878152
 GameObject:
   m_ObjectHideFlags: 0
@@ -69659,7 +68977,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734378270844
 GameObject:
   m_ObjectHideFlags: 0
@@ -69785,8 +69102,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734381787370
 GameObject:
   m_ObjectHideFlags: 0
@@ -69900,7 +69215,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734398699209
 GameObject:
   m_ObjectHideFlags: 0
@@ -70026,8 +69340,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734418308029
 GameObject:
   m_ObjectHideFlags: 0
@@ -70141,7 +69453,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734429080324
 GameObject:
   m_ObjectHideFlags: 0
@@ -70255,7 +69566,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734435596158
 GameObject:
   m_ObjectHideFlags: 0
@@ -70369,7 +69679,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734453085990
 GameObject:
   m_ObjectHideFlags: 0
@@ -70483,7 +69792,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734454001560
 GameObject:
   m_ObjectHideFlags: 0
@@ -70597,7 +69905,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734456705732
 GameObject:
   m_ObjectHideFlags: 0
@@ -70711,7 +70018,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734463734271
 GameObject:
   m_ObjectHideFlags: 0
@@ -70825,7 +70131,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734464932062
 GameObject:
   m_ObjectHideFlags: 0
@@ -70939,7 +70244,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734466229692
 GameObject:
   m_ObjectHideFlags: 0
@@ -71053,7 +70357,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734472000983
 GameObject:
   m_ObjectHideFlags: 0
@@ -71179,8 +70482,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734489408742
 GameObject:
   m_ObjectHideFlags: 0
@@ -71294,7 +70595,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734510798626
 GameObject:
   m_ObjectHideFlags: 0
@@ -71408,7 +70708,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734522897816
 GameObject:
   m_ObjectHideFlags: 0
@@ -71522,7 +70821,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734544656436
 GameObject:
   m_ObjectHideFlags: 0
@@ -71636,7 +70934,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734555459195
 GameObject:
   m_ObjectHideFlags: 0
@@ -71750,7 +71047,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734580162368
 GameObject:
   m_ObjectHideFlags: 0
@@ -71864,7 +71160,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734584976863
 GameObject:
   m_ObjectHideFlags: 0
@@ -71978,7 +71273,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734598396590
 GameObject:
   m_ObjectHideFlags: 0
@@ -72092,7 +71386,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734628204555
 GameObject:
   m_ObjectHideFlags: 0
@@ -72218,8 +71511,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734642959069
 GameObject:
   m_ObjectHideFlags: 0
@@ -72333,7 +71624,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734650232479
 GameObject:
   m_ObjectHideFlags: 0
@@ -72447,7 +71737,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734655722867
 GameObject:
   m_ObjectHideFlags: 0
@@ -72573,8 +71862,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734657588347
 GameObject:
   m_ObjectHideFlags: 0
@@ -72688,7 +71975,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734658094191
 GameObject:
   m_ObjectHideFlags: 0
@@ -72802,7 +72088,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734661608635
 GameObject:
   m_ObjectHideFlags: 0
@@ -72916,7 +72201,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734667135972
 GameObject:
   m_ObjectHideFlags: 0
@@ -73042,8 +72326,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734668369934
 GameObject:
   m_ObjectHideFlags: 0
@@ -73157,7 +72439,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734670760375
 GameObject:
   m_ObjectHideFlags: 0
@@ -73271,7 +72552,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734672860169
 GameObject:
   m_ObjectHideFlags: 0
@@ -73385,7 +72665,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734674314046
 GameObject:
   m_ObjectHideFlags: 0
@@ -73499,7 +72778,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734693626234
 GameObject:
   m_ObjectHideFlags: 0
@@ -73613,7 +72891,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734699966475
 GameObject:
   m_ObjectHideFlags: 0
@@ -73727,7 +73004,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734714809965
 GameObject:
   m_ObjectHideFlags: 0
@@ -73841,7 +73117,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734716785414
 GameObject:
   m_ObjectHideFlags: 0
@@ -73955,7 +73230,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734718848294
 GameObject:
   m_ObjectHideFlags: 0
@@ -74069,7 +73343,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734737468901
 GameObject:
   m_ObjectHideFlags: 0
@@ -74183,7 +73456,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734750211951
 GameObject:
   m_ObjectHideFlags: 0
@@ -74297,7 +73569,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734750692344
 GameObject:
   m_ObjectHideFlags: 0
@@ -74411,7 +73682,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734758005178
 GameObject:
   m_ObjectHideFlags: 0
@@ -74537,8 +73807,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734758600130
 GameObject:
   m_ObjectHideFlags: 0
@@ -74652,7 +73920,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734758918814
 GameObject:
   m_ObjectHideFlags: 0
@@ -74766,7 +74033,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734764061723
 GameObject:
   m_ObjectHideFlags: 0
@@ -74892,8 +74158,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734773000737
 GameObject:
   m_ObjectHideFlags: 0
@@ -75007,7 +74271,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734778989350
 GameObject:
   m_ObjectHideFlags: 0
@@ -75133,8 +74396,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734783701434
 GameObject:
   m_ObjectHideFlags: 0
@@ -75248,7 +74509,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734787202051
 GameObject:
   m_ObjectHideFlags: 0
@@ -75362,7 +74622,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734793478204
 GameObject:
   m_ObjectHideFlags: 0
@@ -75476,7 +74735,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734797805485
 GameObject:
   m_ObjectHideFlags: 0
@@ -75590,7 +74848,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734799911383
 GameObject:
   m_ObjectHideFlags: 0
@@ -75716,8 +74973,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734812509872
 GameObject:
   m_ObjectHideFlags: 0
@@ -75831,7 +75086,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734816843001
 GameObject:
   m_ObjectHideFlags: 0
@@ -75945,7 +75199,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734818289731
 GameObject:
   m_ObjectHideFlags: 0
@@ -76059,7 +75312,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734837819656
 GameObject:
   m_ObjectHideFlags: 0
@@ -76173,7 +75425,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734840839787
 GameObject:
   m_ObjectHideFlags: 0
@@ -76287,7 +75538,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734841403456
 GameObject:
   m_ObjectHideFlags: 0
@@ -76413,8 +75663,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5338041734846566345
 GameObject:
   m_ObjectHideFlags: 0
@@ -76528,7 +75776,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734847988623
 GameObject:
   m_ObjectHideFlags: 0
@@ -76642,7 +75889,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734848873806
 GameObject:
   m_ObjectHideFlags: 0
@@ -76756,7 +76002,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734879767398
 GameObject:
   m_ObjectHideFlags: 0
@@ -76870,7 +76115,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734902546227
 GameObject:
   m_ObjectHideFlags: 0
@@ -76984,7 +76228,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734904580765
 GameObject:
   m_ObjectHideFlags: 0
@@ -77098,7 +76341,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734909570963
 GameObject:
   m_ObjectHideFlags: 0
@@ -77212,7 +76454,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734911156181
 GameObject:
   m_ObjectHideFlags: 0
@@ -77326,7 +76567,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734913149801
 GameObject:
   m_ObjectHideFlags: 0
@@ -77440,7 +76680,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734928258730
 GameObject:
   m_ObjectHideFlags: 0
@@ -77554,7 +76793,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734932286859
 GameObject:
   m_ObjectHideFlags: 0
@@ -77668,7 +76906,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5338041734940383674
 GameObject:
   m_ObjectHideFlags: 0
@@ -77782,7 +77019,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5388098068102998762
 GameObject:
   m_ObjectHideFlags: 0
@@ -77896,7 +77132,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5406410261234917298
 GameObject:
   m_ObjectHideFlags: 0
@@ -78010,7 +77245,6 @@ MonoBehaviour:
   barrier: 1
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5422633715110238817
 GameObject:
   m_ObjectHideFlags: 0
@@ -78124,7 +77358,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5477723161723908387
 GameObject:
   m_ObjectHideFlags: 0
@@ -78238,7 +77471,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5508412504009945505
 GameObject:
   m_ObjectHideFlags: 0
@@ -78352,7 +77584,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5551165516607823630
 GameObject:
   m_ObjectHideFlags: 0
@@ -78466,7 +77697,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5556823564670073768
 GameObject:
   m_ObjectHideFlags: 0
@@ -78580,7 +77810,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5629940292103531633
 GameObject:
   m_ObjectHideFlags: 0
@@ -78694,7 +77923,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5642464106673490837
 GameObject:
   m_ObjectHideFlags: 0
@@ -78808,7 +78036,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5654004209631351715
 GameObject:
   m_ObjectHideFlags: 0
@@ -78922,7 +78149,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5678178399777800609
 GameObject:
   m_ObjectHideFlags: 0
@@ -79036,7 +78262,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5715473525572118274
 GameObject:
   m_ObjectHideFlags: 0
@@ -79162,8 +78387,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5723047010977310565
 GameObject:
   m_ObjectHideFlags: 0
@@ -79277,7 +78500,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5725762292049124601
 GameObject:
   m_ObjectHideFlags: 0
@@ -79391,7 +78613,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5762789131749360813
 GameObject:
   m_ObjectHideFlags: 0
@@ -79505,7 +78726,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5774436549039955092
 GameObject:
   m_ObjectHideFlags: 0
@@ -79619,7 +78839,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5794799569552342858
 GameObject:
   m_ObjectHideFlags: 0
@@ -79733,7 +78952,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5802736663093949131
 GameObject:
   m_ObjectHideFlags: 0
@@ -79930,7 +79148,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5848978812473519515
 GameObject:
   m_ObjectHideFlags: 0
@@ -80056,8 +79273,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5874596761909394491
 GameObject:
   m_ObjectHideFlags: 0
@@ -80171,7 +79386,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5875417342901956451
 GameObject:
   m_ObjectHideFlags: 0
@@ -80297,8 +79511,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5891297871574442869
 GameObject:
   m_ObjectHideFlags: 0
@@ -80412,7 +79624,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &5912354822057019173
 GameObject:
   m_ObjectHideFlags: 0
@@ -80538,8 +79749,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &5952319338108634125
 GameObject:
   m_ObjectHideFlags: 0
@@ -80653,7 +79862,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6022499034119654283
 GameObject:
   m_ObjectHideFlags: 0
@@ -80767,7 +79975,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6055726519996315301
 GameObject:
   m_ObjectHideFlags: 0
@@ -80881,7 +80088,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6062248138418765316
 GameObject:
   m_ObjectHideFlags: 0
@@ -80995,7 +80201,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6074663463107237167
 GameObject:
   m_ObjectHideFlags: 0
@@ -81109,7 +80314,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6096783934685786734
 GameObject:
   m_ObjectHideFlags: 0
@@ -81223,7 +80427,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6152829164002434574
 GameObject:
   m_ObjectHideFlags: 0
@@ -81337,7 +80540,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6227684991258470083
 GameObject:
   m_ObjectHideFlags: 0
@@ -81451,7 +80653,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6241780927266274952
 GameObject:
   m_ObjectHideFlags: 0
@@ -81565,7 +80766,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6245516660623614755
 GameObject:
   m_ObjectHideFlags: 0
@@ -81679,7 +80879,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6264206586254325598
 GameObject:
   m_ObjectHideFlags: 0
@@ -81793,7 +80992,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6298867123051614996
 GameObject:
   m_ObjectHideFlags: 0
@@ -81907,7 +81105,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6326196287682356001
 GameObject:
   m_ObjectHideFlags: 0
@@ -82021,7 +81218,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6333970134333507611
 GameObject:
   m_ObjectHideFlags: 0
@@ -82135,7 +81331,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6347497672673089142
 GameObject:
   m_ObjectHideFlags: 0
@@ -82249,7 +81444,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6357787745643640712
 GameObject:
   m_ObjectHideFlags: 0
@@ -82363,7 +81557,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6361859768378849851
 GameObject:
   m_ObjectHideFlags: 0
@@ -82477,7 +81670,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6367574062737031538
 GameObject:
   m_ObjectHideFlags: 0
@@ -82591,7 +81783,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6380581189239118118
 GameObject:
   m_ObjectHideFlags: 0
@@ -82705,7 +81896,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6381817429423384497
 GameObject:
   m_ObjectHideFlags: 0
@@ -82819,7 +82009,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6385390129918584183
 GameObject:
   m_ObjectHideFlags: 0
@@ -82933,7 +82122,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6425635954403583139
 GameObject:
   m_ObjectHideFlags: 0
@@ -83047,7 +82235,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6429375267036867674
 GameObject:
   m_ObjectHideFlags: 0
@@ -83161,7 +82348,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6489706153185849103
 GameObject:
   m_ObjectHideFlags: 0
@@ -83275,7 +82461,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6539528341903520994
 GameObject:
   m_ObjectHideFlags: 0
@@ -83389,7 +82574,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6558252768286822005
 GameObject:
   m_ObjectHideFlags: 0
@@ -83503,7 +82687,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6574781514510956577
 GameObject:
   m_ObjectHideFlags: 0
@@ -83629,8 +82812,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &6601367646515860694
 GameObject:
   m_ObjectHideFlags: 0
@@ -83744,7 +82925,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6628280171935694933
 GameObject:
   m_ObjectHideFlags: 0
@@ -83858,7 +83038,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6702375243172593016
 GameObject:
   m_ObjectHideFlags: 0
@@ -83972,7 +83151,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6719489166862424096
 GameObject:
   m_ObjectHideFlags: 0
@@ -84086,7 +83264,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6778749802037083024
 GameObject:
   m_ObjectHideFlags: 0
@@ -84200,7 +83377,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6785081998746185980
 GameObject:
   m_ObjectHideFlags: 0
@@ -84314,7 +83490,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6802472406420720279
 GameObject:
   m_ObjectHideFlags: 0
@@ -84440,8 +83615,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &6836166160282918243
 GameObject:
   m_ObjectHideFlags: 0
@@ -84555,7 +83728,6 @@ MonoBehaviour:
   barrier: 1
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6844629453702877020
 GameObject:
   m_ObjectHideFlags: 0
@@ -84669,7 +83841,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6933645786791251691
 GameObject:
   m_ObjectHideFlags: 0
@@ -84795,8 +83966,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &6937841922391308338
 GameObject:
   m_ObjectHideFlags: 0
@@ -84922,8 +84091,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &6954424844606541645
 GameObject:
   m_ObjectHideFlags: 0
@@ -85120,7 +84287,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &6994495744436976311
 GameObject:
   m_ObjectHideFlags: 0
@@ -85234,7 +84400,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7018647120929808752
 GameObject:
   m_ObjectHideFlags: 0
@@ -85348,7 +84513,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7067216684067149687
 GameObject:
   m_ObjectHideFlags: 0
@@ -85462,7 +84626,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7139944897453258729
 GameObject:
   m_ObjectHideFlags: 0
@@ -85576,7 +84739,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7174733045382767267
 GameObject:
   m_ObjectHideFlags: 0
@@ -85690,7 +84852,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7180265174460154035
 GameObject:
   m_ObjectHideFlags: 0
@@ -85804,7 +84965,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7183233740217710495
 GameObject:
   m_ObjectHideFlags: 0
@@ -85918,7 +85078,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7216024406630770198
 GameObject:
   m_ObjectHideFlags: 0
@@ -86032,7 +85191,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7237877474926149816
 GameObject:
   m_ObjectHideFlags: 0
@@ -86146,7 +85304,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7264832304097450836
 GameObject:
   m_ObjectHideFlags: 0
@@ -86355,8 +85512,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &7364514262349770971
 GameObject:
   m_ObjectHideFlags: 0
@@ -86553,7 +85708,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7408794334514089555
 GameObject:
   m_ObjectHideFlags: 0
@@ -86679,8 +85833,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &7413943346606639475
 GameObject:
   m_ObjectHideFlags: 0
@@ -86889,8 +86041,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &7423559069623176116
 GameObject:
   m_ObjectHideFlags: 0
@@ -87004,7 +86154,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7445489026595989151
 GameObject:
   m_ObjectHideFlags: 0
@@ -87118,7 +86267,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7454623194933329238
 GameObject:
   m_ObjectHideFlags: 0
@@ -87232,7 +86380,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7460117692418909921
 GameObject:
   m_ObjectHideFlags: 0
@@ -87346,7 +86493,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7482052740616449542
 GameObject:
   m_ObjectHideFlags: 0
@@ -87460,7 +86606,6 @@ MonoBehaviour:
   barrier: 1
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7491978423274078407
 GameObject:
   m_ObjectHideFlags: 0
@@ -87586,8 +86731,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &7497067465387099581
 GameObject:
   m_ObjectHideFlags: 0
@@ -87701,7 +86844,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7544813187415082134
 GameObject:
   m_ObjectHideFlags: 0
@@ -87815,7 +86957,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7579585605148127110
 GameObject:
   m_ObjectHideFlags: 0
@@ -87941,8 +87082,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &7590068036547458261
 GameObject:
   m_ObjectHideFlags: 0
@@ -88056,7 +87195,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7602610086483097399
 GameObject:
   m_ObjectHideFlags: 0
@@ -88170,7 +87308,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7619859351190849307
 GameObject:
   m_ObjectHideFlags: 0
@@ -88367,7 +87504,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7726851812840612475
 GameObject:
   m_ObjectHideFlags: 0
@@ -88481,7 +87617,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7731626342772358448
 GameObject:
   m_ObjectHideFlags: 0
@@ -88607,8 +87742,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &7794826910857582271
 GameObject:
   m_ObjectHideFlags: 0
@@ -88722,7 +87855,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7890222144780612778
 GameObject:
   m_ObjectHideFlags: 0
@@ -88836,7 +87968,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &7941666315917035562
 GameObject:
   m_ObjectHideFlags: 0
@@ -88962,8 +88093,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &7993642040646565858
 GameObject:
   m_ObjectHideFlags: 0
@@ -89077,7 +88206,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8010359283432121596
 GameObject:
   m_ObjectHideFlags: 0
@@ -89191,7 +88319,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8046192480774688040
 GameObject:
   m_ObjectHideFlags: 0
@@ -89305,7 +88432,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8070282275707689356
 GameObject:
   m_ObjectHideFlags: 0
@@ -89419,7 +88545,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8078283040202112426
 GameObject:
   m_ObjectHideFlags: 0
@@ -89533,7 +88658,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8101368310337779755
 GameObject:
   m_ObjectHideFlags: 0
@@ -89647,7 +88771,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8113364301543716890
 GameObject:
   m_ObjectHideFlags: 0
@@ -89761,7 +88884,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8120099930484177390
 GameObject:
   m_ObjectHideFlags: 0
@@ -89875,7 +88997,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8123146159327728051
 GameObject:
   m_ObjectHideFlags: 0
@@ -89989,7 +89110,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8126647398990250054
 GameObject:
   m_ObjectHideFlags: 0
@@ -90103,7 +89223,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8136547138801153003
 GameObject:
   m_ObjectHideFlags: 0
@@ -90217,7 +89336,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8156274319427326121
 GameObject:
   m_ObjectHideFlags: 0
@@ -90331,7 +89449,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8177537803552640980
 GameObject:
   m_ObjectHideFlags: 0
@@ -90445,7 +89562,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8180066402066627450
 GameObject:
   m_ObjectHideFlags: 0
@@ -90559,7 +89675,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8192179561009069433
 GameObject:
   m_ObjectHideFlags: 0
@@ -90673,7 +89788,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8201571996999053534
 GameObject:
   m_ObjectHideFlags: 0
@@ -90799,8 +89913,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &8216064581861787553
 GameObject:
   m_ObjectHideFlags: 0
@@ -90914,7 +90026,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8240390643044208836
 GameObject:
   m_ObjectHideFlags: 0
@@ -91028,7 +90139,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8246529733327613907
 GameObject:
   m_ObjectHideFlags: 0
@@ -91142,7 +90252,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8298478466242993478
 GameObject:
   m_ObjectHideFlags: 0
@@ -91256,7 +90365,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8333554335395637021
 GameObject:
   m_ObjectHideFlags: 0
@@ -91370,7 +90478,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8339591401190555464
 GameObject:
   m_ObjectHideFlags: 0
@@ -91484,7 +90591,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8341454561540663464
 GameObject:
   m_ObjectHideFlags: 0
@@ -91598,7 +90704,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8381506417577149668
 GameObject:
   m_ObjectHideFlags: 0
@@ -91712,7 +90817,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8399836151273836050
 GameObject:
   m_ObjectHideFlags: 0
@@ -91826,7 +90930,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8432106699719692982
 GameObject:
   m_ObjectHideFlags: 0
@@ -91940,7 +91043,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8454945230808123274
 GameObject:
   m_ObjectHideFlags: 0
@@ -92054,7 +91156,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8474161646667799659
 GameObject:
   m_ObjectHideFlags: 0
@@ -92168,7 +91269,6 @@ MonoBehaviour:
   barrier: 1
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8503111311149140074
 GameObject:
   m_ObjectHideFlags: 0
@@ -92282,7 +91382,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8503399907224961071
 GameObject:
   m_ObjectHideFlags: 0
@@ -92396,7 +91495,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8523739983012180654
 GameObject:
   m_ObjectHideFlags: 0
@@ -92522,8 +91620,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &8588279556641624252
 GameObject:
   m_ObjectHideFlags: 0
@@ -92637,7 +91733,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8597813649921956868
 GameObject:
   m_ObjectHideFlags: 0
@@ -92751,7 +91846,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8603028802347989580
 GameObject:
   m_ObjectHideFlags: 0
@@ -92865,7 +91959,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8630420994287122103
 GameObject:
   m_ObjectHideFlags: 0
@@ -92979,7 +92072,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8636628243840621598
 GameObject:
   m_ObjectHideFlags: 0
@@ -93093,7 +92185,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8641605277034018119
 GameObject:
   m_ObjectHideFlags: 0
@@ -93207,7 +92298,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8647854169740781364
 GameObject:
   m_ObjectHideFlags: 0
@@ -93404,7 +92494,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8670238923840293826
 GameObject:
   m_ObjectHideFlags: 0
@@ -93518,7 +92607,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8714105462628785296
 GameObject:
   m_ObjectHideFlags: 0
@@ -93644,8 +92732,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &8734095429964535450
 GameObject:
   m_ObjectHideFlags: 0
@@ -93771,8 +92857,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &8737992249279198505
 GameObject:
   m_ObjectHideFlags: 0
@@ -93886,7 +92970,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8741679654647631822
 GameObject:
   m_ObjectHideFlags: 0
@@ -94000,7 +93083,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8760206326313757978
 GameObject:
   m_ObjectHideFlags: 0
@@ -94114,7 +93196,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8774631304890840543
 GameObject:
   m_ObjectHideFlags: 0
@@ -94228,7 +93309,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8797155872050768584
 GameObject:
   m_ObjectHideFlags: 0
@@ -94342,7 +93422,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8819496988517393612
 GameObject:
   m_ObjectHideFlags: 0
@@ -94456,7 +93535,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8830372401101720921
 GameObject:
   m_ObjectHideFlags: 0
@@ -94570,7 +93648,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8830413631024216760
 GameObject:
   m_ObjectHideFlags: 0
@@ -94696,8 +93773,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 1
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &8840288903229528716
 GameObject:
   m_ObjectHideFlags: 0
@@ -94811,7 +93886,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8864848813281352853
 GameObject:
   m_ObjectHideFlags: 0
@@ -94925,7 +93999,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8889069706761616618
 GameObject:
   m_ObjectHideFlags: 0
@@ -95039,7 +94112,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8898181369717526818
 GameObject:
   m_ObjectHideFlags: 0
@@ -95153,7 +94225,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &8977774163213546522
 GameObject:
   m_ObjectHideFlags: 0
@@ -95267,7 +94338,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &9006988801571965134
 GameObject:
   m_ObjectHideFlags: 0
@@ -95381,7 +94451,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &9011789560227655853
 GameObject:
   m_ObjectHideFlags: 0
@@ -95495,7 +94564,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &9061264412880685327
 GameObject:
   m_ObjectHideFlags: 0
@@ -95609,7 +94677,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &9096345386243604590
 GameObject:
   m_ObjectHideFlags: 0
@@ -95723,7 +94790,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &9127730259840612057
 GameObject:
   m_ObjectHideFlags: 0
@@ -95837,7 +94903,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &9128546267434430074
 GameObject:
   m_ObjectHideFlags: 0
@@ -95951,7 +95016,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &9140402780248752845
 GameObject:
   m_ObjectHideFlags: 0
@@ -96065,7 +95129,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &9154875233803480568
 GameObject:
   m_ObjectHideFlags: 0
@@ -96191,8 +95254,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &9173952073979406153
 GameObject:
   m_ObjectHideFlags: 0
@@ -96306,7 +95367,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &9189033950888292581
 GameObject:
   m_ObjectHideFlags: 0
@@ -96432,8 +95492,6 @@ MonoBehaviour:
   Pos: {x: 0, y: 0, z: 0}
   tileSurfaces: []
   Barrier: 0
-  renderer: {fileID: 0}
-  visited: 0
 --- !u!1 &9207124604722587224
 GameObject:
   m_ObjectHideFlags: 0
@@ -96547,7 +95605,6 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
 --- !u!1 &9216461687960799519
 GameObject:
   m_ObjectHideFlags: 0
@@ -96661,4 +95718,3 @@ MonoBehaviour:
   barrier: 0
   distance: 0
   Pos: {x: 0, y: 0, z: 0}
-  renderer: {fileID: 0}
