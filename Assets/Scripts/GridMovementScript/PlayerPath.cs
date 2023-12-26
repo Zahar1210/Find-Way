@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 public class PlayerPath : MonoBehaviour
 {
@@ -9,8 +10,7 @@ public class PlayerPath : MonoBehaviour
     private Camera _camera;
     private bool isFindPath;
 
-    private void Start()
-    {
+    private void Start() {
         _camera = Camera.main;
     }
     private void Update()
@@ -25,25 +25,30 @@ public class PlayerPath : MonoBehaviour
             Surface currentSurface = GetCurrentSurface();
             Surface targetSurface = GetTargetSurface();
             if (currentSurface && targetSurface)
-                MakePath(pathFinder.GetPath(currentSurface, targetSurface));
+                MakePath(pathFinder.GetPath(currentSurface, targetSurface), currentSurface);
         }
     }
-    private void MakePath(Surface[] path)
+    private void MakePath(Surface[] path, Surface currentSurface)
     {
-        playerMove.index = 0;
-        Array.Clear(playerMove.surfaces, 0, playerMove.surfaces.Length);
-        playerMove.PointRotations.Clear();
-        for (int i = 0; i < path.Length - 1; i++) {
-            if (path[i].tile == path[i + 1].tile)
-                playerMove.PointRotations.Add(new PlayerMove.PointRotation(path[i].Dir, path[i + 1].Dir, path[i].tile, false));
-            else if (path[i].tile != path[i + 1].tile && path[i].type == path[i + 1].type)
-                playerMove.PointRotations.Add(new PlayerMove.PointRotation(path[i].tile.Pos - path[i + 1].tile.Pos, path[i + 1].Dir, path[i + 1].tile, false));
-            else if (path[i].tile != path[i + 1].tile && path[i].type != path[i + 1].type)
-                playerMove.PointRotations.Add(new PlayerMove.PointRotation(-path[i].Dir, path[i + 1].Dir, path[i + 1].tile, true));
+        if (path.Contains(currentSurface)) {
+            playerMove.index = 0;
+            Array.Clear(playerMove.surfaces, 0, playerMove.surfaces.Length);
+            playerMove.PointRotations.Clear();
+            for (int i = 0; i < path.Length - 1; i++) {
+                if (path[i].tile == path[i + 1].tile)
+                    playerMove.PointRotations.Add(new PlayerMove.PointRotation(path[i].Dir, path[i + 1].Dir, path[i].tile, false));
+                else if (path[i].tile != path[i + 1].tile && path[i].type == path[i + 1].type)
+                    playerMove.PointRotations.Add(new PlayerMove.PointRotation(path[i].tile.Pos - path[i + 1].tile.Pos, path[i + 1].Dir, path[i + 1].tile, false));
+                else if (path[i].tile != path[i + 1].tile && path[i].type != path[i + 1].type)
+                    playerMove.PointRotations.Add(new PlayerMove.PointRotation(-path[i].Dir, path[i + 1].Dir, path[i + 1].tile, true));
+            }
+            navigationPath.PathNavigation(path);
+            playerMove.surfaces = path;
+            playerMove.Move();
         }
-        navigationPath.PathNavigation(path);
-        playerMove.surfaces = path;
-        playerMove.Move();
+        else {
+            Debug.Log("ураа порадуйся");
+        }
     }
     private Surface GetTargetSurface()
     {
