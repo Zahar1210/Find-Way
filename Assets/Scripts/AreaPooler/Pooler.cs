@@ -55,17 +55,10 @@ public class Pooler : MonoBehaviour
     }
     private AreaAbstract GetQueueArea()
     {
-        int indexToSpawn = new();
         int index = GetIndex();
         AreaAbstract area = GetAreaFromPool(index);
-        if (area != null) {
-            return area;
-        }
-        foreach (var a in queueArea.Areas) {
-            if (a.Index == index)
-                indexToSpawn = a.Index;
-        }
-        return AreaToSpawn(indexToSpawn);
+        if (area != null) { return area; }
+        return AreaToSpawn(index);
     }
     private AreaAbstract GetAreaFromPool(int index)
     {

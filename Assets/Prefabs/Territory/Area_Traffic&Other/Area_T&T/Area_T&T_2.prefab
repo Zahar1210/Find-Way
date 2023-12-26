@@ -92886,7 +92886,12 @@ MonoBehaviour:
   AreaLength: 5
   Chance: 32
   Type: 1
-  Areas: []
+  Areas:
+  - {fileID: 7626572868098712805, guid: 7fe32541652bc4107b1be29180d436c4, type: 3}
+  - {fileID: 325693365252835818, guid: 2c72ce76ef9504adb9dc7e9ab41cb274, type: 3}
+  - {fileID: 9101598404664476260, guid: 0039e79ba29aa4c6e9d1132173511e9b, type: 3}
+  - {fileID: 8116572173452632122, guid: ba1f98d30a49349a390bd507619cc250, type: 3}
+  - {fileID: 4611613924099025491, guid: b3f4b01fde6d3469ab76ba1b93e51b51, type: 3}
   Tiles: []
 --- !u!1 &7409957349673415804
 GameObject:
