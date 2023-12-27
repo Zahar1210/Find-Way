@@ -23,8 +23,7 @@ public class PathFinding : MonoBehaviour
         setValues.Set();
         foreach (var tile in FindObjectsOfType<Tile>()) {
             if (!_tiles.ContainsValue(tile)) {
-                Vector3Int pos = Vector3Int.RoundToInt(tile.transform.position);
-                _tiles.Add(pos, tile);
+                _tiles.Add(Vector3Int.RoundToInt(tile.transform.position), tile);
                 tiles.Add(tile);
             }
         }

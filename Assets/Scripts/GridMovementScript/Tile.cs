@@ -14,7 +14,6 @@ public class Tile : MonoBehaviour
     public Dictionary<SurfaceType, Surface> surfaces = new();
     public List<Surface> tileSurfaces = new();
     public bool Barrier;
-    
     private void Start() {
         SetValue();
     }
