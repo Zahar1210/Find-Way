@@ -8,8 +8,9 @@ public class AreaPooler : MonoBehaviour
     [SerializeField] private float spawnInterval;
     [SerializeField] private float checkInterval;
     [SerializeField] private Transform pointReturnToPool;
-    [SerializeField] private PathFinding pathFinding;
     [SerializeField] private Transform pointCheckInterval;
+    [SerializeField] private PathFinding pathFinding;
+    [SerializeField] private TrafficSystem trafficSystem;
     [SerializeField] private AreaAbstract[] areaArray;
 
     private List<AreaAbstract> _areaAbstracts = new();
@@ -22,7 +23,7 @@ public class AreaPooler : MonoBehaviour
     {
         foreach (var area in FindObjectsOfType<AreaAbstract>()) _areaAbstracts.Add(area);
         _lastSpawnPosition = Vector3Int.RoundToInt(transform.position);
-        queueArea = areaArray[Random.Range(0, 15)];
+        queueArea = areaArray[Random.Range(0, 12)];
         queueArea.SpawnIndex = _spawnIndex;
         _spawnIndex++;
     }
@@ -42,7 +43,8 @@ public class AreaPooler : MonoBehaviour
             _spawnIndex++;
             _lastSpawnPosition.z = currentZPosition.z;
             SpawnArea(currentZPosition);
-            pathFinding.FindTiles(); //обновляем данные для поиска пути :)
+            pathFinding.FindTiles();//обновляем данные для поиска пути :)
+            trafficSystem.FindTraffic();//обновляем данные для машин :)
         }
     }
     private void SpawnArea(Vector3Int areaPosition)

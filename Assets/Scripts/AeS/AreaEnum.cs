@@ -4,4 +4,5 @@ public enum AreaTypes
     Train,
     Simple,
     Traffic,
+    Mixed
 }

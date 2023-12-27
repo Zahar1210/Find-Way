@@ -10537,7 +10537,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2126700369088046906}
-  - component: {fileID: 1808945840341270423}
+  - component: {fileID: 6559066027134929824}
   m_Layer: 0
   m_Name: Territory_Train_1
   m_TagString: Untagged
@@ -10679,7 +10679,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1808945840341270423
+--- !u!114 &6559066027134929824
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10688,23 +10688,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 2126700369088046905}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52f57bf89819c45b2a7567c6069c6d6c, type: 3}
+  m_Script: {fileID: 11500000, guid: 26a7b5f16cad340aca0e30f718863652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 13
+  Index: 27
   AreaLength: 5
-  Chance: 34
+  Chance: 45
   Type: 1
   Areas:
   - {fileID: 7211770072484490167, guid: 4d78d744ce4194970aa3e3b2c318470f, type: 3}
-  - {fileID: 3427113599266054152, guid: 71d0dfdad54fd43f88373dc0fe3b98c8, type: 3}
   - {fileID: 3583510309609587395, guid: 53b73d3e63c234c528cbb6f2a3751ee1, type: 3}
+  - {fileID: 3427113599266054152, guid: 71d0dfdad54fd43f88373dc0fe3b98c8, type: 3}
   - {fileID: 546622776627699809, guid: 0edadb511ba2440b7b0cc02bf46affcf, type: 3}
-  - {fileID: 7050292149792642161, guid: 81846508a7d8d4bbc9512a42a72824b5, type: 3}
-  - {fileID: 569517908044317728, guid: f65a1f5166f2841f983b54ac13bcf571, type: 3}
-  - {fileID: 5145049181052253541, guid: eaf359f77463b48e8baf1c463e82d881, type: 3}
-  - {fileID: 1702722894791504170, guid: f38909d253b4c46899c5a61604fbfc2a, type: 3}
+  - {fileID: 1360944523072777336, guid: 81846508a7d8d4bbc9512a42a72824b5, type: 3}
+  - {fileID: 9169263762278189669, guid: f65a1f5166f2841f983b54ac13bcf571, type: 3}
+  - {fileID: 2576327143905376274, guid: eaf359f77463b48e8baf1c463e82d881, type: 3}
+  - {fileID: 7811417270010443336, guid: f38909d253b4c46899c5a61604fbfc2a, type: 3}
   Tiles: []
+  SpawnIndex: 0
 --- !u!1 &2128140303446572435
 GameObject:
   m_ObjectHideFlags: 0

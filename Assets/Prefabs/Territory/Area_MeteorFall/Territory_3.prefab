@@ -269,12 +269,12 @@ MonoBehaviour:
   Areas:
   - {fileID: 7626572868098712805, guid: 5e403c55e2ae84595af039780c073150, type: 3}
   - {fileID: 325693365252835818, guid: 87b3d55c5cf554582837702d6121fe07, type: 3}
-  - {fileID: 9101598404664476260, guid: 562e511bdabef4f4a8e31330da802d82, type: 3}
-  - {fileID: 8116572173452632122, guid: 63f98ce82dc7f412b867ca4d7cab064d, type: 3}
-  - {fileID: 4611613924099025491, guid: b3f4b01fde6d3469ab76ba1b93e51b51, type: 3}
-  - {fileID: 7086428507554602331, guid: 48723861df3014854a496e7fcd941b61, type: 3}
+  - {fileID: -8118377725881854355, guid: 562e511bdabef4f4a8e31330da802d82, type: 3}
+  - {fileID: -4503587569826579076, guid: 63f98ce82dc7f412b867ca4d7cab064d, type: 3}
+  - {fileID: 6854565041822691067, guid: b3f4b01fde6d3469ab76ba1b93e51b51, type: 3}
+  - {fileID: 831372678256054907, guid: 48723861df3014854a496e7fcd941b61, type: 3}
   Tiles: []
-  SpawnIndex: 5
+  SpawnIndex: 0
 --- !u!1001 &5475257833647305
 PrefabInstance:
   m_ObjectHideFlags: 0
