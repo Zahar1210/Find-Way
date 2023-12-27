@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -17,11 +16,16 @@ public class AreaPooler : MonoBehaviour
     private AreaAbstract queueArea;
     private Vector3Int _lastSpawnPosition;
     private float _time;
+    private int _spawnIndex = 3;
+
     private void Start()
     {
-        foreach (var area in FindObjectsOfType<AreaAbstract>()) { _areaAbstracts.Add(area); }
+        foreach (var area in FindObjectsOfType<AreaAbstract>())
+            _areaAbstracts.Add(area);
         _lastSpawnPosition = Vector3Int.RoundToInt(transform.position);
-        queueArea = areaArray[Random.Range(0, 10)];
+        queueArea = areaArray[Random.Range(0, areaArray.Length)];
+        queueArea.SpawnIndex = _spawnIndex;
+        _spawnIndex++;
     }
     private void Timer()
     {
@@ -35,8 +39,8 @@ public class AreaPooler : MonoBehaviour
     {
         Timer();
         Vector3Int currentZPosition = Vector3Int.RoundToInt(pointCheckInterval.position);
-        if (currentZPosition.z - _lastSpawnPosition.z >= spawnInterval)
-        {
+        if (currentZPosition.z - _lastSpawnPosition.z >= spawnInterval) {
+            _spawnIndex++;
             _lastSpawnPosition.z = currentZPosition.z;
             SpawnArea(currentZPosition);
             pathFinding.FindTiles(); //обновляем данные для поиска пути :)
@@ -44,6 +48,7 @@ public class AreaPooler : MonoBehaviour
     }
     private void SpawnArea(Vector3Int areaPosition)
     {
+        queueArea.SpawnIndex = _spawnIndex;
         AreaAbstract beforeArea = queueArea;
         Vector3 newPosition = queueArea.transform.position;
         newPosition.z = areaPosition.z;
@@ -61,10 +66,11 @@ public class AreaPooler : MonoBehaviour
     }
     private AreaAbstract GetAreaFromPool(int index)
     {
-        foreach (AreaAbstract area in _areaAbstracts) {
+        foreach (AreaAbstract area in _areaAbstracts){
             if (!area.gameObject.activeSelf && area.Index == index && area != null)
                 return area;
         }
+
         return null;
     }
     private AreaAbstract AreaToSpawn(int index)
@@ -85,11 +91,12 @@ public class AreaPooler : MonoBehaviour
     {
         float totalChance = Random.Range(0, queueArea.Areas.Sum(area => area.Chance));
         for (int i = 0; i < queueArea.Areas.Length; i++) {
-            if (totalChance > queueArea.Areas[i].Chance) 
+            if (totalChance > queueArea.Areas[i].Chance)
                 totalChance -= queueArea.Areas[i].Chance;
-            else 
-               return queueArea.Areas[i].Index;
+            else
+                return queueArea.Areas[i].Index;
         }
+
         return 0;
     }
     private void SetSpawnInterval(AreaAbstract beforeArea)

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TrafficSystem : MonoBehaviour
 {
-    public static TrafficSystem Instance { get; set;}
-    private Dictionary<Vector3Int, TrafficTile> _trafficTiles; 
+    public static TrafficSystem Instance { get; set; }
+    private Dictionary<Vector3, TrafficDot> _trafficDots;
 
     private void Awake() {
         if (Instance == null) {
@@ -15,9 +15,12 @@ public class TrafficSystem : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void FindTrafficTiles() {
-        foreach (var tile in FindObjectsOfType<TrafficTile>()) {
-            _trafficTiles.Add(Vector3Int.RoundToInt(tile.transform.position), tile);
+    private void FindTrafficDot()
+    {
+        foreach (var dot in FindObjectsOfType<TrafficDot>()) {
+            if (!_trafficDots.ContainsValue(dot)) {
+                _trafficDots.Add(dot.transform.position, dot);
+            }
         }
     }
 }
