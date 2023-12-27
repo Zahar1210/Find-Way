@@ -20,10 +20,9 @@ public class AreaPooler : MonoBehaviour
 
     private void Start()
     {
-        foreach (var area in FindObjectsOfType<AreaAbstract>())
-            _areaAbstracts.Add(area);
+        foreach (var area in FindObjectsOfType<AreaAbstract>()) _areaAbstracts.Add(area);
         _lastSpawnPosition = Vector3Int.RoundToInt(transform.position);
-        queueArea = areaArray[Random.Range(0, areaArray.Length)];
+        queueArea = areaArray[Random.Range(0, 15)];
         queueArea.SpawnIndex = _spawnIndex;
         _spawnIndex++;
     }
@@ -96,7 +95,6 @@ public class AreaPooler : MonoBehaviour
             else
                 return queueArea.Areas[i].Index;
         }
-
         return 0;
     }
     private void SetSpawnInterval(AreaAbstract beforeArea)
