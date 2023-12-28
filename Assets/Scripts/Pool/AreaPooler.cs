@@ -54,7 +54,7 @@ public class AreaPooler : MonoBehaviour
         Vector3 newPosition = queueArea.transform.position;
         newPosition.z = areaPosition.z;
         queueArea.transform.position = newPosition;
-        queueArea.EnableArea(true);
+        EnableArea(queueArea,true);
         queueArea = GetQueueArea();
         SetSpawnInterval(beforeArea);
     }
@@ -78,7 +78,7 @@ public class AreaPooler : MonoBehaviour
     {
         AreaAbstract area = Instantiate(areaArray[index]);
         _areaAbstracts.Add(area);
-        area.EnableArea(false);
+        EnableArea(area,false);
         return area;
     }
     private void ReturnToPool()
@@ -92,13 +92,29 @@ public class AreaPooler : MonoBehaviour
                     trafficArea.Dot.BackDot = null;
                     trafficSystem._trafficAreas.Remove(trafficArea.Dot.Area.SpawnIndex);
                     trafficSystem._trafficDots.Remove(trafficArea.Dot);
-                    // TrafficDot dot = trafficSystem.GetDotArea(area);
-                    // dot.FrontDot = null;
-                    // dot.BackDot = null;
                 }
-                area.EnableArea(false);
+                EnableArea(area,false);
             }
         }
+    }
+    private void EnableArea(AreaAbstract area, bool isActive)
+    {
+        if (isActive) {
+            foreach (var t in area.Tiles) {
+                t.SetValue();
+            }
+        }
+        else if (!isActive) {
+            area.SpawnIndex = 0;
+            foreach (var t in area.Tiles) {
+                if (pathFinding._tiles.TryGetValue(t.Pos, out var Tile)) {
+                    pathFinding.tiles.Remove(Tile);
+                    pathFinding._tiles.Remove(Tile.Pos);
+                    Tile.Pos = Vector3Int.zero;
+                }
+            }
+        }
+        area.gameObject.SetActive(isActive);
     }
     private int GetIndex()
     {

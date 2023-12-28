@@ -2,7 +2,8 @@ using UnityEngine;
 
 public abstract class CarAbstract : MonoBehaviour
 {
-    public CarType type;
+    public AreaAbstract Area { get; set; }
+    public CarType type; 
     public float speed;
 
     public abstract void Move(TrafficDot.Dot a, TrafficDot.Dot b);

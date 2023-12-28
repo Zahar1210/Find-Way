@@ -9,12 +9,12 @@ public class TrafficSystem : MonoBehaviour
     public void SetTraffic()
     {
         foreach (var dot in FindObjectsOfType<TrafficDot>()) {
-            GetDot(dot);
             if (!_trafficDots.Contains(dot)) {
                 dot.SetDot();
                 _trafficDots.Add(dot);
                 _trafficAreas.Add(dot.Area.SpawnIndex, dot.Area);
             }
+            GetDot(dot);
         }
     }
     private void GetDot(TrafficDot dot)

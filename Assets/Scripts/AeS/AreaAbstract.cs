@@ -11,5 +11,4 @@ public abstract class AreaAbstract : MonoBehaviour
     public List<Tile> Tiles = new();
     public int SpawnIndex;
     public abstract void Action();
-    public abstract void EnableArea(bool isActive);
 }

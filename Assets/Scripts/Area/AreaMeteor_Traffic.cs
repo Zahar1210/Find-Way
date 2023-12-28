@@ -4,12 +4,10 @@ public class AreaMeteor_Traffic : AreaAbstract, IName
 {
     [SerializeField] private TrafficDot _dot;
     public TrafficDot Dot { get; set;}
-    private PathFinding _pathFinding;
 
     private void Start()
     {
         Dot = _dot;
-        _pathFinding = PathFinding.Instance;
         foreach (Transform child in transform) {
             Tile tile = child.GetComponent<Tile>();
             if (tile)
@@ -19,26 +17,5 @@ public class AreaMeteor_Traffic : AreaAbstract, IName
 
     public override void Action()
     {
-    }
-
-    public override void EnableArea(bool isActive)
-    {
-        if (isActive) {
-            foreach (var t in Tiles) {
-                t.SetValue();
-            }
-        }
-        else if (!isActive)
-        {
-            SpawnIndex = 0;
-            foreach (var t in Tiles) {
-                if (_pathFinding._tiles.TryGetValue(t.Pos, out var Tile)) {
-                    _pathFinding.tiles.Remove(Tile);
-                    _pathFinding._tiles.Remove(Tile.Pos);
-                    Tile.Pos = Vector3Int.zero;
-                }
-            }
-        }
-        gameObject.SetActive(isActive);
     }
 }
