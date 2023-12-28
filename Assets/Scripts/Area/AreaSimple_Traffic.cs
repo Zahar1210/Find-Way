@@ -5,8 +5,8 @@ using UnityEngine;
 public class AreaSimple_Traffic : AreaAbstract
 {
     private PathFinding _pathFinding;
-    private void Start()
-    {
+
+    private void Start() {
         _pathFinding = PathFinding.Instance;
         foreach (Transform child in transform) {
             Tile tile = child.GetComponent<Tile>();
@@ -29,6 +29,7 @@ public class AreaSimple_Traffic : AreaAbstract
             }
         }
         else if (!isActive) {
+            SpawnIndex = 0;
             foreach (var t in Tiles) {
                 if (_pathFinding._tiles.TryGetValue(t.Pos, out var Tile)) {
                     _pathFinding.tiles.Remove(Tile);

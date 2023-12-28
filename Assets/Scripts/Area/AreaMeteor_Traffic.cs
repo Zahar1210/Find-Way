@@ -1,24 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AreaMeteor_Traffic : AreaAbstract
 {
     private PathFinding _pathFinding;
+
     private void Start()
     {
         _pathFinding = PathFinding.Instance;
         foreach (Transform child in transform) {
             Tile tile = child.GetComponent<Tile>();
-            if (tile) {
+            if (tile)
                 Tiles.Add(tile);
-            }
         }
     }
 
     public override void Action()
     {
-        
     }
 
     public override void EnableArea(bool isActive)
@@ -28,7 +25,9 @@ public class AreaMeteor_Traffic : AreaAbstract
                 t.SetValue();
             }
         }
-        else if (!isActive) {
+        else if (!isActive)
+        {
+            SpawnIndex = 0;
             foreach (var t in Tiles) {
                 if (_pathFinding._tiles.TryGetValue(t.Pos, out var Tile)) {
                     _pathFinding.tiles.Remove(Tile);

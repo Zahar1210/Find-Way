@@ -4,26 +4,34 @@ using UnityEngine;
 
 public class TrafficSystem : MonoBehaviour
 {
-    public static TrafficSystem Instance { get; set; }
-    public Dictionary<Vector3, TrafficDot> _trafficDots = new();
+    public List<TrafficDot> _trafficDots = new();
     public Dictionary<int, AreaAbstract> _trafficAreas = new();
-
-    private void Awake() {
-        if (Instance == null) {
-            Instance = this;
-            return;
-        }
-        Destroy(gameObject);
-    }
-    public void FindTraffic()
+    public void SetTraffic()
     {
         foreach (var dot in FindObjectsOfType<TrafficDot>()) {
-            if (!_trafficDots.ContainsValue(dot)) 
-                _trafficDots.Add(dot.transform.position, dot);
+            GetDot(dot);
+            if (!_trafficDots.Contains(dot)) {
+                dot.SetDot();
+                _trafficDots.Add(dot);
+                _trafficAreas.Add(dot.Area.SpawnIndex, dot.Area);
+            }
         }
-        foreach (var area in FindObjectsOfType<AreaAbstract>()) {
-            if (!_trafficAreas.ContainsValue(area) && area.Type == AreaTypes.Traffic || area.Type == AreaTypes.Mixed) 
-                _trafficAreas.Add(area.SpawnIndex, area);
+    }
+    
+    public TrafficDot GetDotArea(AreaAbstract area)
+    {
+        foreach (var dot in FindObjectsOfType<TrafficDot>()) {
+            if (dot.Area == area)
+                return dot;
         }
+        return null;
+    }
+
+    private void GetDot(TrafficDot dot)
+    {
+        if (_trafficAreas.TryGetValue(dot.Area.SpawnIndex + 1, out var area))
+            dot.FrontDot = GetDotArea(area);
+        if (_trafficAreas.TryGetValue(dot.Area.SpawnIndex - 1, out var _area))
+            dot.BackDot = GetDotArea(_area);
     }
 }

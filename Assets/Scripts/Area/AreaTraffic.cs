@@ -3,7 +3,6 @@ using UnityEngine;
 public class AreaTraffic : AreaAbstract
 {
     private PathFinding _pathFinding;
-
     private void Start() {
         _pathFinding = PathFinding.Instance;
         foreach (Transform child in transform) {
@@ -26,6 +25,7 @@ public class AreaTraffic : AreaAbstract
             }
         }
         else if (!isActive) {
+            SpawnIndex = 0;
             foreach (var t in Tiles) {
                 if (_pathFinding._tiles.TryGetValue(t.Pos, out var Tile)) {
                     _pathFinding.tiles.Remove(Tile);

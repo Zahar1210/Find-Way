@@ -92882,7 +92882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a7b5f16cad340aca0e30f718863652, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Index: 27
+  Index: 28
   AreaLength: 5
   Chance: 43
   Type: 1

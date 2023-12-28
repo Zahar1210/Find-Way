@@ -44,7 +44,7 @@ public class AreaPooler : MonoBehaviour
             _lastSpawnPosition.z = currentZPosition.z;
             SpawnArea(currentZPosition);
             pathFinding.FindTiles();//обновляем данные для поиска пути :)
-            trafficSystem.FindTraffic();//обновляем данные для машин :)
+            trafficSystem.SetTraffic();//обновляем данные для машин :)
         }
     }
     private void SpawnArea(Vector3Int areaPosition)
@@ -84,8 +84,16 @@ public class AreaPooler : MonoBehaviour
     private void ReturnToPool()
     {
         foreach (var area in _areaAbstracts) {
-            if (area.transform.position.z <= pointReturnToPool.transform.position.z && area.gameObject.activeSelf)
+            if (area.transform.position.z <= pointReturnToPool.transform.position.z && area.gameObject.activeSelf) {
+                if (area.Type == AreaTypes.Mixed || area.Type == AreaTypes.Traffic) {
+                    TrafficDot dot = trafficSystem.GetDotArea(area);
+                    dot.FrontDot = null;
+                    dot.BackDot = null;
+                    trafficSystem._trafficAreas.Remove(dot.Area.SpawnIndex);
+                    trafficSystem._trafficDots.Remove(dot);
+                }
                 area.EnableArea(false);
+            }
         }
     }
     private int GetIndex()
