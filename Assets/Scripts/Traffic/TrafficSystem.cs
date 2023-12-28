@@ -17,21 +17,17 @@ public class TrafficSystem : MonoBehaviour
             }
         }
     }
-    
-    public TrafficDot GetDotArea(AreaAbstract area)
-    {
-        foreach (var dot in FindObjectsOfType<TrafficDot>()) {
-            if (dot.Area == area)
-                return dot;
-        }
-        return null;
-    }
-
     private void GetDot(TrafficDot dot)
     {
-        if (_trafficAreas.TryGetValue(dot.Area.SpawnIndex + 1, out var area))
-            dot.FrontDot = GetDotArea(area);
-        if (_trafficAreas.TryGetValue(dot.Area.SpawnIndex - 1, out var _area))
-            dot.BackDot = GetDotArea(_area);
+        if (dot.FrontDot == null && _trafficAreas.TryGetValue(dot.Area.SpawnIndex + 1, out var area)) {
+            IName trafficArea = area.GetComponent<IName>();
+            if (trafficArea != null)
+                dot.FrontDot = trafficArea.Dot;
+        }
+        if (dot.BackDot == null && _trafficAreas.TryGetValue(dot.Area.SpawnIndex - 1, out var _area)) {
+            IName trafficArea = _area.GetComponent<IName>();
+            if (trafficArea != null)
+                dot.BackDot = trafficArea.Dot;
+        }
     }
 }

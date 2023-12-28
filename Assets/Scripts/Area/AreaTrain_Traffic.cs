@@ -1,11 +1,15 @@
 
 using UnityEngine;
 
-public class AreaTrain_Traffic : AreaAbstract
+public class AreaTrain_Traffic : AreaAbstract, IName
 {
+    [SerializeField] private TrafficDot _dot;
     private PathFinding _pathFinding;
+    public TrafficDot Dot { get; set; }
+
     private void Start()
     {
+        Dot = _dot;
         _pathFinding = PathFinding.Instance;
         foreach (Transform child in transform) {
             Tile tile = child.GetComponent<Tile>();

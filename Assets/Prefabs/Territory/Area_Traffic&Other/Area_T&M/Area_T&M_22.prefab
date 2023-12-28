@@ -336,6 +336,7 @@ MonoBehaviour:
   - {fileID: -744418965644702072, guid: d1715839b39584046916d7292409fe7b, type: 3}
   Tiles: []
   SpawnIndex: 0
+  _dot: {fileID: 7371482645371447275}
 --- !u!1 &9035118220130463245
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,6 +382,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Area: {fileID: -1157108765930150880}
+  FrontDot: {fileID: 0}
+  BackDot: {fileID: 0}
 --- !u!1001 &38136370767144882
 PrefabInstance:
   m_ObjectHideFlags: 0

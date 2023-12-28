@@ -51598,6 +51598,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Area: {fileID: 2207871120135905213}
+  FrontDot: {fileID: 0}
+  BackDot: {fileID: 0}
 --- !u!1 &4254184350062345685
 GameObject:
   m_ObjectHideFlags: 0
@@ -92940,6 +92942,7 @@ MonoBehaviour:
   - {fileID: 6969690869306306080, guid: 2c72ce76ef9504adb9dc7e9ab41cb274, type: 3}
   Tiles: []
   SpawnIndex: 0
+  _dot: {fileID: 5722468807534525809}
 --- !u!1 &7409957349673415804
 GameObject:
   m_ObjectHideFlags: 0

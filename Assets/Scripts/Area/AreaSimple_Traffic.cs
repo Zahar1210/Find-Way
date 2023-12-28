@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AreaSimple_Traffic : AreaAbstract
+public class AreaSimple_Traffic : AreaAbstract,IName
 {
+    [SerializeField] private TrafficDot _dot;
+    public TrafficDot Dot { get; set;}
     private PathFinding _pathFinding;
 
     private void Start() {
+        Dot = _dot;
         _pathFinding = PathFinding.Instance;
         foreach (Transform child in transform) {
             Tile tile = child.GetComponent<Tile>();

@@ -23,7 +23,7 @@ public class AreaPooler : MonoBehaviour
     {
         foreach (var area in FindObjectsOfType<AreaAbstract>()) _areaAbstracts.Add(area);
         _lastSpawnPosition = Vector3Int.RoundToInt(transform.position);
-        queueArea = areaArray[Random.Range(0, 12)];
+        queueArea = areaArray[Random.Range(0, 10)];
         queueArea.SpawnIndex = _spawnIndex;
         _spawnIndex++;
     }
@@ -43,7 +43,7 @@ public class AreaPooler : MonoBehaviour
             _spawnIndex++;
             _lastSpawnPosition.z = currentZPosition.z;
             SpawnArea(currentZPosition);
-            pathFinding.FindTiles();//обновляем данные для поиска пути :)
+            pathFinding.FindTiles(); //обновляем данные для поиска пути :)
             trafficSystem.SetTraffic();//обновляем данные для машин :)
         }
     }
@@ -84,13 +84,17 @@ public class AreaPooler : MonoBehaviour
     private void ReturnToPool()
     {
         foreach (var area in _areaAbstracts) {
-            if (area.transform.position.z <= pointReturnToPool.transform.position.z && area.gameObject.activeSelf) {
-                if (area.Type == AreaTypes.Mixed || area.Type == AreaTypes.Traffic) {
-                    TrafficDot dot = trafficSystem.GetDotArea(area);
-                    dot.FrontDot = null;
-                    dot.BackDot = null;
-                    trafficSystem._trafficAreas.Remove(dot.Area.SpawnIndex);
-                    trafficSystem._trafficDots.Remove(dot);
+            if (area.transform.position.z <= pointReturnToPool.transform.position.z && area.gameObject.activeSelf)
+            {
+                IName trafficArea = area.GetComponent<IName>();
+                if (trafficArea != null) {
+                    trafficArea.Dot.FrontDot = null;
+                    trafficArea.Dot.BackDot = null;
+                    trafficSystem._trafficAreas.Remove(trafficArea.Dot.Area.SpawnIndex);
+                    trafficSystem._trafficDots.Remove(trafficArea.Dot);
+                    // TrafficDot dot = trafficSystem.GetDotArea(area);
+                    // dot.FrontDot = null;
+                    // dot.BackDot = null;
                 }
                 area.EnableArea(false);
             }

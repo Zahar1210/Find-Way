@@ -904,7 +904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48d186d4eede54c029c30e18165995c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
+  speed: 150
   surfaces: []
   isMove: 0
   isMoving: 0
@@ -5871,6 +5871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5cd2ec7918264e40b333f071684148b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _trafficDots: []
 --- !u!4 &1225137740
 Transform:
   m_ObjectHideFlags: 0
@@ -6285,7 +6286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnInterval: 5
-  checkInterval: 1
+  checkInterval: 0.5
   pointReturnToPool: {fileID: 1266466369}
   pointCheckInterval: {fileID: 737772858}
   pathFinding: {fileID: 1018389157}
