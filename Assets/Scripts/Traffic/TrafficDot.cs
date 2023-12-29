@@ -5,10 +5,10 @@ using UnityEngine;
 public class TrafficDot : MonoBehaviour
 {
     public AreaAbstract Area;
-    private List<Dot> dots = new();
+    public List<Dot> dots = new();
     public TrafficDot FrontDot;
     public TrafficDot BackDot;
-    Vector3[] dotPositions = {
+    private Vector3[] dotPositions = {
             new Vector3(-4, 0, -1),
             new Vector3(4, 0, -1),
             new Vector3(-19, 0, -1),
@@ -18,16 +18,20 @@ public class TrafficDot : MonoBehaviour
             new Vector3(-19, 0, 1),
             new Vector3(10, 0, 1)
     };
+    private Quaternion[] dotRotations = {
+        new Quaternion(0.0f, 0.0f, 90.0f, 0f),
+        new Quaternion(0f, 90f, 90f, 0f),
+    };
     public void Awake()
     {
         if (Area.Type == AreaTypes.Traffic) {
             foreach (Vector3 position in dotPositions) {
-                dots.Add(new Dot(position,(position.z > 0) ? DotType.Left : DotType.Right));
+                dots.Add(new Dot(position,(position.z > 0) ? DotType.Left : DotType.Right, dotRotations[0]));
             }
         }
         else {
-            dots.Add(new Dot(new Vector3(-1,0,0),DotType.Right));
-            dots.Add(new Dot(new Vector3(1,0,0),DotType.Left));
+            dots.Add(new Dot(new Vector3(-1,0,0),DotType.Right, dotRotations[1]));
+            dots.Add(new Dot(new Vector3(1,0,0),DotType.Left, dotRotations[1]));
         }
     }
     public void SetDot()
@@ -51,11 +55,13 @@ public class TrafficDot : MonoBehaviour
     }
     public class Dot
     {
+        public Quaternion Rot { get;}
         public Vector3 Pos { get; set; }
         private Vector3 СonstantPos { get; }
         public DotType Type { get; }
-        public Dot(Vector3 pos, DotType type)
+        public Dot(Vector3 pos, DotType type, Quaternion rot)
         {
+            Rot =  Quaternion.Euler(rot.x, rot.y, rot.z);
             СonstantPos = pos;
             Type = type;
         }

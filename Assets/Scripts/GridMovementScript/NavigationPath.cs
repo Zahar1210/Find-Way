@@ -13,7 +13,7 @@ public class NavigationPath : MonoBehaviour
         transform.position = player.transform.position;
         gameObject.SetActive(true);
         light.intensity = 0;
-        StartCoroutine(LightIntensity(5, 1));
+        // StartCoroutine(LightIntensity(5, 1));
         StartCoroutine(MoveAlongPath(path));
     }
     private IEnumerator MoveAlongPath(Surface[] path)
@@ -25,7 +25,7 @@ public class NavigationPath : MonoBehaviour
                 yield return null;
             }
         }
-        StartCoroutine(LightIntensity(0, 2));
+        // StartCoroutine(LightIntensity(0, 2));
     }
     private IEnumerator LightIntensity(float targetLight, float duration)
     {

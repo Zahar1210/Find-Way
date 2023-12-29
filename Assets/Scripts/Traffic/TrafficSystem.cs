@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TrafficSystem : MonoBehaviour
 {
+    [SerializeField] private CarPooler carPooler;
     public List<TrafficDot> _trafficDots = new();
     public Dictionary<int, AreaAbstract> _trafficAreas = new();
     public void SetTraffic()
@@ -13,6 +14,7 @@ public class TrafficSystem : MonoBehaviour
                 dot.SetDot();
                 _trafficDots.Add(dot);
                 _trafficAreas.Add(dot.Area.SpawnIndex, dot.Area);
+                carPooler.SpawnCar(dot.Area);
             }
             GetDot(dot);
         }

@@ -422,7 +422,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -550,7 +550,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &963194227
 Camera:
   m_ObjectHideFlags: 0
@@ -5850,6 +5850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1225137740}
   - component: {fileID: 1225137739}
+  - component: {fileID: 1225137741}
   m_Layer: 0
   m_Name: TrafficSystem
   m_TagString: Untagged
@@ -5869,6 +5870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5cd2ec7918264e40b333f071684148b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carPooler: {fileID: 1225137741}
   _trafficDots: []
 --- !u!4 &1225137740
 Transform:
@@ -5885,6 +5887,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1225137741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225137738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1123948b2a73b4a15972a3bea5519e5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carArray:
+  - {fileID: 8383501958800808271, guid: 1aedd8da7d5624325b7653c72ea75b36, type: 3}
+  - {fileID: 7515612851872005092, guid: fa5d69b21585d42b68b80dab239bc79d, type: 3}
+  - {fileID: 5818516574844820861, guid: c96653a0d98774445abcba1eea97aae4, type: 3}
 --- !u!1 &1266466368
 GameObject:
   m_ObjectHideFlags: 0
@@ -6176,7 +6194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1958373655
 Transform:
   m_ObjectHideFlags: 0
