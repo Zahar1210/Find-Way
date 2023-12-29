@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class CarAbstract : MonoBehaviour
 {
-    public AreaAbstract Area { get; set; }
+    public IName Area { get; set; }
     public CarType type; 
     public float speed;
 

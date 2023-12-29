@@ -92887,7 +92887,6 @@ MonoBehaviour:
   Chance: 43
   Type: 1
   Areas:
-  - {fileID: 6854565041822691067, guid: b3f4b01fde6d3469ab76ba1b93e51b51, type: 3}
   - {fileID: -8118377725881854355, guid: 562e511bdabef4f4a8e31330da802d82, type: 3}
   - {fileID: -4503587569826579076, guid: 63f98ce82dc7f412b867ca4d7cab064d, type: 3}
   - {fileID: 7626572868098712805, guid: 5e403c55e2ae84595af039780c073150, type: 3}

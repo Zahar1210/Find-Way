@@ -7,28 +7,18 @@ public class CarPooler : MonoBehaviour
 {
     [SerializeField] private CarAbstract[] carArray;
     private List<CarAbstract> _carAbstracts = new();
-    
-    private void Start()
-    {
-        foreach (var car in FindObjectsOfType<CarAbstract>()) { _carAbstracts.Add(car); }
-    }
-
     public void SpawnCar(AreaAbstract area)
     {
-        Debug.Log(area);
         IName trafficArea = area.GetComponent<IName>(); 
         if (trafficArea != null) {
             CarAbstract[] cars = FindCar((area.Type == AreaTypes.Traffic) ? Random.Range(1, 5) : Random.Range(0, 2));
             if (cars != null) {
-                SetCar(cars, area, trafficArea);
+                SetCar(cars, trafficArea);
             }
         }
     }
-    
-    
     private CarAbstract[] FindCar(int sum)
     {
-        Debug.Log(sum + " это количество нужных");
         List<CarAbstract> cars = new();
         if (sum != 0) {
             foreach (var car in _carAbstracts) {
@@ -36,9 +26,7 @@ public class CarPooler : MonoBehaviour
                     cars.Add(car);
                 }
             }
-            Debug.Log(cars.Count + " столько получили");
             if (cars.Count < sum) {
-                Debug.Log("не хватает " + (sum - cars.Count));
                 for (int i = 0; i < (sum - cars.Count) + 1; i++) {
                     CarAbstract car = Instantiate(carArray[Random.Range(0, carArray.Length)]);
                     _carAbstracts.Add(car);
@@ -46,33 +34,32 @@ public class CarPooler : MonoBehaviour
                     car.gameObject.SetActive(false);
                 }
             }
-            Debug.Log(cars.Count + " столько вернули в итоге");
             return cars.ToArray();
         }
         return null;
     }
-
-    private void SetCar(CarAbstract[] cars, AreaAbstract area, IName trafficArea)
+    private void SetCar(CarAbstract[] cars, IName trafficArea )
     {
-        Debug.Log(trafficArea.Dot);
-        foreach (var car in cars)
-        {
-            EnableCar(car, area, true);
+        foreach (var car in cars) {
+            EnableCar(car, trafficArea,true);
             SetPos(car, trafficArea);
         }
     }
-
     private void SetPos(CarAbstract car, IName area)
     {
-        TrafficDot.Dot carDot = area.Dot.dots[Random.Range(0, area.Dot.dots.Count + 1)];
+        TrafficDot.Dot carDot = area.Dot.dots[Random.Range(0, area.Dot.dots.Count)];
         car.transform.position = carDot.Pos;
         car.transform.rotation = carDot.Rot;
-        Debug.Log(carDot.Rot);
     }
-    
-    private void EnableCar(CarAbstract car, AreaAbstract area ,bool isActive)
+    private void EnableCar(CarAbstract car, IName area ,bool isActive)
     {
         car.Area = area;
         car.gameObject.SetActive(isActive);
+    }
+    public void ReturnToPool(IName area)
+    {
+        foreach (var car in _carAbstracts) {
+            if (car.Area == area) { EnableCar(car, null, false); }
+        }
     }
 }

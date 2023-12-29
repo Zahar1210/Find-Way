@@ -43472,7 +43472,6 @@ MonoBehaviour:
   - {fileID: 6969690869306306080, guid: 2c72ce76ef9504adb9dc7e9ab41cb274, type: 3}
   - {fileID: -748658235824207148, guid: 0039e79ba29aa4c6e9d1132173511e9b, type: 3}
   - {fileID: 3961766988677235956, guid: ba1f98d30a49349a390bd507619cc250, type: 3}
-  - {fileID: 2207871120135905213, guid: 0d79c1b8d54d84b33946952e4c4aaf47, type: 3}
   Tiles: []
   SpawnIndex: 0
   _dot: {fileID: 1271556499339029370}

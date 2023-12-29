@@ -41,6 +41,7 @@ public class AreaPooler : MonoBehaviour
         Vector3Int currentZPosition = Vector3Int.RoundToInt(pointCheckInterval.position);
         if (currentZPosition.z - _lastSpawnPosition.z >= spawnInterval) {
             _spawnIndex++;
+            trafficSystem.spawnIndex = _spawnIndex;
             _lastSpawnPosition.z = currentZPosition.z;
             SpawnArea(currentZPosition);
             pathFinding.FindTiles(); //обновляем данные для поиска пути :)
@@ -88,10 +89,7 @@ public class AreaPooler : MonoBehaviour
             {
                 IName trafficArea = area.GetComponent<IName>();
                 if (trafficArea != null) {
-                    trafficArea.Dot.FrontDot = null;
-                    trafficArea.Dot.BackDot = null;
-                    trafficSystem._trafficAreas.Remove(trafficArea.Dot.Area.SpawnIndex);
-                    trafficSystem._trafficDots.Remove(trafficArea.Dot);
+                    trafficSystem.ReSetDot(trafficArea);
                 }
                 EnableArea(area,false);
             }
