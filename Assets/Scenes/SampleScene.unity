@@ -422,7 +422,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -5851,6 +5851,7 @@ GameObject:
   - component: {fileID: 1225137740}
   - component: {fileID: 1225137739}
   - component: {fileID: 1225137741}
+  - component: {fileID: 1225137742}
   m_Layer: 0
   m_Name: TrafficSystem
   m_TagString: Untagged
@@ -5871,7 +5872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carPooler: {fileID: 1225137741}
-  caunt: 0
+  crossRoad: {fileID: 1225137742}
   spawnIndex: 0
 --- !u!4 &1225137740
 Transform:
@@ -5904,6 +5905,21 @@ MonoBehaviour:
   - {fileID: 8383501958800808271, guid: 1aedd8da7d5624325b7653c72ea75b36, type: 3}
   - {fileID: 7515612851872005092, guid: fa5d69b21585d42b68b80dab239bc79d, type: 3}
   - {fileID: 5818516574844820861, guid: c96653a0d98774445abcba1eea97aae4, type: 3}
+--- !u!114 &1225137742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225137738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f80648b8012c746aebb756b69bb2fe44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dots: []
+  changeTime: 5
+  count: 0
 --- !u!1 &1266466368
 GameObject:
   m_ObjectHideFlags: 0
@@ -6041,7 +6057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e26527ab0d03044c5b67063a9ede2739, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 1958373656}
+  Light: {fileID: 1958373656}
   player: {fileID: 1018389150}
   speed: 10
 --- !u!4 &1687883783

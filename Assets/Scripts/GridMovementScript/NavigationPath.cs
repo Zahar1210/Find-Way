@@ -1,9 +1,10 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class NavigationPath : MonoBehaviour
 {
-    [SerializeField] private Light light;
+    [SerializeField] private Light Light;
     [SerializeField] private Transform player;
     [SerializeField] private float speed;
 
@@ -12,7 +13,7 @@ public class NavigationPath : MonoBehaviour
         gameObject.SetActive(false);
         transform.position = player.transform.position;
         gameObject.SetActive(true);
-        light.intensity = 0;
+        Light.intensity = 0;
         StartCoroutine(LightIntensity(5, 1));
         StartCoroutine(MoveAlongPath(path));
     }
@@ -29,14 +30,14 @@ public class NavigationPath : MonoBehaviour
     }
     private IEnumerator LightIntensity(float targetLight, float duration)
     {
-        float startIntensity = light.intensity;
+        float startIntensity = Light.intensity;
         float elapsedTime = 0.0f;
         while (elapsedTime < duration) {
             yield return null;
             elapsedTime += Time.deltaTime;
             float t = Mathf.Clamp01(elapsedTime / duration);
-            light.intensity = Mathf.Lerp(startIntensity, targetLight, t);
+            Light.intensity = Mathf.Lerp(startIntensity, targetLight, t);
         }
-        light.intensity = targetLight;
+        Light.intensity = targetLight;
     }
 }

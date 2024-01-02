@@ -85,8 +85,7 @@ public class AreaPooler : MonoBehaviour
     private void ReturnToPool()
     {
         foreach (var area in _areaAbstracts) {
-            if (area.transform.position.z <= pointReturnToPool.transform.position.z && area.gameObject.activeSelf)
-            {
+            if (area.transform.position.z <= pointReturnToPool.transform.position.z && area.gameObject.activeSelf) {
                 IName trafficArea = area.GetComponent<IName>();
                 if (trafficArea != null) {
                     trafficSystem.ReSetDot(trafficArea);

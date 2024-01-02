@@ -26,12 +26,12 @@ public class TrafficDot : MonoBehaviour
     {
         if (Area.Type == AreaTypes.Traffic) {
             foreach (Vector3 position in dotPositions) {
-                dots.Add(new Dot(position,(position.z > 0) ? DotType.Left : DotType.Right, dotRotations[0]));
+                dots.Add(new Dot(position,(position.z > 0) ? DotType.Left : DotType.Right, dotRotations[0], AreaTypes.Traffic));
             }
         }
         else {
-            dots.Add(new Dot(new Vector3(-1,0,0),DotType.Right, dotRotations[1]));
-            dots.Add(new Dot(new Vector3(1,0,0),DotType.Left, dotRotations[1]));
+            dots.Add(new Dot(new Vector3(-1,0,0),DotType.Right, dotRotations[1], AreaTypes.Mixed));
+            dots.Add(new Dot(new Vector3(1,0,0),DotType.Left, dotRotations[1], AreaTypes.Mixed));
         }
     }
     public void SetDot()
@@ -44,23 +44,28 @@ public class TrafficDot : MonoBehaviour
     {
         if (dots != null) {
             foreach (var dot in dots) {
-                if (dot.Type == DotType.Right) {
+                if (dot.CanMove) {
+                    Gizmos.color = Color.green;
                     Gizmos.DrawSphere(dot.Pos, 0.2f);
                 }
                 else {
-                    Gizmos.DrawSphere(dot.Pos, 0.4f);
+                    Gizmos.color = Color.red;
+                    Gizmos.DrawSphere(dot.Pos, 0.2f);
                 }
             }
         }
     }
     public class Dot
     {
+        public bool CanMove { get; set; } = true;
         public Quaternion Rot { get;}
         public Vector3 Pos { get; set; }
         private Vector3 СonstantPos { get; }
         public DotType Type { get; }
-        public Dot(Vector3 pos, DotType type, Quaternion rot)
+        public AreaTypes AreaType { get; set; }
+        public Dot(Vector3 pos, DotType type, Quaternion rot, AreaTypes areaType)
         {
+            AreaType = areaType;
             Rot =  Quaternion.Euler(rot.x, rot.y, rot.z);
             СonstantPos = pos;
             Type = type;
