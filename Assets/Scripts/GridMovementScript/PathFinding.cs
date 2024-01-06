@@ -7,16 +7,10 @@ public class PathFinding : MonoBehaviour
 {
     [SerializeField] private SetValues setValues;
     [SerializeField] private Directions dir;
-    public static PathFinding Instance { get; set; }
     public Dictionary<Vector3Int, Tile> _tiles = new();
     public List<Tile> tiles = new();
 
     private void Awake() {
-        if (Instance == null) {
-            Instance = this;
-            return;
-        }
-        Destroy(gameObject);
         FindTiles();
     }
     public void FindTiles() {

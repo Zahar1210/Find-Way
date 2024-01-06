@@ -3,11 +3,12 @@ using UnityEngine;
 
 public class CrossRoad : MonoBehaviour
 {
+    [SerializeField] private float changeTime;
+    
     public List<TrafficDot> _dots = new();
     public List<TrafficDot.Dot> _changeDots = new();
-    [SerializeField] private float changeTime;
-    private float _time;
     private AreaTypes _changeType = AreaTypes.Traffic;
+    private float _time;
     public int count;
 
     private void Update() {
@@ -24,19 +25,23 @@ public class CrossRoad : MonoBehaviour
             else
                 _changeType = AreaTypes.Traffic;
         }
-
         count = _changeDots.Count;
     }
 
-    private void ChangeRoadSide()
+    public void ChangeRoadSide()
     {
         foreach (var dot in _dots) {
             if (dot.Area.gameObject.activeSelf) {
                 SelectDots(dot, dot.BackDot, dot.FrontDot);
             }
+            else {
+                foreach (var d in dot.dots) {
+                    _changeDots.Remove(d);
+                }
+            }
         }
         foreach (var dot in _changeDots) {
-            if (dot.AreaType == _changeType) 
+            if (dot.DotTraffic.Area.Type == _changeType) 
                 dot.CanMove = false;
             else 
                 dot.CanMove = true;
@@ -46,20 +51,25 @@ public class CrossRoad : MonoBehaviour
     private void SelectDots(TrafficDot mainDot,TrafficDot backDot,TrafficDot frontDot)
     {
         foreach (var dot in mainDot.dots) {
-            if (dot.Pos.x < 10 && dot.Pos.x > -10 && !_changeDots.Contains(dot)) {
+            if (!_changeDots.Contains(dot) && dot.DotTraffic.Area.gameObject.activeSelf) {
                 _changeDots.Add(dot);
+            }
+            foreach (var d in mainDot.dots) {
+                if (d.Pos.x < -11 || d.Pos.x > 9) {
+                    _changeDots.Remove(d);
+                }
             }
         }
         if (frontDot != null) {
             foreach (var dot in frontDot.dots) {
-                if (!_changeDots.Contains(dot)) {
+                if (!_changeDots.Contains(dot) && dot.DotTraffic.Area.gameObject.activeSelf) {
                     _changeDots.Add(dot);
                 }
             }
         }
         if (backDot != null) {
             foreach (var dot in backDot.dots) {
-                if (!_changeDots.Contains(dot)) {
+                if (!_changeDots.Contains(dot) && dot.DotTraffic.Area.gameObject.activeSelf) {
                     _changeDots.Add(dot);
                 }
             }
