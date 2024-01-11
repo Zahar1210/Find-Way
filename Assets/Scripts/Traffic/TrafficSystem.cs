@@ -7,94 +7,64 @@ public class TrafficSystem : MonoBehaviour
     public static TrafficSystem Instance { get; set; }
     [SerializeField] private CarPooler carPooler;
     [SerializeField] private CrossRoad crossRoad;
-
-    public List<TrafficDot> _trafficDots = new();
-    public Dictionary<int, AreaAbstract> _trafficAreas = new();
+    public Dictionary<int, TrafficDot> _traffic = new();
     private AreaAbstract pastArea;
-    public int spawnIndex;
 
-    private void Awake()
-    {
+    private void Awake() {
         if (Instance == null) {
             Instance = this;
-            return;
         }
-        Destroy(gameObject);
     }
 
-    public void SetTraffic()
-    {
-        List<TrafficDot> dots = new();
+    public void SetTraffic(AreaAbstract areaAbstract) {
         foreach (var dot in FindObjectsOfType<TrafficDot>()) {
-            if (!_trafficDots.Contains(dot)) {
+            if (!_traffic.TryGetValue(dot.Area.SpawnIndex, out var Dot)) {
                 dot.SetDot();
-                _trafficDots.Add(dot);
-                _trafficAreas.Add(dot.Area.SpawnIndex, dot.Area);
-                dots.Add(dot);
+                _traffic.Add(dot.Area.SpawnIndex, dot);
+                carPooler.SpawnCar(dot.Area);
             }
-        }
-        foreach (var dot in _trafficDots) {
-            GetDot(dot);
-        }
-        foreach (var dot in _trafficDots) {
-            if (dot.Area.SpawnIndex == spawnIndex - 1) {
-                CheckCrossRoads(dot.Area);
-            }
-        }
-        foreach (var d in dots) {
-            carPooler.SpawnCar(d.Area);
-        }
-    }
-    private void GetDot(TrafficDot dot)
-    {
-        if (dot.FrontDot == null && _trafficAreas.TryGetValue(dot.Area.SpawnIndex + 1, out var area)) {
-            IName trafficArea = area.GetComponent<IName>();
-            if (trafficArea != null)
-                dot.FrontDot = trafficArea.Dot;
         }
 
-        if (dot.BackDot == null && _trafficAreas.TryGetValue(dot.Area.SpawnIndex - 1, out var _area)) {
-            IName trafficArea = _area.GetComponent<IName>();
-            if (trafficArea != null)
-                dot.BackDot = trafficArea.Dot;
-        }
+        if (areaAbstract.Type == AreaTypes.Mixed || areaAbstract.Type == AreaTypes.Traffic)
+            CheckCrossRoad(areaAbstract);
     }
-    private void CheckCrossRoads(AreaAbstract area)
+
+    private void CheckCrossRoad(AreaAbstract areaAbstract)
     {
         if (pastArea == null)
-            pastArea = area;
-        else if (pastArea.SpawnIndex + 1 == area.SpawnIndex && area.Type != pastArea.Type) {
-            IName trafficArea = (pastArea.Type == AreaTypes.Traffic) ? pastArea.GetComponent<IName>() : area.GetComponent<IName>();
+            pastArea = areaAbstract;
+        if (areaAbstract.SpawnIndex -1 == pastArea.SpawnIndex && areaAbstract.Type != pastArea.Type) {
+            IName trafficArea = (pastArea.Type == AreaTypes.Traffic) ? pastArea.GetComponent<IName>() : areaAbstract.GetComponent<IName>();
             if (!crossRoad._dots.Contains(trafficArea.Dot)) {
                 crossRoad._dots.Add(trafficArea.Dot);
+                crossRoad.ChangeRoadSide();
             }
-            crossRoad.ChangeRoadSide();
         }
-        pastArea = area;
+        pastArea = areaAbstract;
     }
-    public void ReSetDot(IName trafficArea)
+
+    public void ResetDot(IName area)
     {
-        carPooler.ReturnToPool(trafficArea);
-        trafficArea.Dot.FrontDot = null;
-        trafficArea.Dot.BackDot = null;
-        _trafficAreas.Remove(trafficArea.Dot.Area.SpawnIndex);
-        _trafficDots.Remove(trafficArea.Dot);
+        carPooler.ReturnToPool(area);
+        _traffic.Remove(area.Dot.Area.SpawnIndex);
         if (crossRoad._changeDots.Count != 0) {
-            foreach (var dot in trafficArea.Dot.dots) {
+            foreach (var dot in area.Dot.dots) {
                 if (crossRoad._changeDots.Contains(dot)) {
                     crossRoad._changeDots.Remove(dot);
                 }
             }
-            crossRoad._dots.Remove(trafficArea.Dot);
+            crossRoad._dots.Remove(area.Dot);
         }
     }
+
     public class MoveDots
     {
-        public TrafficDot.Dot DotA { get;}
-        public TrafficDot.Dot DotB { get;}
-        public Vector3 CenterDot{ get;}
+        public TrafficDot.Dot DotA { get; }
+        public TrafficDot.Dot DotB { get; }
+        public Vector3 CenterDot { get; }
 
-        public MoveDots(TrafficDot.Dot a, TrafficDot.Dot b, Vector3 center) {
+        public MoveDots(TrafficDot.Dot a, TrafficDot.Dot b, Vector3 center)
+        {
             DotA = a;
             DotB = b;
             CenterDot = center;

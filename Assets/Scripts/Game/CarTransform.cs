@@ -1,8 +1,7 @@
 using UnityEngine;
-
-public static class Bezier
+public static class CarTransform
 {
-    public static Vector3 GetPoint(float t, TrafficDot.Dot a, TrafficDot.Dot b, Vector3 centerDot)
+    public static Vector3 GetPosition(float t, TrafficDot.Dot a, TrafficDot.Dot b, Vector3 centerDot)
     {
         if (centerDot.x != 0) {
             Vector3 dot1 = Vector3.Lerp(a.Pos, centerDot, t);
@@ -14,5 +13,10 @@ public static class Bezier
             Vector3 dot = Vector3.Lerp(a.Pos,b.Pos,t);
             return dot;
         }
+    }
+
+    public static Quaternion GetRotation(float t, TrafficDot.Dot a, TrafficDot.Dot b)
+    {
+        return Quaternion.Lerp(a.Rot, b.Rot, t);
     }
 }

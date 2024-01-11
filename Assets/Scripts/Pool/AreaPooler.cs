@@ -10,7 +10,7 @@ public class AreaPooler : MonoBehaviour
     [SerializeField] private Transform pointReturnToPool;
     [SerializeField] private Transform pointCheckInterval;
     [SerializeField] private PathFinding pathFinding;
-    [SerializeField] private TrafficSystem trafficSystem;
+    [SerializeField] private TrafficSystem traffic_System;
     [SerializeField] private AreaAbstract[] areaArray;
 
     private List<AreaAbstract> _areaAbstracts = new();
@@ -35,17 +35,16 @@ public class AreaPooler : MonoBehaviour
             _time = 0f;
         }
     }
-    private void Update()
-    {
+    private void Update() {
         Timer();
         Vector3Int currentZPosition = Vector3Int.RoundToInt(pointCheckInterval.position);
         if (currentZPosition.z - _lastSpawnPosition.z >= spawnInterval) {
+            AreaAbstract area = queueArea;
             _spawnIndex++;
-            trafficSystem.spawnIndex = _spawnIndex;
             _lastSpawnPosition.z = currentZPosition.z;
             SpawnArea(currentZPosition);
             pathFinding.FindTiles(); //обновляем данные для поиска пути :)
-            trafficSystem.SetTraffic();//обновляем данные для машин :)
+            traffic_System.SetTraffic(area);//обновляем данные для машин :)
         }
     }
     private void SpawnArea(Vector3Int areaPosition)
@@ -88,7 +87,7 @@ public class AreaPooler : MonoBehaviour
             if (area.transform.position.z <= pointReturnToPool.transform.position.z && area.gameObject.activeSelf) {
                 IName trafficArea = area.GetComponent<IName>();
                 if (trafficArea != null) {
-                    trafficSystem.ReSetDot(trafficArea);
+                    traffic_System.ResetDot(trafficArea);
                 }
                 EnableArea(area,false);
             }

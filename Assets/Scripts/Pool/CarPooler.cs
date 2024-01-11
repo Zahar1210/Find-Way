@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 public class CarPooler : MonoBehaviour
 {
-    [SerializeField] private CarMoveController carMoveController;
+    
     [SerializeField] private CarAbstract[] carArray;
     private List<CarAbstract> _carAbstracts = new();
     public void SpawnCar(AreaAbstract area)
@@ -44,7 +44,7 @@ public class CarPooler : MonoBehaviour
         foreach (var car in cars) {
             EnableCar(car, trafficArea,true);
             TrafficDot.Dot dot = SetPos(car, trafficArea);
-            carMoveController.GetMovementDirection(dot, car);
+            DotFinding.GetDot(dot, car);
         }
     }
     private TrafficDot.Dot SetPos(CarAbstract car, IName area)
@@ -54,15 +54,15 @@ public class CarPooler : MonoBehaviour
         car.transform.rotation = carDot.Rot;
         return carDot;
     }
-    public void EnableCar(CarAbstract car, IName area ,bool isActive)
+    private void EnableCar(CarAbstract car, IName area ,bool isActive)
     {
-        car.Area = area;
+        car.CarArea = area;
         car.gameObject.SetActive(isActive);
     }
     public void ReturnToPool(IName area)
     {
         foreach (var car in _carAbstracts) {
-            if (car.Area == area) {
+            if (car.CarArea == area) {
                 EnableCar(car, null, false);
             }
         }

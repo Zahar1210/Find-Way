@@ -153,7 +153,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5044770
 MonoBehaviour:
@@ -426,7 +426,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+  m_Color: {r: 0.20901564, g: 0.3652887, b: 0.7264151, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -5849,10 +5849,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1225137740}
-  - component: {fileID: 1225137739}
   - component: {fileID: 1225137741}
-  - component: {fileID: 1225137742}
-  - component: {fileID: 1225137743}
+  - component: {fileID: 1225137746}
+  - component: {fileID: 1225137745}
+  - component: {fileID: 1225137747}
   m_Layer: 0
   m_Name: TrafficSystem
   m_TagString: Untagged
@@ -5860,22 +5860,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1225137739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225137738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5cd2ec7918264e40b333f071684148b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  carPooler: {fileID: 1225137741}
-  crossRoad: {fileID: 1225137742}
-  _trafficDots: []
-  spawnIndex: 0
 --- !u!4 &1225137740
 Transform:
   m_ObjectHideFlags: 0
@@ -5903,12 +5887,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1123948b2a73b4a15972a3bea5519e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carMoveController: {fileID: 1225137743}
   carArray:
-  - {fileID: 8383501958800808271, guid: 1aedd8da7d5624325b7653c72ea75b36, type: 3}
-  - {fileID: 7515612851872005092, guid: fa5d69b21585d42b68b80dab239bc79d, type: 3}
-  - {fileID: 5818516574844820861, guid: c96653a0d98774445abcba1eea97aae4, type: 3}
---- !u!114 &1225137742
+  - {fileID: -3551893937172940208, guid: f3c7b6203aa134de4940c16ed9656897, type: 3}
+  - {fileID: 7959224561911118613, guid: 2487d5f6d268945f98cd63a35224caae, type: 3}
+  - {fileID: 329467422466321369, guid: 9c76a0d9fa7404752b4ffe01dd2cc4e4, type: 3}
+--- !u!114 &1225137745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5917,13 +5900,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 1225137738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f80648b8012c746aebb756b69bb2fe44, type: 3}
+  m_Script: {fileID: 11500000, guid: bbd03330345f7438784439596ede5800, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carPooler: {fileID: 1225137741}
+  crossRoad: {fileID: 1225137746}
+--- !u!114 &1225137746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225137738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e7c56b3ec66f4672856661aeb02ca07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   changeTime: 1
+  trafficSystem: {fileID: 1225137745}
   _dots: []
-  count: 0
---- !u!114 &1225137743
+--- !u!114 &1225137747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5932,9 +5929,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1225137738}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 612c6bbb4d3d94f55bcc8365f37b12db, type: 3}
+  m_Script: {fileID: 11500000, guid: 876fab671a52b4da4a3e978649c6a493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dotPositions:
+  - {x: -4, y: 0, z: -1}
+  - {x: 4, y: 0, z: -1}
+  - {x: -19, y: 0, z: -1}
+  - {x: 10, y: 0, z: -1}
+  - {x: -4, y: 0, z: 1}
+  - {x: 4, y: 0, z: 1}
+  - {x: -19, y: 0, z: 1}
+  - {x: 10, y: 0, z: 1}
+  dotRotations:
+  - {x: 0, y: 0, z: 90, w: 0}
+  - {x: 0, y: 180, z: 90, w: 0}
+  - {x: 0, y: 90, z: 90, w: 0}
+  - {x: 0, y: 270, z: 90, w: 0}
 --- !u!1 &1266466368
 GameObject:
   m_ObjectHideFlags: 0
@@ -6090,7 +6101,7 @@ Transform:
   - {fileID: 1068819922}
   - {fileID: 1958373655}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1749188434
 PrefabInstance:
@@ -6338,7 +6349,7 @@ MonoBehaviour:
   pointReturnToPool: {fileID: 1266466369}
   pointCheckInterval: {fileID: 737772858}
   pathFinding: {fileID: 1018389157}
-  trafficSystem: {fileID: 1225137739}
+  traffic_System: {fileID: 1225137745}
   areaArray:
   - {fileID: 7626572868098712805, guid: 5e403c55e2ae84595af039780c073150, type: 3}
   - {fileID: 7211770072484490167, guid: 4d78d744ce4194970aa3e3b2c318470f, type: 3}
