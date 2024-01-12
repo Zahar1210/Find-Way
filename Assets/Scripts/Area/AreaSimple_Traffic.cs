@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AreaSimple_Traffic : AreaAbstract,IName
+public class AreaSimple_Traffic : AreaAbstract,ITrafficable
 {
     [SerializeField] private TrafficDot _dot;
     public TrafficDot Dot { get; set;}

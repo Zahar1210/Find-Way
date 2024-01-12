@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class AreaTraffic : AreaAbstract, IName
+public class AreaTraffic : AreaAbstract, ITrafficable
 {
     [SerializeField] private TrafficDot _dot;
     public TrafficDot Dot { get; set;}

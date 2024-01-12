@@ -16,20 +16,16 @@ public static class DotFinding
     {
         if (b != null) {
             if (b.DotTraffic.Area.Type == a.DotTraffic.Area.Type){
-                if (b.Type == a.Type) {
+                if (b.Type == a.Type) 
                     CarMovement.Move(a, b, Vector3.zero, car);
-                }
-                else {
+                else 
                     CarMovement.Move(a, b, GetPivotDot(a, b), car);
-                }
             }
             else {
-                if (a.DotTraffic.Area.Type == AreaTypes.Traffic) {
+                if (a.DotTraffic.Area.Type == AreaTypes.Traffic) 
                     CarMovement.Move(a, b, a.DotTraffic.transform.position, car);
-                }
-                else {
+                else 
                     CarMovement.Move(a, b, b.DotTraffic.transform.position, car);
-                }
             }
         }
     }
@@ -196,7 +192,7 @@ public static class DotFinding
         Vector3 CalculatePosition(bool isTraffic) {
             if (isTraffic) {
                 if (a.Type == DotType.Left && b.Type == DotType.Right) {
-                    return new Vector3(midPoint.x - 3, midPoint.y, midPoint.z);
+                    return new Vector3(midPoint.x - 3, midPoint.y, midPoint.z);//пока так (все магические числа занесешь в TrafficSystem и от туда будешь брать нужные значения)
                 }
                 if (a.Type == DotType.Right && b.Type == DotType.Left) {
                     return new Vector3(midPoint.x + 3, midPoint.y, midPoint.z); 

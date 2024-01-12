@@ -15,8 +15,7 @@ public static class CarTransform
         }
     }
 
-    public static Quaternion GetRotation(float t, TrafficDot.Dot a, TrafficDot.Dot b)
-    {
+    public static Quaternion GetRotation(float t, TrafficDot.Dot a, TrafficDot.Dot b) {
         return Quaternion.Lerp(a.Rot, b.Rot, t);
     }
 }

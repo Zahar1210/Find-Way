@@ -5,6 +5,7 @@ using UnityEngine;
 public class CrossRoad : MonoBehaviour
 {
     public static CrossRoad Instance { get; set; }
+    
     [SerializeField] private float changeTime;
     [SerializeField] private TrafficSystem trafficSystem;
     public List<TrafficDot> _dots = new();
@@ -68,6 +69,11 @@ public class CrossRoad : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void InstanceBarrier()
+    {
+        
     }
 
     private void ChangeType() {

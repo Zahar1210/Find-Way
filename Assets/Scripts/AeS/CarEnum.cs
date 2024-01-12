@@ -1,6 +1,6 @@
 public enum CarType
 {
     ServiceCar,
-    OrdinaryCar,
+    SimpleCar,
     TruckerCar
 }

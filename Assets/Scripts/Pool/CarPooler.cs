@@ -5,14 +5,16 @@ using Random = UnityEngine.Random;
 
 public class CarPooler : MonoBehaviour
 {
-    
+    [SerializeField] private int[] trafficSpawnCount;
+    [SerializeField] private int[] mixedSpawnCount;
     [SerializeField] private CarAbstract[] carArray;
     private List<CarAbstract> _carAbstracts = new();
     public void SpawnCar(AreaAbstract area)
     {
-        IName trafficArea = area.GetComponent<IName>(); 
+        ITrafficable trafficArea = area.GetComponent<ITrafficable>(); 
         if (trafficArea != null) {
-            CarAbstract[] cars = FindCar((area.Type == AreaTypes.Traffic) ? Random.Range(1, 5) : Random.Range(0, 2));
+            CarAbstract[] cars = FindCar((area.Type == AreaTypes.Traffic) ? Random.Range(trafficSpawnCount[0], trafficSpawnCount[1]) 
+                : Random.Range(mixedSpawnCount[0], mixedSpawnCount[1]));
             if (cars != null) {
                 SetCar(cars, trafficArea);
             }
@@ -39,7 +41,7 @@ public class CarPooler : MonoBehaviour
         }
         return null;
     }
-    private void SetCar(CarAbstract[] cars, IName trafficArea )
+    private void SetCar(CarAbstract[] cars, ITrafficable trafficArea )
     {
         foreach (var car in cars) {
             EnableCar(car, trafficArea,true);
@@ -47,19 +49,19 @@ public class CarPooler : MonoBehaviour
             DotFinding.GetDot(dot, car);
         }
     }
-    private TrafficDot.Dot SetPos(CarAbstract car, IName area)
+    private TrafficDot.Dot SetPos(CarAbstract car, ITrafficable area)
     {
         TrafficDot.Dot carDot = area.Dot.dots[Random.Range(0, area.Dot.dots.Count)];
         car.transform.position = carDot.Pos;
         car.transform.rotation = carDot.Rot;
         return carDot;
     }
-    private void EnableCar(CarAbstract car, IName area ,bool isActive)
+    private void EnableCar(CarAbstract car, ITrafficable area ,bool isActive)
     {
         car.CarArea = area;
         car.gameObject.SetActive(isActive);
     }
-    public void ReturnToPool(IName area)
+    public void ReturnToPool(ITrafficable area)
     {
         foreach (var car in _carAbstracts) {
             if (car.CarArea == area) {

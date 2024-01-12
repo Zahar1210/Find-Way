@@ -34,7 +34,7 @@ public class TrafficSystem : MonoBehaviour
         if (pastArea == null)
             pastArea = areaAbstract;
         if (areaAbstract.SpawnIndex -1 == pastArea.SpawnIndex && areaAbstract.Type != pastArea.Type) {
-            IName trafficArea = (pastArea.Type == AreaTypes.Traffic) ? pastArea.GetComponent<IName>() : areaAbstract.GetComponent<IName>();
+            ITrafficable trafficArea = (pastArea.Type == AreaTypes.Traffic) ? pastArea.GetComponent<ITrafficable>() : areaAbstract.GetComponent<ITrafficable>();
             if (!crossRoad._dots.Contains(trafficArea.Dot)) {
                 crossRoad._dots.Add(trafficArea.Dot);
                 crossRoad.ChangeRoadSide();
@@ -43,7 +43,7 @@ public class TrafficSystem : MonoBehaviour
         pastArea = areaAbstract;
     }
 
-    public void ResetDot(IName area)
+    public void ResetDot(ITrafficable area)
     {
         carPooler.ReturnToPool(area);
         _traffic.Remove(area.Dot.Area.SpawnIndex);

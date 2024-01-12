@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1745362607678070938}
   - component: {fileID: 1745362607678070937}
   - component: {fileID: -3551893937172940208}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Car
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33,6 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8293774941107580614}
+  - {fileID: 3082887222287436713}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -111,9 +112,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef3f49a92f52f4eacb7f99317aac703a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EndPos: {x: 0, y: 0, z: 0}
-  type: 1
-  speed: 4
+  Type: 1
+  Speed: 4
+  FixedSpeed: 4
+  RayDistance: 2.5
+  TimeForMove: 0.6
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  RayDot: {fileID: 3082887222287436713}
+--- !u!1 &3784289326172914984
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3082887222287436713}
+  m_Layer: 8
+  m_Name: ray
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3082887222287436713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3784289326172914984}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1745362607678070932}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8028788590155519770
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +164,7 @@ GameObject:
   - component: {fileID: 7745909427516059879}
   - component: {fileID: 653722422208889902}
   - component: {fileID: 5325184692187343888}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}

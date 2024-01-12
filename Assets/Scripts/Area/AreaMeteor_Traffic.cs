@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class AreaMeteor_Traffic : AreaAbstract, IName
+public class AreaMeteor_Traffic : AreaAbstract, ITrafficable
 {
     [SerializeField] private TrafficDot _dot;
     public TrafficDot Dot { get; set;}
