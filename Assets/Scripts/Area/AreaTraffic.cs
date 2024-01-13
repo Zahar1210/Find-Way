@@ -4,7 +4,7 @@ public class AreaTraffic : AreaAbstract, ITrafficable
 {
     [SerializeField] private TrafficDot _dot;
     public TrafficDot Dot { get; set;}
-    
+
     private void Awake() {
         Dot = _dot;
     }

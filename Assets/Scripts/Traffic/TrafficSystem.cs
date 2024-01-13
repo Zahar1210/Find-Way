@@ -5,11 +5,13 @@ using UnityEngine;
 public class TrafficSystem : MonoBehaviour
 {
     public static TrafficSystem Instance { get; set; }
+    
+    public LayerMask LayerMask;
+    public float PivotDotDis;
     [SerializeField] private CarPooler carPooler;
     [SerializeField] private CrossRoad crossRoad;
     public Dictionary<int, TrafficDot> _traffic = new();
     private AreaAbstract pastArea;
-
     private void Awake() {
         if (Instance == null) {
             Instance = this;
@@ -55,6 +57,14 @@ public class TrafficSystem : MonoBehaviour
             }
             crossRoad._dots.Remove(area.Dot);
         }
+
+        // for (int e = 0; e < crossRoad._walls.Count; e++) {
+        //     if (crossRoad._walls[e].Area == area.Dot.Area) {
+        //         crossRoad._walls.Remove(crossRoad._walls[e]);
+        //         crossRoad._walls[e].gameObject.SetActive(false);
+        //         crossRoad._walls[e].IsUse = false;
+        //     }
+        // }
     }
 
     public class MoveDots

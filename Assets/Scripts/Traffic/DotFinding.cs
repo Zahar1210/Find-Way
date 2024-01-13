@@ -191,20 +191,16 @@ public static class DotFinding
 
         Vector3 CalculatePosition(bool isTraffic) {
             if (isTraffic) {
-                if (a.Type == DotType.Left && b.Type == DotType.Right) {
-                    return new Vector3(midPoint.x - 3, midPoint.y, midPoint.z);//пока так (все магические числа занесешь в TrafficSystem и от туда будешь брать нужные значения)
-                }
-                if (a.Type == DotType.Right && b.Type == DotType.Left) {
-                    return new Vector3(midPoint.x + 3, midPoint.y, midPoint.z); 
-                }
+                if (a.Type == DotType.Left && b.Type == DotType.Right) 
+                    return new Vector3(midPoint.x - trafficSystem.PivotDotDis, midPoint.y, midPoint.z);
+                if (a.Type == DotType.Right && b.Type == DotType.Left) 
+                    return new Vector3(midPoint.x + trafficSystem.PivotDotDis, midPoint.y, midPoint.z); 
             }
             else {
-                if (a.Type == DotType.Left && b.Type == DotType.Right) {
-                    return new Vector3(midPoint.x, midPoint.y, midPoint.z + 3);
-                }
-                if (a.Type == DotType.Right && b.Type == DotType.Left) {
-                    return new Vector3(midPoint.x, midPoint.y, midPoint.z - 3);
-                }
+                if (a.Type == DotType.Left && b.Type == DotType.Right) 
+                    return new Vector3(midPoint.x, midPoint.y, midPoint.z + trafficSystem.PivotDotDis);
+                if (a.Type == DotType.Right && b.Type == DotType.Left) 
+                    return new Vector3(midPoint.x, midPoint.y, midPoint.z - trafficSystem.PivotDotDis);
             }
             return Vector3.zero;
         }

@@ -115,6 +115,7 @@ MonoBehaviour:
   Type: 2
   Speed: 3
   FixedSpeed: 3
+  SpeedMultiplier: 1
   RayDistance: 3
   TimeForMove: 1
   layerMask:

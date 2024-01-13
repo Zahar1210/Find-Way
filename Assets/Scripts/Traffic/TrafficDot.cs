@@ -37,32 +37,14 @@ public class TrafficDot : MonoBehaviour
     {
         if (dots != null) {
             foreach (var dot in dots) {
-                if (dot.CanMove) {
-                    float d = 0f;
-                    if (dot.Type == DotType.Right)
-                        d = 0.3f;
-                    else 
-                        d = 0.2f;
-                    Gizmos.color = Color.green;
-                    Gizmos.DrawSphere(dot.Pos, d);
-                }
-                else {
-                    float d = 0f;
-                    if (dot.Type == DotType.Right)
-                        d = 0.3f;
-                    else 
-                        d = 0.2f;
-                    Gizmos.color = Color.red;
-                    Gizmos.DrawSphere(dot.Pos, d);
-                }
+                Gizmos.DrawSphere(dot.Pos, 0.2f);
             }
         }
     }
 
     public class Dot
     {
-        public TrafficDot DotTraffic { get; set; }
-        public bool CanMove { get; set; } = true; //надо будет убрать 
+        public TrafficDot DotTraffic { get; set; } 
         public Quaternion Rot { get; }
         public Vector3 Pos { get; set; }
         public Vector3 СonstantPos { get; set; }
@@ -78,7 +60,6 @@ public class TrafficDot : MonoBehaviour
 
         public void ChangePos(Vector3 trafficDotPos)
         {
-            CanMove = true;
             Pos = new Vector3(trafficDotPos.x + СonstantPos.x, trafficDotPos.y + СonstantPos.y, trafficDotPos.z + СonstantPos.z);
         }
     }
