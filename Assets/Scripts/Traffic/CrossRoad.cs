@@ -14,8 +14,8 @@ public class CrossRoad : MonoBehaviour
     public List<TrafficDot.Dot> _changeDots = new();
     private AreaTypes _changeType = AreaTypes.Traffic;
     
-    private float _time;
-    private int previosCountDots;
+    public float _time;
+    public bool  newDots;
 
     private void Awake() {
         if (Instance == null) {
@@ -37,17 +37,16 @@ public class CrossRoad : MonoBehaviour
     }
     public void ChangeRoadSide()
     {
-        if (previosCountDots < _dots.Count) {
+        if (newDots) {
             foreach (var dot in _dots) {
                 if (dot.Area.gameObject.activeSelf) 
                     SelectDots(dot);
-                else 
+                else
                     _dots.Remove(dot);
             }
-
-            foreach (var dot in _changeDots) {
+            foreach (var dot in _changeDots) 
                 wallPooler.SpawnCrossRoadWall(dot);
-            }
+            newDots = false;
         }
         
         foreach (var wall in wallPooler._walls) {
@@ -66,7 +65,6 @@ public class CrossRoad : MonoBehaviour
                 }
             }
         }
-        previosCountDots = _dots.Count;
     }
     private void SelectDots(TrafficDot dot)
     {
@@ -76,32 +74,34 @@ public class CrossRoad : MonoBehaviour
         foreach (var d in mainDot.dots) {
             if (!_changeDots.Contains(d) && CheckDot(d)) {
                 _changeDots.Add(d);
+                d.CanMove = false;
             }
         }
         if (frontDot != null) {
             foreach (var d in frontDot.dots) {
-                if (!_changeDots.Contains(d) && (d.Type == DotType.Right && d.DotTraffic.Area.SpawnIndex == mainDot.Area.SpawnIndex + 1))  {
+                if (!_changeDots.Contains(d) && d.Type == DotType.Right)  {
                     _changeDots.Add(d);
+                    d.CanMove = false;
                 }
             }
         }
         if (backDot != null) {
             foreach (var d in backDot.dots) {
-                if (!_changeDots.Contains(d) && (d.Type == DotType.Left && d.DotTraffic.Area.SpawnIndex == mainDot.Area.SpawnIndex - 1)) {
+                if (!_changeDots.Contains(d) && d.Type == DotType.Left) {
                     _changeDots.Add(d);
+                    d.CanMove = false;
                 }
             }
         }
     }
-    
-    private void ChangeType() {
-        _changeType = (_changeType == AreaTypes.Traffic) ? AreaTypes.Mixed : AreaTypes.Traffic;
-    }
-
     private TrafficDot GetDot(TrafficDot dot, int offset)
     {
-        if (trafficSystem._traffic.TryGetValue(dot.Area.SpawnIndex + offset, out TrafficDot adjacentDot)) { return adjacentDot; }
+        if (trafficSystem._traffic.TryGetValue(dot.Area.SpawnIndex + offset, out TrafficDot Dot)) 
+            return Dot; 
         return null;
+    }
+    private void ChangeType() {
+        _changeType = (_changeType == AreaTypes.Traffic) ? AreaTypes.Mixed : AreaTypes.Traffic;
     }
 
     private bool CheckDot(TrafficDot.Dot dot)

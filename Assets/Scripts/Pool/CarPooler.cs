@@ -14,7 +14,7 @@ public class CarPooler : MonoBehaviour
         ITrafficable trafficArea = area.GetComponent<ITrafficable>(); 
         if (trafficArea != null) {
             CarAbstract[] cars = FindCar((area.Type == AreaTypes.Traffic) ? Random.Range(trafficSpawnCount[0], trafficSpawnCount[1]) 
-                : Random.Range(mixedSpawnCount[0], mixedSpawnCount[1]));
+                : Random.Range(mixedSpawnCount[0], mixedSpawnCount[2]));
             if (cars != null) {
                 SetCar(cars, trafficArea);
             }

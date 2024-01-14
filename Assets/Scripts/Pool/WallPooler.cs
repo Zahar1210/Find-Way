@@ -9,7 +9,9 @@ public class WallPooler : MonoBehaviour
     public void SpawnCrossRoadWall(TrafficDot.Dot dot)
     {
         CrossRoadWall wall = FindWall();
-        _walls.Add(wall);
+        if (!_walls.Contains(wall)) {
+            _walls.Add(wall);
+        }
         wall.Dot = dot;
         wall.IsUse = true;
         wall.gameObject.SetActive(true);

@@ -23,6 +23,7 @@ public class TrafficSystem : MonoBehaviour
             if (!_traffic.TryGetValue(dot.Area.SpawnIndex, out var Dot)) {
                 dot.SetDot();
                 _traffic.Add(dot.Area.SpawnIndex, dot);
+                dot.Area.IsTraffic = true;
                 carPooler.SpawnCar(dot.Area);
             }
         }
@@ -39,7 +40,8 @@ public class TrafficSystem : MonoBehaviour
             ITrafficable trafficArea = (pastArea.Type == AreaTypes.Traffic) ? pastArea.GetComponent<ITrafficable>() : areaAbstract.GetComponent<ITrafficable>();
             if (!crossRoad._dots.Contains(trafficArea.Dot)) {
                 crossRoad._dots.Add(trafficArea.Dot);
-                crossRoad.ChangeRoadSide();
+                crossRoad.newDots = true;
+                crossRoad._time = 3f;
             }
         }
         pastArea = areaAbstract;
@@ -49,22 +51,16 @@ public class TrafficSystem : MonoBehaviour
     {
         carPooler.ReturnToPool(area);
         _traffic.Remove(area.Dot.Area.SpawnIndex);
+        area.Dot.Area.IsTraffic = false;
         if (crossRoad._changeDots.Count != 0) {
+            crossRoad._dots.Remove(area.Dot);
             foreach (var dot in area.Dot.dots) {
                 if (crossRoad._changeDots.Contains(dot)) {
                     crossRoad._changeDots.Remove(dot);
+                    dot.CanMove = true;
                 }
             }
-            crossRoad._dots.Remove(area.Dot);
         }
-
-        // for (int e = 0; e < crossRoad._walls.Count; e++) {
-        //     if (crossRoad._walls[e].Area == area.Dot.Area) {
-        //         crossRoad._walls.Remove(crossRoad._walls[e]);
-        //         crossRoad._walls[e].gameObject.SetActive(false);
-        //         crossRoad._walls[e].IsUse = false;
-        //     }
-        // }
     }
 
     public class MoveDots

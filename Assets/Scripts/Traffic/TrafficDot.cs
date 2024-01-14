@@ -37,7 +37,7 @@ public class TrafficDot : MonoBehaviour
     {
         if (dots != null) {
             foreach (var dot in dots) {
-                Gizmos.DrawSphere(dot.Pos, 0.2f);
+                Gizmos.DrawSphere(dot.Pos, (dot.Type == DotType.Right)? 0.3f : 0.2f);
             }
         }
     }
@@ -49,6 +49,7 @@ public class TrafficDot : MonoBehaviour
         public Vector3 Pos { get; set; }
         public Vector3 СonstantPos { get; set; }
         public DotType Type { get; }
+        public bool CanMove { get; set; } = true;
 
         public Dot(Vector3 pos, DotType type, Quaternion rot, TrafficDot parentDot)
         {

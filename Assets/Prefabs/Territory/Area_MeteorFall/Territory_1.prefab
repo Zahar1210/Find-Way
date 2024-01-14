@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7876271841130495051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 25}
+  m_LocalPosition: {x: 0, y: 0, z: 20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -260,6 +260,7 @@ MonoBehaviour:
   - {fileID: 6559066027134929824, guid: a3e5f4a27dcee4545848158ed21be805, type: 3}
   Tiles: []
   SpawnIndex: 5
+  IsTraffic: 0
 --- !u!1001 &64693502144967629
 PrefabInstance:
   m_ObjectHideFlags: 0

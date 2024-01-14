@@ -10,5 +10,6 @@ public abstract class AreaAbstract : MonoBehaviour
     public AreaAbstract[] Areas;
     public List<Tile> Tiles = new();
     public int SpawnIndex;
+    public bool IsTraffic;
     public abstract void Action();
 }
