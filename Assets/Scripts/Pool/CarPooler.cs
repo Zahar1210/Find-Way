@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 using Random = UnityEngine.Random;
 
 public class CarPooler : MonoBehaviour
@@ -9,6 +10,14 @@ public class CarPooler : MonoBehaviour
     [SerializeField] private int[] mixedSpawnCount;
     [SerializeField] private CarAbstract[] carArray;
     private List<CarAbstract> _carAbstracts = new();
+    private State _state;
+
+    [Inject]
+    private void Construct(State state)
+    {
+        _state = state;
+    }
+    
     public void SpawnCar(AreaAbstract area)
     {
         ITrafficable trafficArea = area.GetComponent<ITrafficable>(); 
@@ -46,7 +55,8 @@ public class CarPooler : MonoBehaviour
         foreach (var car in cars) {
             EnableCar(car, trafficArea,true);
             TrafficDot.Dot dot = SetPos(car, trafficArea);
-            DotFinding.GetDot(dot, car);
+            _state.SetState<CarStateDriving>(car, dot);
+            Debug.Log("заспавнили");
         }
     }
     private TrafficDot.Dot SetPos(CarAbstract car, ITrafficable area)

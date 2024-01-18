@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1745362607678070936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 3, z: 1.8}
+  m_LocalScale: {x: 1.4, y: 2.7, z: 1.6}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2985260487231895256}
@@ -112,15 +112,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e000f6916b32d4049b209c4d6310c8a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 2
+  TimeForMove: 1
   Speed: 3
   FixedSpeed: 3
-  SpeedMultiplier: 1
-  RayDistance: 3
-  TimeForMove: 1
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 256
+  IsSlowDown: 0
+  RayDistance: 0.6
   RayDot: {fileID: 3671843153521345904}
 --- !u!1 &7526608689919946559
 GameObject:

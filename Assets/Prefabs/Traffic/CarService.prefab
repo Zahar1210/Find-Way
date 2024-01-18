@@ -112,15 +112,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89afd721d4f4640a2939259811cb0c44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Type: 0
+  TimeForMove: 0.5
   Speed: 3.5
   FixedSpeed: 3.5
-  SpeedMultiplier: 1
-  RayDistance: 2.5
-  TimeForMove: 0.5
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 256
+  IsSlowDown: 0
+  RayDistance: 0.5
   RayDot: {fileID: 6109564632148986067}
 --- !u!1 &5231429903113648983
 GameObject:
