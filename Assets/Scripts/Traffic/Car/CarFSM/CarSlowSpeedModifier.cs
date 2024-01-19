@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class CarSlowDown: MonoBehaviour
+public class CarSlowSpeedModifier: MonoBehaviour
 {
     public IEnumerator ChangeSpeed(CarAbstract car, float targetSpeed, float duration)
     {

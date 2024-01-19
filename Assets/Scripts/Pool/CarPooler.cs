@@ -13,8 +13,7 @@ public class CarPooler : MonoBehaviour
     private State _state;
 
     [Inject]
-    private void Construct(State state)
-    {
+    private void Construct(State state) {
         _state = state;
     }
     
@@ -22,7 +21,8 @@ public class CarPooler : MonoBehaviour
     {
         ITrafficable trafficArea = area.GetComponent<ITrafficable>(); 
         if (trafficArea != null) {
-            CarAbstract[] cars = FindCar((area.Type == AreaTypes.Traffic) ? Random.Range(trafficSpawnCount[0], trafficSpawnCount[1]) 
+            CarAbstract[] cars = FindCar(area.Type == AreaTypes.Traffic
+                ? Random.Range(trafficSpawnCount[0], trafficSpawnCount[1])
                 : Random.Range(mixedSpawnCount[0], mixedSpawnCount[2]));
             if (cars != null) {
                 SetCar(cars, trafficArea);
@@ -54,22 +54,36 @@ public class CarPooler : MonoBehaviour
     {
         foreach (var car in cars) {
             EnableCar(car, trafficArea,true);
-            TrafficDot.Dot dot = SetPos(car, trafficArea);
-            _state.SetState<CarStateDriving>(car, dot);
-            Debug.Log("заспавнили");
+            TrafficDot.Dot dot = SetPos(trafficArea);
+            if (dot != null) {
+                dot.CarSpawn = true;
+                car.transform.position = dot.Pos;
+                car.transform.rotation = dot.Rot;
+                _state.SetState<CarStateDriving>(car, dot);
+            }
         }
     }
-    private TrafficDot.Dot SetPos(CarAbstract car, ITrafficable area)
+    private TrafficDot.Dot SetPos(ITrafficable area)
     {
-        TrafficDot.Dot carDot = area.Dot.dots[Random.Range(0, area.Dot.dots.Count)];
-        car.transform.position = carDot.Pos;
-        car.transform.rotation = carDot.Rot;
-        return carDot;
+        TrafficDot.Dot dot = null;
+        if (area.Dot.Area.Type == AreaTypes.Traffic) {
+            for (int i = 0; i < area.Dot.dots.Count; i++) {
+                dot = area.Dot.dots[Random.Range(0, area.Dot.dots.Count)];
+                if (dot.CarSpawn == false) {
+                    return dot;
+                }
+            }
+        }
+        else {
+            return area.Dot.dots[Random.Range(0, area.Dot.dots.Count)];
+        }
+        return null;
     }
     private void EnableCar(CarAbstract car, ITrafficable area ,bool isActive)
     {
         car.CarArea = area;
         car.gameObject.SetActive(isActive);
+        if (!isActive) { car.CurrentState = null; }
     }
     public void ReturnToPool(ITrafficable area)
     {

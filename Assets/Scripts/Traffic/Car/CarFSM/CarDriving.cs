@@ -1,8 +1,19 @@
+using System;
 using System.Collections;
 using UnityEngine;
+using Zenject;
 
 public class CarDriving: MonoBehaviour
 {
+    private State _state;
+    private CarStateDriving _carStateDriving;
+
+    [Inject]
+    private void Construct(State state, CarStateDriving carStateDriving) {
+        _state = state;
+        _carStateDriving = carStateDriving;
+    }
+
     public void Move(TrafficDot.Dot a, TrafficDot.Dot b, Vector3 center, CarAbstract car) {
         car.EndPos = b.Pos;
         car.CarArea = b.DotTraffic.Area.GetComponent<ITrafficable>();
@@ -17,8 +28,8 @@ public class CarDriving: MonoBehaviour
             car.transform.position =  CarTransform.GetPosition(t, moveParams.DotA, moveParams.DotB, moveParams.CenterDot);
             car.transform.rotation = CarTransform.GetRotation(t, moveParams.DotA, moveParams.DotB);
             currentTime += Time.deltaTime * car.Speed;
-            if (currentTime >= length) { 
-                car.CurrentState.Enter(moveParams.DotB, car);
+            if (currentTime >= length) {
+                _carStateDriving.EnterDriving(moveParams.DotB, car);
                 yield break;
             }
             yield return null;

@@ -1,23 +1,18 @@
-using UnityEngine;
 using Zenject;
 
 public class CarStateSlowDown : FSM
 {
-    private CarAbstract car;
-    private CarSlowDown carSlowDown;
+    private CarAbstract _car;
+    private CarSlowSpeedModifier _carSlowSpeedModifier;
 
     [Inject]
-    public void Construct(CarSlowDown _carSlowDown)
+    public void Construct(CarSlowSpeedModifier carSlowSpeedModifier)
     {
-        carSlowDown = _carSlowDown;
+        _carSlowSpeedModifier = carSlowSpeedModifier;
     }
 
-    public override void Enter(CarAbstract _car, float targetSpeed) {
-        car = _car;
-        car.StartCoroutine(carSlowDown.ChangeSpeed(car, targetSpeed, car.TimeForMove));
-    }
-
-    public override void Exit() {
-        car.CurrentState = null;
+    public override void EnterSlowDown(CarAbstract car, float targetSpeed,float timeForMove) {
+        _car = car;
+        _car.StartCoroutine(_carSlowSpeedModifier.ChangeSpeed(_car, targetSpeed, timeForMove));
     }
 }

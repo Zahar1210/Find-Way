@@ -44,13 +44,13 @@ public class TrafficDot : MonoBehaviour
 
     public class Dot
     {
-        public TrafficDot DotTraffic { get; set; } 
         public Quaternion Rot { get; }
         public Vector3 Pos { get; set; }
         public Vector3 СonstantPos { get; set; }
+        public TrafficDot DotTraffic { get; set; } 
         public DotType Type { get; }
-        public bool CanMove { get; set; } = true;
 
+        public bool CarSpawn { get; set; }
         public Dot(Vector3 pos, DotType type, Quaternion rot, TrafficDot parentDot)
         {
             DotTraffic = parentDot;

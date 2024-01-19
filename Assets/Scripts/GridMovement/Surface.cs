@@ -3,9 +3,9 @@ using UnityEngine;
 public class Surface : MonoBehaviour
 {
     public bool barrier;
+    public float distance;
     public SurfaceGroup groupType { get; set; }
     public SurfaceType type { get; set; }
-    public float distance;
     public Tile tile { get; set; }
     public Vector3Int Dir { get; set; }
     public Vector3Int[] Directions { get; set; }

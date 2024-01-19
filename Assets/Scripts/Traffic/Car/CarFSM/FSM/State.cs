@@ -13,20 +13,22 @@ public class State: MonoBehaviour
         }
     }
 
-    public void SetState<T>(CarAbstract car, TrafficDot.Dot a = null, CarAbstract frontCar = null)where T: FSM
+    public void SetState<T>(CarAbstract car, TrafficDot.Dot a = null, float frontCarSpeed = 0)where T: FSM
     {
         var type = typeof(T);
-        if (car.CurrentState != null && car.CurrentState.GetType() == type) {
+        if (car.CurrentState != null && car.CurrentState.GetType() == type) 
             return;
-        }
-
+        
         if (_states.TryGetValue(type, out var newState)) {
             car.CurrentState = newState;
-            if (car.CurrentState is CarStateDriving) {
-                car.CurrentState.Enter(a, car);
+            if (car.CurrentState is CarStatePowerUp) {
+                car.CurrentState.EnterRowerUp(car, car.FixedSpeed);
             }
             else if (car.CurrentState is CarStateSlowDown) {
-                car.CurrentState.Enter(car, (frontCar != null) ? frontCar.Speed : 0);
+                car.CurrentState.EnterSlowDown(car, (frontCarSpeed != 0) ? frontCarSpeed : 0, car.TimeForMove);
+            }
+            else if (car.CurrentState is CarStateDriving) {
+                car.CurrentState.EnterDriving(a, car);
             }
         }
     }

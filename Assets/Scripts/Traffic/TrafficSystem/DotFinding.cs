@@ -25,7 +25,7 @@ public class DotFinding : MonoBehaviour
         TrafficDot.Dot b = null;
         if (a.DotTraffic.Area.Type == AreaTypes.Traffic) {
             if (_crossRoad._dots.Contains(a.DotTraffic) && CheckCrossRoadDot(a)) {
-                return GetDotToTraffic(a);
+                b = GetDotToTraffic(a);
             }
             else {
                 b = GetDotInTraffic(a);
@@ -48,10 +48,6 @@ public class DotFinding : MonoBehaviour
                 b = GetExtraDot(a);
             }
         }
-        else {
-            Debug.Log("ват");
-        }
-
         return b;
     }
 

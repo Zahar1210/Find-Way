@@ -22,6 +22,7 @@ public class TrafficSystem : MonoBehaviour
     private void Start() {
         _state.AddState(_trafficFactory.CreateState<CarStateDriving>());
         _state.AddState(_trafficFactory.CreateState<CarStateSlowDown>());
+        _state.AddState(_trafficFactory.CreateState<CarStatePowerUp>());
     }
     
 
@@ -64,7 +65,7 @@ public class TrafficSystem : MonoBehaviour
             foreach (var dot in area.Dot.dots) {
                 if (crossRoad._changeDots.Contains(dot)) {
                     crossRoad._changeDots.Remove(dot);
-                    dot.CanMove = true;
+                    dot.CarSpawn = false;
                 }
             }
         }

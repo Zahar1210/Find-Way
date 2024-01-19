@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Runtime.ConstrainedExecution;
 using UnityEngine;
 using Zenject;
 
@@ -6,6 +7,7 @@ public class CheckForward: MonoBehaviour
 {
     private State _state;
     private TrafficSystem _trafficSystem;
+    public bool canShootRay = true;
 
     [Inject]
     private void Construct(State state, TrafficSystem trafficSystem)
@@ -15,9 +17,9 @@ public class CheckForward: MonoBehaviour
     }
     public IEnumerator ShootRayCoroutine(TrafficSystem.MoveDots moveParams, CarAbstract car)
     {
-        while (true) {
+        while (canShootRay) {
             ShootRay(car, moveParams);
-            Debug.DrawRay(car.RayDot.transform.position, car.RayDot.transform.up * car.RayDistance, Color.blue);//
+            Debug.DrawRay(car.RayDot.transform.position, car.RayDot.transform.up * car.RayDistance, Color.yellow);
             yield return new WaitForSeconds(0.3f);
         }
     }
@@ -25,24 +27,35 @@ public class CheckForward: MonoBehaviour
     private void ShootRay(CarAbstract car, TrafficSystem.MoveDots moveParams)
     {
         if (Physics.Raycast(car.RayDot.transform.position, car.transform.up, out RaycastHit hit, car.RayDistance, _trafficSystem.LayerMask)) {
-            if (hit.collider != null) {
-                CrossRoadWall wall = hit.collider.gameObject.GetComponent<CrossRoadWall>();
-                CarAbstract frontCar = hit.collider.gameObject.GetComponent<CarAbstract>();
-                if (frontCar != null && car.CurrentState is CarStateDriving) {
-                    car.CurrentState.Exit();
-                    _state.SetState<CarStateDriving>(car,null,frontCar);
+            CrossRoadWall wall = hit.collider.GetComponent<CrossRoadWall>();
+            CarAbstract frontCar = hit.collider.GetComponent<CarAbstract>();
+            if ((car.CurrentState is CarStatePowerUp || car.CurrentState is CarStateDriving) && (frontCar || wall)) {
+                if (frontCar) {
+                    Debug.Log("тормозим перед машиной");
+                    _state.SetState<CarStateSlowDown>(car,null,GetTargetSpeed(frontCar, car));
                 }
-                if (car.CurrentState is CarStateDriving && wall != null) {
-                    car.CurrentState.Exit();
-                    _state.SetState<CarStateSlowDown>(car, null, frontCar);
-                }
-            }
-            else {
-                if (car.CurrentState is CarStateSlowDown) {
-                    car.CurrentState.Exit();
-                    _state.SetState<CarStateDriving>(car);
+                else if (wall) {
+                    Debug.Log("тормозим перед стеной");
+                    _state.SetState<CarStateSlowDown>(car);
                 }
             }
+        }
+        else if(car.CurrentState is CarStateSlowDown) {
+            Debug.Log("разгон");
+            _state.SetState<CarStatePowerUp>(car);
+        }
+    }
+
+
+    private float GetTargetSpeed(CarAbstract frontCar, CarAbstract car)
+    {
+        float dis = Vector3.Distance(frontCar.transform.position, car.transform.position);
+        float targetDis = frontCar.transform.localScale.y + car.transform.localScale.y / 1.8f;
+        if (dis < targetDis - 0.1f) {
+            return 0.2f;
+        }
+        else {
+            return (frontCar.Speed >= car.Speed) ? car.Speed : frontCar.Speed;
         }
     }
 }

@@ -64,14 +64,12 @@ public class CrossRoad : MonoBehaviour
         foreach (var d in mainDot.dots) {
             if (!_changeDots.Contains(d) && CheckDot(d)) {
                 _changeDots.Add(d);
-                d.CanMove = false;
             }
         }
         if (frontDot != null) {
             foreach (var d in frontDot.dots) {
                 if (!_changeDots.Contains(d) && d.Type == DotType.Right)  {
                     _changeDots.Add(d);
-                    d.CanMove = false;
                 }
             }
         }
@@ -79,7 +77,6 @@ public class CrossRoad : MonoBehaviour
             foreach (var d in backDot.dots) {
                 if (!_changeDots.Contains(d) && d.Type == DotType.Left) {
                     _changeDots.Add(d);
-                    d.CanMove = false;
                 }
             }
         }
