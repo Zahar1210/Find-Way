@@ -1,8 +1,8 @@
+using UnityEngine;
 using Zenject;
 
 public class CarStatePowerUp : FSM
 {
-    private CarAbstract _car;
     private CarSlowSpeedModifier _carSlowSpeedModifier;
 
     [Inject]
@@ -11,7 +11,14 @@ public class CarStatePowerUp : FSM
     }
 
     public override void EnterRowerUp(CarAbstract car, float targetSpeed) {
-        _car = car;
-        _car.StartCoroutine(_carSlowSpeedModifier.ChangeSpeed(_car, targetSpeed, _car.TimeForMove));
+        car.StartCoroutine(_carSlowSpeedModifier.ChangeSpeed(car, GetTargetSpeed(car) ,car.TimeForMove));
+    }
+
+    private float GetTargetSpeed(CarAbstract car)
+    {
+        if (_carSlowSpeedModifier._speedCars.TryGetValue(car.Type, out var ts)) {
+            return ts;
+        }
+        return 0;
     }
 }

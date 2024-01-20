@@ -11,10 +11,12 @@ public class CarPooler : MonoBehaviour
     [SerializeField] private CarAbstract[] carArray;
     private List<CarAbstract> _carAbstracts = new();
     private State _state;
+    private CrossRoad _crossRoad;
 
     [Inject]
-    private void Construct(State state) {
+    private void Construct(State state, CrossRoad crossRoad) {
         _state = state;
+        _crossRoad = crossRoad;
     }
     
     public void SpawnCar(AreaAbstract area)
@@ -81,12 +83,15 @@ public class CarPooler : MonoBehaviour
     }
     private void EnableCar(CarAbstract car, ITrafficable area ,bool isActive)
     {
-        car.isCrossRoad = false;
-        car.CarArea = area;
-        car.gameObject.SetActive(isActive);
         if (!isActive) {
             car.CurrentState = null;
+            if (car.CrossRoadDot != null) {
+                _crossRoad.NextCarToMove(car);
+            }
         }
+        car.CrossRoadDot = null;
+        car.CarArea = area;
+        car.gameObject.SetActive(isActive);
     }
     public void ReturnToPool(ITrafficable area)
     {

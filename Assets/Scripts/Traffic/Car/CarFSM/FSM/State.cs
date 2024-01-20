@@ -25,7 +25,7 @@ public class State: MonoBehaviour
                 car.CurrentState.EnterRowerUp(car, car.FixedSpeed);
             }
             else if (car.CurrentState is CarStateSlowDown) {
-                car.CurrentState.EnterSlowDown(car, (frontCarSpeed != 0) ? frontCarSpeed : 0, car.TimeForMove);
+                car.CurrentState.EnterSlowDown(car, (frontCarSpeed != 0.0f) ? frontCarSpeed : 0.0f, car.TimeForMove);
             }
             else if (car.CurrentState is CarStateDriving) {
                 car.CurrentState.EnterDriving(a, car);

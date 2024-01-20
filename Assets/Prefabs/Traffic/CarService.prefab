@@ -112,11 +112,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89afd721d4f4640a2939259811cb0c44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 2
   RayDot: {fileID: 6109564632148986067}
   TimeForMove: 0.2
   Speed: 3.5
   FixedSpeed: 3.5
   RayDistance: 0.5
+  isCrossRoad: 0
 --- !u!1 &5231429903113648983
 GameObject:
   m_ObjectHideFlags: 0

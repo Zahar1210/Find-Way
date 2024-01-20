@@ -22,7 +22,7 @@ public class CarStateDriving : FSM
         TrafficDot.Dot b = _dotFinding.GetDot(a);
         Vector3 center = _dotFinding.GetPivotDot(a, b);
         StartMove(a, b, car, center);
-        car.StartCoroutine(_checkForward.ShootRayCoroutine(new TrafficSystem.MoveDots(a, b, center), car));
+        car.StartCoroutine(_checkForward.ShootRayCoroutine(car));
     }
 
     private void StartMove(TrafficDot.Dot a, TrafficDot.Dot b, CarAbstract car, Vector3 center)

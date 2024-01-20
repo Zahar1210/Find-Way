@@ -269,7 +269,6 @@ MonoBehaviour:
   - {fileID: -4503587569826579076, guid: 63f98ce82dc7f412b867ca4d7cab064d, type: 3}
   Tiles: []
   SpawnIndex: 5
-  IsTraffic: 0
 --- !u!1001 &13106838915519526
 PrefabInstance:
   m_ObjectHideFlags: 0

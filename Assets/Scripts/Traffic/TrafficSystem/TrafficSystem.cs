@@ -31,7 +31,6 @@ public class TrafficSystem : MonoBehaviour
             if (!_traffic.TryGetValue(dot.Area.SpawnIndex, out var Dot)) {
                 dot.SetDot();
                 _traffic.Add(dot.Area.SpawnIndex, dot);
-                dot.Area.IsTraffic = true;
                 carPooler.SpawnCar(dot.Area);
             }
         }
@@ -58,13 +57,13 @@ public class TrafficSystem : MonoBehaviour
     {
         carPooler.ReturnToPool(area);
         _traffic.Remove(area.Dot.Area.SpawnIndex);
-        area.Dot.Area.IsTraffic = false;
         if (crossRoad._changeDots.Count != 0) {
             crossRoad._dots.Remove(area.Dot);
             foreach (var dot in area.Dot.dots) {
                 if (crossRoad._changeDots.Contains(dot)) {
                     crossRoad._changeDots.Remove(dot);
                     dot.CarSpawn = false;
+                    dot.isCross = false;
                 }
             }
         }

@@ -16,17 +16,17 @@ public class CheckForward: MonoBehaviour
         _trafficSystem = trafficSystem;
         _state = state;
     }
-    public IEnumerator ShootRayCoroutine(TrafficSystem.MoveDots moveParams, CarAbstract car)
+    public IEnumerator ShootRayCoroutine(CarAbstract car)
     {
         while (canShootRay) {
             Physics.queriesHitBackfaces = true;
-            ShootRay(car, moveParams);
+            ShootRay(car);
             Debug.DrawRay(car.RayDot.transform.position, car.RayDot.transform.up * car.RayDistance, Color.yellow);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.3f);
         }
     }
     
-    private void ShootRay(CarAbstract car, TrafficSystem.MoveDots moveParams)
+    private void ShootRay(CarAbstract car)
     {
         if (Physics.Raycast(car.RayDot.transform.position, car.transform.up, out RaycastHit hit, car.RayDistance, _trafficSystem.LayerMask)) {
             CarAbstract frontCar = hit.collider.GetComponent<CarAbstract>();
@@ -37,8 +37,8 @@ public class CheckForward: MonoBehaviour
                 }
             }
         }
-        else if(car.CurrentState is CarStateSlowDown) {
-            Debug.Log("разгон");
+        else if(car.CurrentState is CarStateSlowDown && car.FixedSpeed != 0) {
+            Debug.Log("разгон" + car);
             _state.SetState<CarStatePowerUp>(car);
         }
     }

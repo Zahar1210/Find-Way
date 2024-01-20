@@ -5879,7 +5879,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1225137741
 MonoBehaviour:
@@ -5929,12 +5929,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e7c56b3ec66f4672856661aeb02ca07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallPooler: {fileID: 1225137748}
-  changeTime: 4
   trafficSystem: {fileID: 1225137745}
   _dots: []
-  time: 0
-  newDots: 0
 --- !u!114 &1225137747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5999,6 +5995,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52418bb4c0bad4fd8921635860e97809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  simpleCarSpeed: 4
+  serviceCarSpeed: 3.5
+  truckCarSpeed: 3
 --- !u!114 &1225137751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6035,6 +6034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11a9a2a3cfccc48358c21b8c57fa2f09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canShootRay: 1
 --- !u!1 &1266466368
 GameObject:
   m_ObjectHideFlags: 0
@@ -6519,7 +6519,7 @@ MonoBehaviour:
   state: {fileID: 1225137749}
   dotFinding: {fileID: 1225137752}
   carDriving: {fileID: 1225137751}
-  carSlowDown: {fileID: 1225137750}
+  carSlowSpeedModifier: {fileID: 1225137750}
   checkForward: {fileID: 1225137753}
   trafficSystem: {fileID: 1225137745}
   crossRoad: {fileID: 1225137746}
@@ -6568,5 +6568,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

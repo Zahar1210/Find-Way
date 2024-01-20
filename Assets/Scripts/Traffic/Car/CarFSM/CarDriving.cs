@@ -29,8 +29,7 @@ public class CarDriving: MonoBehaviour
             car.transform.rotation = CarTransform.GetRotation(t, moveParams.DotA, moveParams.DotB);
             currentTime += Time.deltaTime * car.Speed;
             if (currentTime >= length) {
-                if (car.isCrossRoad) {
-                    car.isCrossRoad = false;
+                if (car.CrossRoadDot) {
                     _crossRoad.NextCarToMove(car);
                     _carStateDriving.EnterDriving(moveParams.DotB, car);
                     yield break;
