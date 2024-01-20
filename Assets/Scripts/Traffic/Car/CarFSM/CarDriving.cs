@@ -5,12 +5,12 @@ using Zenject;
 
 public class CarDriving: MonoBehaviour
 {
-    private State _state;
     private CarStateDriving _carStateDriving;
+    private CrossRoad _crossRoad;
 
     [Inject]
-    private void Construct(State state, CarStateDriving carStateDriving) {
-        _state = state;
+    private void Construct(CarStateDriving carStateDriving, CrossRoad crossRoad) {
+        _crossRoad = crossRoad;
         _carStateDriving = carStateDriving;
     }
 
@@ -29,7 +29,18 @@ public class CarDriving: MonoBehaviour
             car.transform.rotation = CarTransform.GetRotation(t, moveParams.DotA, moveParams.DotB);
             currentTime += Time.deltaTime * car.Speed;
             if (currentTime >= length) {
-                _carStateDriving.EnterDriving(moveParams.DotB, car);
+                if (car.isCrossRoad) {
+                    car.isCrossRoad = false;
+                    _crossRoad.NextCarToMove(car);
+                    _carStateDriving.EnterDriving(moveParams.DotB, car);
+                    yield break;
+                }
+                if (!_crossRoad._changeDots.Contains(moveParams.DotB)) {
+                    _carStateDriving.EnterDriving(moveParams.DotB, car);
+                }
+                else {
+                    _crossRoad.AddCar(car, moveParams.DotB);
+                }
                 yield break;
             }
             yield return null;

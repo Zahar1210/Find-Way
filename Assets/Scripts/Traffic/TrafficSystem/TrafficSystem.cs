@@ -48,8 +48,7 @@ public class TrafficSystem : MonoBehaviour
             ITrafficable trafficArea = (pastArea.Type == AreaTypes.Traffic) ? pastArea.GetComponent<ITrafficable>() : areaAbstract.GetComponent<ITrafficable>();
             if (!crossRoad._dots.Contains(trafficArea.Dot)) {
                 crossRoad._dots.Add(trafficArea.Dot);
-                crossRoad.newDots = true;
-                crossRoad.time = 3f;
+                crossRoad.AddDots();
             }
         }
         pastArea = areaAbstract;

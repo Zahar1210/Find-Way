@@ -116,7 +116,7 @@ MonoBehaviour:
   TimeForMove: 0.3
   Speed: 3
   FixedSpeed: 3
-  RayDistance: 0.9
+  RayDistance: 0.6
 --- !u!1 &7526608689919946559
 GameObject:
   m_ObjectHideFlags: 0

@@ -37,7 +37,14 @@ public class TrafficDot : MonoBehaviour
     {
         if (dots != null) {
             foreach (var dot in dots) {
-                Gizmos.DrawSphere(dot.Pos, (dot.Type == DotType.Right)? 0.3f : 0.2f);
+                if (dot.isCross) {
+                    Gizmos.color = Color.green;
+                    Gizmos.DrawSphere(dot.Pos, 0.2f);
+                }
+                else {
+                    Gizmos.color = Color.white;
+                    Gizmos.DrawSphere(dot.Pos,0.2f);
+                }
             }
         }
     }
@@ -49,6 +56,7 @@ public class TrafficDot : MonoBehaviour
         public Vector3 СonstantPos { get; set; }
         public TrafficDot DotTraffic { get; set; } 
         public DotType Type { get; }
+        public bool isCross;
 
         public bool CarSpawn { get; set; }
         public Dot(Vector3 pos, DotType type, Quaternion rot, TrafficDot parentDot)

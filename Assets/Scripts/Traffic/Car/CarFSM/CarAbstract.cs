@@ -10,5 +10,6 @@ public abstract class CarAbstract : MonoBehaviour
     public float Speed; 
     public float FixedSpeed;
     public float RayDistance;
+    public bool isCrossRoad;
 
 }

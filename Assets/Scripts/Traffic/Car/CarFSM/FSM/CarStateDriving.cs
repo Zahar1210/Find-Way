@@ -6,10 +6,12 @@ public class CarStateDriving : FSM
     private DotFinding _dotFinding;
     private CarDriving _carDriving;
     private CheckForward _checkForward;
+    private CrossRoad _crossRoad;
 
     [Inject]
-    private void Construct(DotFinding dotFinding, CarDriving carDriving, CheckForward checkForward)
+    private void Construct(DotFinding dotFinding, CarDriving carDriving, CheckForward checkForward, CrossRoad crossRoad)
     {
+        _crossRoad = crossRoad;
         _dotFinding = dotFinding;
         _carDriving = carDriving;
         _checkForward = checkForward;

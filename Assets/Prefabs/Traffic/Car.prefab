@@ -113,10 +113,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RayDot: {fileID: 3082887222287436713}
-  TimeForMove: 0.4
+  TimeForMove: 0.3
   Speed: 4
   FixedSpeed: 4
-  RayDistance: 0.8
+  RayDistance: 0.5
 --- !u!1 &3784289326172914984
 GameObject:
   m_ObjectHideFlags: 0

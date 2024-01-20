@@ -1,59 +1,28 @@
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 public class CrossRoad : MonoBehaviour
 {
-    [SerializeField] private WallPooler wallPooler;
-    [SerializeField] private float changeTime;
     [SerializeField] private TrafficSystem trafficSystem;
     public List<TrafficDot> _dots = new();
     public List<TrafficDot.Dot> _changeDots = new();
-    private AreaTypes _changeType = AreaTypes.Traffic;
-    public float time;
-    public bool newDots;
-    
-    private void Update() {
-        Timer();
-    }
-    private void Timer()
-    {
-        time += Time.deltaTime;
-        if (time >= changeTime) {
-            ChangeRoadSide();
-            ChangeType();
-            time = 0;
-        }
-    }
-    public void ChangeRoadSide()
-    {
-        if (newDots) {
-            foreach (var dot in _dots) {
-                if (dot.Area.gameObject.activeSelf) 
-                    SelectDots(dot);
-                else
-                    _dots.Remove(dot);
-            }
-            foreach (var dot in _changeDots) 
-                wallPooler.SpawnCrossRoadWall(dot);
-            newDots = false;
-        }
-        
-        foreach (var wall in wallPooler._walls) {
-            if (wall.Dot == null || !wall.Dot.DotTraffic.Area.gameObject.activeSelf) 
-                wallPooler.ReturnToPool(wall);
-        }
+    public Dictionary<CarAbstract, TrafficDot.Dot> _queueCars = new();
+    private CarStateDriving _carStateDriving;
 
-        foreach (var wall in wallPooler._walls) {
-            if (wall.IsUse) {
-                if (wall.Dot.DotTraffic.Area.Type == _changeType) {
-                    wallPooler.ChangeRoadSide(wall, false);
-                }
-                else {
-                    wallPooler.ChangeRoadSide(wall, true);
-                    wall.transform.position = wall.Dot.Pos;
-                }
-            }
+    [Inject]
+    private void Construct(CarStateDriving carStateDriving) {
+        _carStateDriving = carStateDriving;
+    }
+    
+    public void AddDots()
+    {
+        foreach (var dot in _dots) {
+            if (dot.Area.gameObject.activeSelf) 
+                SelectDots(dot);
+            else
+                _dots.Remove(dot);
         }
     }
     private void SelectDots(TrafficDot dot)
@@ -87,10 +56,6 @@ public class CrossRoad : MonoBehaviour
             return Dot; 
         return null;
     }
-    private void ChangeType() {
-        _changeType = (_changeType == AreaTypes.Traffic) ? AreaTypes.Mixed : AreaTypes.Traffic;
-    }
-
     private bool CheckDot(TrafficDot.Dot dot)
     {
         List<TrafficDot.Dot> dots = new();
@@ -108,5 +73,26 @@ public class CrossRoad : MonoBehaviour
         else 
             d.AddRange(a.DotTraffic.dots.Where(dot => dot.Type == a.Type && dot.СonstantPos.x > a.СonstantPos.x));
         return d;
+    }
+
+    public void AddCar(CarAbstract car, TrafficDot.Dot a) {
+        if (!_queueCars.TryGetValue(car, out var dotA)) {
+            _queueCars.Add(car, a);
+            car.isCrossRoad = true;
+            if (_queueCars.Count == 1) {
+                _carStateDriving.EnterDriving(a, car);
+            }
+        }
+    }
+
+    public void NextCarToMove(CarAbstract previousCar) {
+        _queueCars.Remove(previousCar);
+        if (_queueCars.Count > 0) {
+            List<CarAbstract> cars = _queueCars.Keys.ToList();
+            CarAbstract nextCar = cars[Random.Range(0, cars.Count)];
+            if (_queueCars.TryGetValue(nextCar, out var dotA)) {
+                _carStateDriving.EnterDriving(dotA, nextCar);
+            }
+        }
     }
 }
