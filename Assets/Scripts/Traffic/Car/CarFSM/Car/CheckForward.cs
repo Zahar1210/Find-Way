@@ -33,7 +33,7 @@ public class CheckForward: MonoBehaviour
             if ((car.CurrentState is CarStatePowerUp || car.CurrentState is CarStateDriving) && frontCar) {
                 if (frontCar) {
                     car.FixedSpeed = frontCar.FixedSpeed;
-                    _state.SetState<CarStateSlowDown>(car,null,0.1f);
+                    _state.SetState<CarStateSlowDown>(car,null,car.CheckCar);
                 }
             }
         }

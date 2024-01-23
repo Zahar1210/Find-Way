@@ -9,7 +9,7 @@ public class CarPooler : MonoBehaviour
     [SerializeField] private int[] trafficSpawnCount;
     [SerializeField] private int[] mixedSpawnCount;
     [SerializeField] private CarAbstract[] carArray;
-    private List<CarAbstract> _carAbstracts = new();
+    public List<CarAbstract> _cars = new();
     private State _state;
     private CrossRoad _crossRoad;
 
@@ -35,7 +35,7 @@ public class CarPooler : MonoBehaviour
     {
         List<CarAbstract> cars = new();
         if (sum != 0) {
-            foreach (var car in _carAbstracts) {
+            foreach (var car in _cars) {
                 if (!car.gameObject.activeSelf && cars.Count < sum) {
                     cars.Add(car);
                 }
@@ -43,7 +43,7 @@ public class CarPooler : MonoBehaviour
             if (cars.Count < sum) {
                 for (int i = 0; i < (sum - cars.Count) + 1; i++) {
                     CarAbstract car = Instantiate(carArray[Random.Range(0, carArray.Length)]);
-                    _carAbstracts.Add(car);
+                    _cars.Add(car);
                     cars.Add(car);
                     car.gameObject.SetActive(false);
                 }
@@ -95,7 +95,7 @@ public class CarPooler : MonoBehaviour
     }
     public void ReturnToPool(ITrafficable area)
     {
-        foreach (var car in _carAbstracts) {
+        foreach (var car in _cars) {
             if (car.CarArea == area) {
                 EnableCar(car, null, false);
             }

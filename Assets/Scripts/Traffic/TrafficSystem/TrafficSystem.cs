@@ -5,13 +5,15 @@ using Zenject;
 
 public class TrafficSystem : MonoBehaviour
 {
-    public LayerMask LayerMask;
     public float PivotDotDis;
+    public LayerMask LayerMask;
+    
+    public Dictionary<int, TrafficDot> _traffic = new();
     [SerializeField] private CarPooler carPooler;
     [SerializeField] private CrossRoad crossRoad;
-    public Dictionary<int, TrafficDot> _traffic = new();
-    private AreaAbstract pastArea;
+    
     private State _state;
+    private AreaAbstract pastArea;
     private TrafficFactory _trafficFactory;
 
     [Inject]

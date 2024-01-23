@@ -11,9 +11,11 @@ public class TrafficInstaler : MonoInstaller
     [SerializeField] private CheckForward checkForward;
     [SerializeField] private TrafficSystem trafficSystem;
     [SerializeField] private CrossRoad crossRoad;
+    [SerializeField] private TrafficDistanceTracker trafficDistanceTracker;
 
     public override void InstallBindings()
     {
+        BindTrafficDistanceTracker();
         BindDotTransform();
         BindTrafficFactory();
         BindFinding();
@@ -24,6 +26,14 @@ public class TrafficInstaler : MonoInstaller
         BindCarCheckForward();
         BindTrafficSystem();
         BindCrossRoad();
+    }
+
+    private void BindTrafficDistanceTracker()
+    {
+        Container
+            .Bind<TrafficDistanceTracker>()
+            .FromInstance(trafficDistanceTracker)
+            .AsSingle();
     }
 
     private void BindDotTransform()

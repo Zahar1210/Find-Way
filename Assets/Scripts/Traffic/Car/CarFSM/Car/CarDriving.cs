@@ -5,19 +5,33 @@ using Zenject;
 
 public class CarDriving: MonoBehaviour
 {
-    private CarStateDriving _carStateDriving;
+    private State _state;
     private CrossRoad _crossRoad;
+    private CarStateDriving _carStateDriving;
+    private TrafficDistanceTracker _trafficDistanceTracker;
 
     [Inject]
-    private void Construct(CarStateDriving carStateDriving, CrossRoad crossRoad) {
+    private void Construct(CarStateDriving carStateDriving, CrossRoad crossRoad, TrafficDistanceTracker trafficDistanceTracker, State state) {
+        _state = state;
         _crossRoad = crossRoad;
         _carStateDriving = carStateDriving;
+        _trafficDistanceTracker = trafficDistanceTracker;
     }
 
     public void Move(TrafficDot.Dot a, TrafficDot.Dot b, Vector3 center, CarAbstract car) {
-        car.EndPos = b.Pos;
+        car.TargetDot = b;
         car.CarArea = b.DotTraffic.Area.GetComponent<ITrafficable>();
+        if (_crossRoad._changeDots.Contains(a)) {
+            _state.SetState<CarStatePowerUp>(car);
+        }
+        else if(_crossRoad._changeDots.Contains(b)) {
+            car.StartCoroutine(_trafficDistanceTracker.CheckDistanceToTargetDotCoroutine(car));
+        }
+        car.CheckCar = _trafficDistanceTracker.GetCarForCheck(car);
         car.StartCoroutine(CarMove(new TrafficSystem.MoveDots(a,b, center),car));
+        if (car.CheckCar != null) {
+            car.StartCoroutine(_trafficDistanceTracker.CheckDistanceCoroutine(car));
+        }
     }
     private IEnumerator CarMove(TrafficSystem.MoveDots moveParams,CarAbstract car)
     {

@@ -13,7 +13,7 @@ public class State: MonoBehaviour
         }
     }
 
-    public void SetState<T>(CarAbstract car, TrafficDot.Dot a = null, float frontCarSpeed = 0)where T: FSM
+    public void SetState<T>(CarAbstract car, TrafficDot.Dot a = null, CarAbstract frontCar = null)where T: FSM
     {
         var type = typeof(T);
         if (car.CurrentState != null && car.CurrentState.GetType() == type) 
@@ -25,7 +25,7 @@ public class State: MonoBehaviour
                 car.CurrentState.EnterRowerUp(car, car.FixedSpeed);
             }
             else if (car.CurrentState is CarStateSlowDown) {
-                car.CurrentState.EnterSlowDown(car, (frontCarSpeed != 0.0f) ? frontCarSpeed : 0.0f, car.TimeForMove);
+                car.CurrentState.EnterSlowDown(car, (frontCar != null) ? frontCar.Speed : 0.0f, car.TimeForMove);
             }
             else if (car.CurrentState is CarStateDriving) {
                 car.CurrentState.EnterDriving(a, car);

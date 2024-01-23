@@ -5853,12 +5853,12 @@ GameObject:
   - component: {fileID: 1225137746}
   - component: {fileID: 1225137745}
   - component: {fileID: 1225137747}
-  - component: {fileID: 1225137748}
   - component: {fileID: 1225137752}
   - component: {fileID: 1225137751}
   - component: {fileID: 1225137750}
   - component: {fileID: 1225137749}
   - component: {fileID: 1225137753}
+  - component: {fileID: 1225137754}
   m_Layer: 0
   m_Name: TrafficSystem
   m_TagString: Untagged
@@ -5899,6 +5899,7 @@ MonoBehaviour:
   - {fileID: -3551893937172940208, guid: f3c7b6203aa134de4940c16ed9656897, type: 3}
   - {fileID: 7959224561911118613, guid: 2487d5f6d268945f98cd63a35224caae, type: 3}
   - {fileID: 329467422466321369, guid: 9c76a0d9fa7404752b4ffe01dd2cc4e4, type: 3}
+  _cars: []
 --- !u!114 &1225137745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5911,10 +5912,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbd03330345f7438784439596ede5800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PivotDotDis: 3
   LayerMask:
     serializedVersion: 2
     m_Bits: 768
-  PivotDotDis: 3
   carPooler: {fileID: 1225137741}
   crossRoad: {fileID: 1225137746}
 --- !u!114 &1225137746
@@ -5957,20 +5958,6 @@ MonoBehaviour:
   - {x: 0, y: 180, z: 90, w: 0}
   - {x: 0, y: 90, z: 90, w: 0}
   - {x: 0, y: 270, z: 90, w: 0}
---- !u!114 &1225137748
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225137738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 74180e3534fd44acfb1f86fa5784dca9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  crossRoadWall: {fileID: 2451712324492598925, guid: 8500bce0bb7de4561843c61134d393d8, type: 3}
-  _walls: []
 --- !u!114 &1225137749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6035,6 +6022,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canShootRay: 1
+--- !u!114 &1225137754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225137738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 383cc9c2d533e4c7f8a060d76f4e3e9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkInterval: 0.3
+  carPooler: {fileID: 1225137741}
 --- !u!1 &1266466368
 GameObject:
   m_ObjectHideFlags: 0
@@ -6524,6 +6525,7 @@ MonoBehaviour:
   checkForward: {fileID: 1225137753}
   trafficSystem: {fileID: 1225137745}
   crossRoad: {fileID: 1225137746}
+  trafficDistanceTracker: {fileID: 1225137754}
 --- !u!114 &2044517015
 MonoBehaviour:
   m_ObjectHideFlags: 0
