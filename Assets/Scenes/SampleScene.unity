@@ -6516,6 +6516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db029676193ba4802ae9b47ca05bdbe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dotTransform: {fileID: 1225137747}
   state: {fileID: 1225137749}
   dotFinding: {fileID: 1225137752}
   carDriving: {fileID: 1225137751}

@@ -38,7 +38,6 @@ public class CheckForward: MonoBehaviour
             }
         }
         else if(car.CurrentState is CarStateSlowDown && car.FixedSpeed != 0) {
-            Debug.Log("разгон" + car);
             _state.SetState<CarStatePowerUp>(car);
         }
     }

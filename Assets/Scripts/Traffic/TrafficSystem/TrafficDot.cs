@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
+
 public enum DotType {
     Left,
     Right
@@ -9,7 +11,7 @@ public class TrafficDot : MonoBehaviour
     public AreaAbstract Area;
     public List<Dot> dots = new();
     private DotTransform _dotTransform;
-
+    
     public void Awake()
     {
         _dotTransform = DotTransform.Instance;

@@ -5,7 +5,7 @@ public abstract class CarAbstract : MonoBehaviour
 {
     public FSM CurrentState;
     public Vector3 EndPos { get; set; }
-    public ITrafficable CarArea { get; set; }
+    public ITrafficable CarArea;
     public CarTypes Type;
     public Transform RayDot;
     public float TimeForMove; 
@@ -13,4 +13,5 @@ public abstract class CarAbstract : MonoBehaviour
     public float FixedSpeed;
     public float RayDistance; 
     public TrafficDot CrossRoadDot;
+    public bool inQueue;
 }

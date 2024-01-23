@@ -2,6 +2,7 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
+using Random = UnityEngine.Random;
 
 public class CrossRoad : MonoBehaviour
 {
@@ -82,7 +83,7 @@ public class CrossRoad : MonoBehaviour
         if (!_queueCars.TryGetValue(car, out var dotA)) {
             _queueCars.Add(car, a);
             car.CrossRoadDot = GetCrossRoadDot(a);
-            if (_queueCars.Count == 1 || TryMove(car)) {
+            if (_queueCars.Count == 1 || TryMove(car, false)) {
                 _carStateDriving.EnterDriving(a, car);
             }
         }
@@ -90,13 +91,10 @@ public class CrossRoad : MonoBehaviour
 
     public void NextCarToMove(CarAbstract previousCar) {
         _queueCars.Remove(previousCar);
-        if (_queueCars.Count > 0) {
-            List<CarAbstract> cars = _queueCars.Keys.ToList();
-            if (cars.Count != 0) {
-                CarAbstract nextCar = GetNextCar(previousCar.CrossRoadDot, cars);
-                if (_queueCars.TryGetValue(nextCar, out var dotA)) {
-                    _carStateDriving.EnterDriving(dotA, nextCar);
-                }
+        if (TryMove(previousCar, true)) {
+            CarAbstract nextCar = GetRandomCar(previousCar.CrossRoadDot);
+            if (nextCar != null && _queueCars.TryGetValue(nextCar, out var dotA)) {
+                _carStateDriving.EnterDriving(dotA, nextCar);
             }
         }
         previousCar.CrossRoadDot = null;
@@ -109,34 +107,28 @@ public class CrossRoad : MonoBehaviour
                 ? trafficSystem._traffic.TryGetValue(a.DotTraffic.Area.SpawnIndex + 1, out var dot) ? dot : null
                 : trafficSystem._traffic.TryGetValue(a.DotTraffic.Area.SpawnIndex - 1, out dot) ? dot : null;
         }
-        else {
-            return a.DotTraffic;
-        }
+        return a.DotTraffic;
     }
 
-    private CarAbstract GetNextCar(TrafficDot dot, List<CarAbstract> cars)
+    private CarAbstract GetRandomCar(TrafficDot trafficDot)
+    {
+        List<CarAbstract> cars = new();
+        foreach (var carsKey in _queueCars.Keys) {
+            if (carsKey.CrossRoadDot == trafficDot) 
+                cars.Add(carsKey);
+        }
+        if (cars.Count != 0) 
+            return cars[Random.Range(0, cars.Count)];
+        return null;
+    }
+    private bool TryMove(CarAbstract car, bool isCheck)
     {
         List<CarAbstract> selectedCars = new();
-        foreach (var car in cars) {
-            if (car.CrossRoadDot == dot) {
-                selectedCars.Add(car);
-            }
-        }
-        return selectedCars[Random.Range(0, selectedCars.Count)];
-    }
-
-    private bool TryMove(CarAbstract car)
-    {
-        List<CarAbstract> cars = _queueCars.Keys.ToList();
-        int selectCount = 0;
-        foreach (var c in cars) {
+        foreach (var c in _queueCars.Keys) {
             if (c.CrossRoadDot == car.CrossRoadDot) {
-                selectCount++;
+                selectedCars.Add(c);
             }
         }
-        if (selectCount == 1) {
-            return true;
-        }
-        return false;
+        return (isCheck) ? (selectedCars.Count > 0): (selectedCars.Count == 1);
     }
 }

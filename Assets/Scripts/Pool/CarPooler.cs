@@ -83,15 +83,16 @@ public class CarPooler : MonoBehaviour
     }
     private void EnableCar(CarAbstract car, ITrafficable area ,bool isActive)
     {
+        car.CrossRoadDot = null;
+        car.CarArea = area;
+        car.gameObject.SetActive(isActive);
         if (!isActive) {
             car.CurrentState = null;
+            car.inQueue = false;
             if (car.CrossRoadDot != null) {
                 _crossRoad.NextCarToMove(car);
             }
         }
-        car.CrossRoadDot = null;
-        car.CarArea = area;
-        car.gameObject.SetActive(isActive);
     }
     public void ReturnToPool(ITrafficable area)
     {

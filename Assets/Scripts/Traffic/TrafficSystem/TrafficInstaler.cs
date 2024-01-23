@@ -3,6 +3,7 @@ using Zenject;
 
 public class TrafficInstaler : MonoInstaller
 {
+    [SerializeField] private DotTransform dotTransform;
     [SerializeField] private State state;
     [SerializeField] private DotFinding dotFinding;
     [SerializeField] private CarDriving carDriving;
@@ -13,6 +14,7 @@ public class TrafficInstaler : MonoInstaller
 
     public override void InstallBindings()
     {
+        BindDotTransform();
         BindTrafficFactory();
         BindFinding();
         BindCarStateDriving();
@@ -22,6 +24,14 @@ public class TrafficInstaler : MonoInstaller
         BindCarCheckForward();
         BindTrafficSystem();
         BindCrossRoad();
+    }
+
+    private void BindDotTransform()
+    {
+        Container
+            .Bind<DotTransform>()
+            .FromInstance(dotTransform)
+            .AsSingle();
     }
 
     private void BindCarStateDriving()

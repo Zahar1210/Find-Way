@@ -21,8 +21,9 @@ public class AreaPooler : MonoBehaviour
 
     private void Start()
     {
-        foreach (var area in FindObjectsOfType<AreaAbstract>())
+        foreach (var area in FindObjectsOfType<AreaAbstract>()) {
             _areaAbstracts.Add(area);
+        } 
         _lastSpawnPosition = Vector3Int.RoundToInt(transform.position);
         queueArea = areaArray[Random.Range(0, 10)];
         queueArea.SpawnIndex = _spawnIndex;
@@ -88,7 +89,7 @@ public class AreaPooler : MonoBehaviour
             if (area.transform.position.z <= pointReturnToPool.transform.position.z && area.gameObject.activeSelf) {
                 ITrafficable trafficArea = area.GetComponent<ITrafficable>();
                 if (trafficArea != null) {
-                    traffic_System.ResetDot(trafficArea);
+                    traffic_System.ResetTraffic(trafficArea);
                 }
                 EnableArea(area,false);
             }

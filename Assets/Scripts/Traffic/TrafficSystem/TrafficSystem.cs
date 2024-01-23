@@ -19,6 +19,7 @@ public class TrafficSystem : MonoBehaviour
         _state = state;
         _trafficFactory = trafficFactory;
     }
+    
     private void Start() {
         _state.AddState(_trafficFactory.CreateState<CarStateDriving>());
         _state.AddState(_trafficFactory.CreateState<CarStateSlowDown>());
@@ -53,7 +54,7 @@ public class TrafficSystem : MonoBehaviour
         pastArea = areaAbstract;
     }
 
-    public void ResetDot(ITrafficable area)
+    public void ResetTraffic(ITrafficable area)
     {
         carPooler.ReturnToPool(area);
         _traffic.Remove(area.Dot.Area.SpawnIndex);
