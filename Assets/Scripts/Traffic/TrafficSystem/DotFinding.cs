@@ -151,12 +151,10 @@ public class DotFinding : MonoBehaviour
     private List<TrafficDot.Dot> GetDots(TrafficDot.Dot a)
     {
         List<TrafficDot.Dot> d = new();
-        if (a.Type == DotType.Left) {
+        if (a.Type == DotType.Left) 
             d.AddRange(a.DotTraffic.dots.Where(dot => dot.Type == a.Type && dot.СonstantPos.x < a.СonstantPos.x));
-        }
-        else {
+        else 
             d.AddRange(a.DotTraffic.dots.Where(dot => dot.Type == a.Type && dot.СonstantPos.x > a.СonstantPos.x));
-        }
         return d;
     }
 
@@ -164,9 +162,8 @@ public class DotFinding : MonoBehaviour
     {
         int checkIndex = 0;
         checkIndex = (a.Type == DotType.Left) ? checkIndex + index : checkIndex - index;
-        if (_trafficSystem._traffic.TryGetValue(a.DotTraffic.Area.SpawnIndex + checkIndex, out var dotArea)) {
+        if (_trafficSystem._traffic.TryGetValue(a.DotTraffic.Area.SpawnIndex + checkIndex, out var dotArea)) 
             return dotArea;
-        }
         return null;
     }
 
