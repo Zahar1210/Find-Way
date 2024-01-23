@@ -80,12 +80,15 @@ public class CrossRoad : MonoBehaviour
     }
 
     public void AddCar(CarAbstract car, TrafficDot.Dot a) {
-        if (!_queueCars.TryGetValue(car, out var dotA)) {
+        if (!_queueCars.TryGetValue(car, out var dotA) || car.CrossRoadDot == null) {
             _queueCars.Add(car, a);
             car.CrossRoadDot = GetCrossRoadDot(a);
             if (_queueCars.Count == 1 || TryMove(car, false)) {
                 _carStateDriving.EnterDriving(a, car);
             }
+        }
+        else {
+            Debug.LogError("what a hell blyat");
         }
     }
 

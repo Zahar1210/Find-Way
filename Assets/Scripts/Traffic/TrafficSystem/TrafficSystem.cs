@@ -44,12 +44,14 @@ public class TrafficSystem : MonoBehaviour
     {
         if (pastArea == null)
             pastArea = areaAbstract;
-        if (areaAbstract.SpawnIndex -1 == pastArea.SpawnIndex && areaAbstract.Type != pastArea.Type) {
+        if (areaAbstract.SpawnIndex - 1 == pastArea.SpawnIndex && areaAbstract.Type != pastArea.Type) {
             ITrafficable trafficArea = (pastArea.Type == AreaTypes.Traffic) ? pastArea.GetComponent<ITrafficable>() : areaAbstract.GetComponent<ITrafficable>();
             if (!crossRoad._dots.Contains(trafficArea.Dot)) {
                 crossRoad._dots.Add(trafficArea.Dot);
                 crossRoad.AddDots();
             }
+            else if(pastArea.Type == AreaTypes.Traffic) 
+                crossRoad.AddDots();
         }
         pastArea = areaAbstract;
     }

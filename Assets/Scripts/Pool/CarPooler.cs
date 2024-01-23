@@ -88,7 +88,6 @@ public class CarPooler : MonoBehaviour
         car.gameObject.SetActive(isActive);
         if (!isActive) {
             car.CurrentState = null;
-            car.inQueue = false;
             if (car.CrossRoadDot != null) {
                 _crossRoad.NextCarToMove(car);
             }

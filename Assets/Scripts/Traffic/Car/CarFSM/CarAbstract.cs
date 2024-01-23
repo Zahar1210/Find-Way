@@ -13,5 +13,4 @@ public abstract class CarAbstract : MonoBehaviour
     public float FixedSpeed;
     public float RayDistance; 
     public TrafficDot CrossRoadDot;
-    public bool inQueue;
 }
