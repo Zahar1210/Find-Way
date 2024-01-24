@@ -4,7 +4,9 @@ public class CarTruck : CarAbstract
 {
     private void OnDrawGizmos() {
         Gizmos.color = Color.gray;
-        Gizmos.DrawSphere(TargetDot.Pos, 0.4f);
+        if (TargetDot != null) {
+            Gizmos.DrawSphere(TargetDot.Pos, 0.4f);
+        }
         if (CheckCar != null && CheckCar.TargetDot == TargetDot) {
             Gizmos.color = Color.yellow; 
             Gizmos.DrawLine(transform.position, CheckCar.transform.position);
@@ -15,9 +17,9 @@ public class CarTruck : CarAbstract
         else if(CurrentState is CarStateSlowDown) {
             Gizmos.color = Color.red;
         }
-        else {
+        else if(CurrentState is CarStateDriving) {
             Gizmos.color = Color.white;
         }
-        Gizmos.DrawCube(new Vector3(transform.position.x + 0.7f ,transform.position.y), new Vector3(0.2f,0.2f,0.2f));
+        Gizmos.DrawCube(RayDot.transform.position, new Vector3(0.3f,0.7f,0.7f));
     }
 }

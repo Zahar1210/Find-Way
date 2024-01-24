@@ -1,13 +1,14 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 using Zenject;
 
 public class TrafficInstaler : MonoInstaller
 {
     [SerializeField] private DotTransform dotTransform;
-    [SerializeField] private State state;
+    [SerializeField] private DrivingState drivingState;
     [SerializeField] private DotFinding dotFinding;
     [SerializeField] private CarDriving carDriving;
-    [SerializeField] private CarSlowSpeedModifier carSlowSpeedModifier;
+    [FormerlySerializedAs("carSlowSpeedModifier")] [SerializeField] private CarSpeedModifier carSpeedModifier;
     [SerializeField] private CheckForward checkForward;
     [SerializeField] private TrafficSystem trafficSystem;
     [SerializeField] private CrossRoad crossRoad;
@@ -61,8 +62,8 @@ public class TrafficInstaler : MonoInstaller
     private void BindState()
     {
         Container
-            .Bind<State>()
-            .FromInstance(state)
+            .Bind<DrivingState>()
+            .FromInstance(drivingState)
             .AsSingle();
     }
 
@@ -83,8 +84,8 @@ public class TrafficInstaler : MonoInstaller
     private void BindCarSlowDown()
     {
         Container
-            .Bind<CarSlowSpeedModifier>()
-            .FromInstance(carSlowSpeedModifier)
+            .Bind<CarSpeedModifier>()
+            .FromInstance(carSpeedModifier)
             .AsSingle();
     }
     private void BindCarCheckForward()

@@ -1,7 +1,7 @@
 using UnityEngine;
 using Zenject;
 
-public class CarStateDriving : FSM
+public class CarStateDriving : DrivingFSM
 {
     private DotFinding _dotFinding;
     private CarDriving _carDriving;

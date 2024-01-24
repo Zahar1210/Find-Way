@@ -1,19 +1,21 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class State: MonoBehaviour
+public class DrivingState: MonoBehaviour
 {
-    private Dictionary<Type, FSM> _states = new();
+    [FormerlySerializedAs("carSlowSpeedModifier")] [SerializeField] private CarSpeedModifier carSpeedModifier;
+    private Dictionary<Type, DrivingFSM> _states = new();
 
-    public void AddState(FSM state)
+    public void AddState(DrivingFSM state)
     {
         if (!_states.ContainsKey(state.GetType())) {
             _states.Add(state.GetType(), state);
         }
     }
 
-    public void SetState<T>(CarAbstract car, TrafficDot.Dot a = null, CarAbstract frontCar = null)where T: FSM
+    public void SetState<T>(CarAbstract car, TrafficDot.Dot a = null)where T: DrivingFSM
     {
         var type = typeof(T);
         if (car.CurrentState != null && car.CurrentState.GetType() == type) 
@@ -25,7 +27,7 @@ public class State: MonoBehaviour
                 car.CurrentState.EnterRowerUp(car, car.FixedSpeed);
             }
             else if (car.CurrentState is CarStateSlowDown) {
-                car.CurrentState.EnterSlowDown(car, (frontCar != null) ? frontCar.Speed : 0.0f, car.TimeForMove);
+                car.CurrentState.EnterSlowDown(car, carSpeedModifier.GetTargetSpeed(car), carSpeedModifier.GetTimeForSlowDown(car));
             }
             else if (car.CurrentState is CarStateDriving) {
                 car.CurrentState.EnterDriving(a, car);

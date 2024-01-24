@@ -10,12 +10,12 @@ public class CarPooler : MonoBehaviour
     [SerializeField] private int[] mixedSpawnCount;
     [SerializeField] private CarAbstract[] carArray;
     public List<CarAbstract> _cars = new();
-    private State _state;
+    private DrivingState _drivingState;
     private CrossRoad _crossRoad;
 
     [Inject]
-    private void Construct(State state, CrossRoad crossRoad) {
-        _state = state;
+    private void Construct(DrivingState drivingState, CrossRoad crossRoad) {
+        _drivingState = drivingState;
         _crossRoad = crossRoad;
     }
     
@@ -61,7 +61,7 @@ public class CarPooler : MonoBehaviour
                 dot.CarSpawn = true;
                 car.transform.position = dot.Pos;
                 car.transform.rotation = dot.Rot;
-                _state.SetState<CarStateDriving>(car, dot);
+                _drivingState.SetState<CarStateDriving>(car, dot);
             }
         }
     }

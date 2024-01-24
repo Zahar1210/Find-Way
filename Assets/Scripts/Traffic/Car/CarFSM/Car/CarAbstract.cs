@@ -1,9 +1,9 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public abstract class CarAbstract : MonoBehaviour
 {
-    public FSM CurrentState;
+    public DrivingFSM CurrentState;
+    public CheckFSM CurrentCehckState;
     public TrafficDot.Dot TargetDot { get; set; }
     public ITrafficable CarArea;
     public CarTypes Type;
@@ -14,4 +14,5 @@ public abstract class CarAbstract : MonoBehaviour
     public float RayDistance; 
     public TrafficDot CrossRoadDot;
     public CarAbstract CheckCar;
+    public Vector3 CheckDot;
 }

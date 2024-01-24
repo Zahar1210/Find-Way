@@ -4,17 +4,17 @@ using Zenject;
 
 public class CheckForward: MonoBehaviour
 {
-    private State _state;
+    private DrivingState _drivingState;
     private TrafficSystem _trafficSystem;
     private CrossRoad _crossRoad;
     public bool canShootRay = true;
 
     [Inject]
-    private void Construct(State state, TrafficSystem trafficSystem, CrossRoad crossRoad)
+    private void Construct(DrivingState drivingState, TrafficSystem trafficSystem, CrossRoad crossRoad)
     {
         _crossRoad = crossRoad;
         _trafficSystem = trafficSystem;
-        _state = state;
+        _drivingState = drivingState;
     }
     public IEnumerator ShootRayCoroutine(CarAbstract car)
     {
@@ -33,12 +33,12 @@ public class CheckForward: MonoBehaviour
             if ((car.CurrentState is CarStatePowerUp || car.CurrentState is CarStateDriving) && frontCar) {
                 if (frontCar) {
                     car.FixedSpeed = frontCar.FixedSpeed;
-                    _state.SetState<CarStateSlowDown>(car,null,car.CheckCar);
+                    _drivingState.SetState<CarStateSlowDown>(car);
                 }
             }
         }
         else if(car.CurrentState is CarStateSlowDown && car.FixedSpeed != 0) {
-            _state.SetState<CarStatePowerUp>(car);
+            _drivingState.SetState<CarStatePowerUp>(car);
         }
     }
 

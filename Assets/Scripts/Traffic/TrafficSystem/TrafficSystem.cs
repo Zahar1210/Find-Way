@@ -12,20 +12,20 @@ public class TrafficSystem : MonoBehaviour
     [SerializeField] private CarPooler carPooler;
     [SerializeField] private CrossRoad crossRoad;
     
-    private State _state;
+    private DrivingState _drivingState;
     private AreaAbstract pastArea;
     private TrafficFactory _trafficFactory;
 
     [Inject]
-    private void Construct(State state, TrafficFactory trafficFactory) {
-        _state = state;
+    private void Construct(DrivingState drivingState, TrafficFactory trafficFactory) {
+        _drivingState = drivingState;
         _trafficFactory = trafficFactory;
     }
     
     private void Start() {
-        _state.AddState(_trafficFactory.CreateState<CarStateDriving>());
-        _state.AddState(_trafficFactory.CreateState<CarStateSlowDown>());
-        _state.AddState(_trafficFactory.CreateState<CarStatePowerUp>());
+        _drivingState.AddState(_trafficFactory.CreateState<CarStateDriving>());
+        _drivingState.AddState(_trafficFactory.CreateState<CarStateSlowDown>());
+        _drivingState.AddState(_trafficFactory.CreateState<CarStatePowerUp>());
     }
     
 
@@ -62,11 +62,11 @@ public class TrafficSystem : MonoBehaviour
     {
         carPooler.ReturnToPool(area);
         _traffic.Remove(area.Dot.Area.SpawnIndex);
-        if (crossRoad._changeDots.Count != 0) {
+        if (crossRoad._crossRoadDots.Count != 0) {
             crossRoad._dots.Remove(area.Dot);
             foreach (var dot in area.Dot.dots) {
-                if (crossRoad._changeDots.Contains(dot)) {
-                    crossRoad._changeDots.Remove(dot);
+                if (crossRoad._crossRoadDots.Contains(dot)) {
+                    crossRoad._crossRoadDots.Remove(dot);
                     dot.CarSpawn = false;
                     dot.isCross = false;
                 }

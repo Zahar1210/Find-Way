@@ -8,7 +8,7 @@ public class CrossRoad : MonoBehaviour
 {
     [SerializeField] private TrafficSystem trafficSystem;
     public List<TrafficDot> _dots = new();
-    public List<TrafficDot.Dot> _changeDots = new();
+    public List<TrafficDot.Dot> _crossRoadDots = new();
     public Dictionary<CarAbstract, TrafficDot.Dot> _queueCars = new();
     private CarStateDriving _carStateDriving;
     
@@ -32,23 +32,23 @@ public class CrossRoad : MonoBehaviour
         TrafficDot frontDot = GetDot(mainDot, 1);
         TrafficDot backDot = GetDot(mainDot, -1);
         foreach (var d in mainDot.dots) {
-            if (!_changeDots.Contains(d) && CheckDot(d)) {
-                _changeDots.Add(d);
+            if (!_crossRoadDots.Contains(d) && CheckDot(d)) {
+                _crossRoadDots.Add(d);
                 d.isCross = true;
             }
         }
         if (frontDot != null) {
             foreach (var d in frontDot.dots) {
-                if (!_changeDots.Contains(d) && d.Type == DotType.Right)  {
-                    _changeDots.Add(d);
+                if (!_crossRoadDots.Contains(d) && d.Type == DotType.Right)  {
+                    _crossRoadDots.Add(d);
                     d.isCross = true;
                 }
             }
         }
         if (backDot != null) {
             foreach (var d in backDot.dots) {
-                if (!_changeDots.Contains(d) && d.Type == DotType.Left) {
-                    _changeDots.Add(d);
+                if (!_crossRoadDots.Contains(d) && d.Type == DotType.Left) {
+                    _crossRoadDots.Add(d);
                     d.isCross = true;
                 }
             }

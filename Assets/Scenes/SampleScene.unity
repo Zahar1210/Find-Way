@@ -5970,6 +5970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 504c254f49f974714acc6e2d73202a91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carSlowSpeedModifier: {fileID: 1225137750}
 --- !u!114 &1225137750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5982,6 +5983,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52418bb4c0bad4fd8921635860e97809, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crossRoad: {fileID: 1225137746}
   simpleCarSpeed: 4
   serviceCarSpeed: 3.5
   truckCarSpeed: 3
