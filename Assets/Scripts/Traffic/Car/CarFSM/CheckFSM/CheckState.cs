@@ -12,7 +12,7 @@ public class CheckState : MonoBehaviour
             _states.Add(state.GetType(), state);
         }
     }
-
+    
     public void SetState<T>(CarAbstract car) where T : CheckFSM
     {
         var type = typeof(T);

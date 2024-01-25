@@ -1,11 +1,10 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class DrivingState: MonoBehaviour
 {
-    [FormerlySerializedAs("carSlowSpeedModifier")] [SerializeField] private CarSpeedModifier carSpeedModifier;
+    [SerializeField] private CarSpeedModifier carSpeedModifier;
     private Dictionary<Type, DrivingFSM> _states = new();
 
     public void AddState(DrivingFSM state)

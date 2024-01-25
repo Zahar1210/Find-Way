@@ -1,8 +1,7 @@
-using UnityEngine;
 using Zenject;
 
-public class CarCheckCarState : CheckFSM
-{
+public class CarCheckStateDistanceCheckCar : CheckFSM
+{ 
     private CheckState _checkState;
     private DrivingState _drivingState;
     private TrafficDistanceTracker _trafficDistanceTracker;
@@ -14,7 +13,7 @@ public class CarCheckCarState : CheckFSM
         _drivingState = drivingState;
         _trafficDistanceTracker = trafficDistanceTracker;
     }
-    
+
     public override void Enter(CarAbstract car)
     {
         if (car.CheckCar != null) {
@@ -35,28 +34,15 @@ public class CarCheckCarState : CheckFSM
             car.CurrentCehckState = null;
         }
     }
-
+    
     private void ProcessingDistance(CarAbstract car, float distance)
     {
-        float targetDistance = _trafficDistanceTracker.GetTargetDistance(car, car.CheckCar);
-        if (distance < targetDistance) {
-            if (TryState(car)) {
-                _checkState.SetState<CarCheckStateDistanceCheckCar>(car);
+        if (distance < _trafficDistanceTracker.GetTargetDistance(car, car.CheckCar)) {
+            if (!TryState(car)) 
                 _drivingState.SetState<CarStateSlowDown>(car);
-            }
-            else {
-                _drivingState.SetState<CarStateSlowDown>(car);
-            }
-        }
-        else if(distance > (targetDistance + car.transform.localScale.y / 2)) {
-            if (!TryState(car)) {
-                _drivingState.SetState<CarStatePowerUp>(car);
-            }
         }
     }
-
-    private bool TryState(CarAbstract car)
-    {
+    private bool TryState(CarAbstract car) {
         return car.CheckCar.CurrentState is CarStateDriving || car.CheckCar.CurrentState is CarStatePowerUp;
     }
 }

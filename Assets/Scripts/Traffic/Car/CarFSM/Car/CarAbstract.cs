@@ -14,5 +14,6 @@ public abstract class CarAbstract : MonoBehaviour
     public float RayDistance; 
     public TrafficDot CrossRoadDot;
     public CarAbstract CheckCar;
-    public Vector3 CheckDot;
+    public TrafficDot.Dot CheckDot;
+    public float TargetSpeed;
 }

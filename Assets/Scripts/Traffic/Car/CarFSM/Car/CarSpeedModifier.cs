@@ -32,14 +32,17 @@ public class CarSpeedModifier: MonoBehaviour
     public float GetTargetSpeed(CarAbstract currentCar)
     {
         if (currentCar.CheckCar != null) {
-            if (currentCar.CheckCar.CurrentState is CarStateSlowDown && currentCar.CheckCar.CheckCar == null) 
-                return 0.1f;
-            return currentCar.CheckCar.Speed;
+            if (currentCar.CheckCar.CheckDot != null) {
+                return currentCar.CheckCar.TargetSpeed;
+            }
+            else {
+                return currentCar.CheckCar.Speed;
+            }
         }
-
-        if (crossRoad._crossRoadDots.Contains(currentCar.TargetDot) && crossRoad._queueCars.Count == 0) {
+        if (currentCar.CheckDot != null && crossRoad._queueCars.Count == 0) 
             return currentCar.Speed;
-        }
+        if (currentCar.CheckDot != null && crossRoad._queueCars.Count > 0)
+            return 0.1f;
         return 0.1f;
     }
 

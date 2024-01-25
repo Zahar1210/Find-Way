@@ -1,30 +1,29 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 using Zenject;
 
 public class TrafficInstaler : MonoInstaller
 {
+    [SerializeField] private CheckState checkState;
     [SerializeField] private DotTransform dotTransform;
     [SerializeField] private DrivingState drivingState;
     [SerializeField] private DotFinding dotFinding;
     [SerializeField] private CarDriving carDriving;
-    [FormerlySerializedAs("carSlowSpeedModifier")] [SerializeField] private CarSpeedModifier carSpeedModifier;
-    [SerializeField] private CheckForward checkForward;
+    [SerializeField] private CarSpeedModifier carSpeedModifier;
     [SerializeField] private TrafficSystem trafficSystem;
     [SerializeField] private CrossRoad crossRoad;
     [SerializeField] private TrafficDistanceTracker trafficDistanceTracker;
 
     public override void InstallBindings()
     {
+        BindCheckState();
         BindTrafficDistanceTracker();
         BindDotTransform();
         BindTrafficFactory();
         BindFinding();
         BindCarStateDriving();
-        BindState();
+        BindDrivingState();
         BindCarDriving();
         BindCarSlowDown();
-        BindCarCheckForward();
         BindTrafficSystem();
         BindCrossRoad();
     }
@@ -59,11 +58,19 @@ public class TrafficInstaler : MonoInstaller
             .AsSingle();
     }
 
-    private void BindState()
+    private void BindDrivingState()
     {
         Container
             .Bind<DrivingState>()
             .FromInstance(drivingState)
+            .AsSingle();
+    }
+    
+    private void BindCheckState()
+    {
+        Container
+            .Bind<CheckState>()
+            .FromInstance(checkState)
             .AsSingle();
     }
 
@@ -86,13 +93,6 @@ public class TrafficInstaler : MonoInstaller
         Container
             .Bind<CarSpeedModifier>()
             .FromInstance(carSpeedModifier)
-            .AsSingle();
-    }
-    private void BindCarCheckForward()
-    {
-        Container
-            .Bind<CheckForward>()
-            .FromInstance(checkForward)
             .AsSingle();
     }
 

@@ -1,18 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using Zenject;
 
-public class CarCheckDotState : MonoBehaviour
+public class CarCheckDotState : CheckFSM
 {
-    // Start is called before the first frame update
-    void Start()
+    private DrivingState _drivingState;
+    private TrafficDistanceTracker _trafficDistanceTracker;
+
+    [Inject]
+    private void Construct(TrafficDistanceTracker trafficDistanceTracker, DrivingState drivingState)
     {
-        
+        _trafficDistanceTracker = trafficDistanceTracker;
+        _drivingState = drivingState;
+    }
+    public override void Enter(CarAbstract car)
+    {
+        if (car.CheckDot != null)
+        {
+            float distance = _trafficDistanceTracker.GetDistance(car.transform.position, car.TargetDot.Pos);
+            ProcessingDistance(car, distance);
+        }
+    }
+    private void ProcessingDistance(CarAbstract car, float distance)
+    {
+        if (distance < car.transform.localScale.y) {
+            if (TryState(car)) 
+                _drivingState.SetState<CarStateSlowDown>(car);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private bool TryState(CarAbstract car)
     {
-        
+        return (car.CurrentState is CarStatePowerUp || car.CurrentState is CarStateDriving);
     }
 }

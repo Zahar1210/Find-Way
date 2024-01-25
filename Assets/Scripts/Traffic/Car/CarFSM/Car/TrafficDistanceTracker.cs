@@ -32,12 +32,12 @@ public class TrafficDistanceTracker : MonoBehaviour
         }
         return null;
     }
-    public Vector3 GetDotForCheck(CarAbstract car)
+    public TrafficDot.Dot GetDotForCheck(CarAbstract car)
     {
         if (_crossRoad._crossRoadDots.Contains(car.TargetDot)) {
-            return car.TargetDot.Pos;
+            return car.TargetDot;
         }
-        return Vector3.zero;
+        return null;
     }
     private CarAbstract GetNearCar(List<CarAbstract> selectedCars, CarAbstract currentCar)
     {
@@ -90,7 +90,7 @@ public class TrafficDistanceTracker : MonoBehaviour
         
         car.CheckCar = null;
         car.CheckDot = GetDotForCheck(car);
-        if (car.CheckDot != Vector3.zero) { 
+        if (car.CheckDot != null) { 
             StartCoroutine(CheckDistanceToDotCoroutine(car));
         }
         // else {
@@ -100,5 +100,14 @@ public class TrafficDistanceTracker : MonoBehaviour
     }
     private float CheckDistanceToTargetDot(CarAbstract car) {
         return Vector3.Distance(car.transform.position, car.TargetDot.Pos);
+    }
+
+    public float GetDistance(Vector3 currentPos, Vector3 targetPos) {
+        return Vector3.Distance(currentPos, targetPos);
+    }
+
+    public float GetTargetDistance(CarAbstract currentCar, CarAbstract checkCar)
+    {
+        return (currentCar.transform.localScale.y / 2) + (checkCar.transform.localScale.y / 2) + Random.Range(0.5f, 2.0f);
     }
 }

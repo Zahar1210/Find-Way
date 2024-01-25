@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
@@ -6,7 +5,6 @@ using Zenject;
 public class TrafficSystem : MonoBehaviour
 {
     public float PivotDotDis;
-    public LayerMask LayerMask;
     
     public Dictionary<int, TrafficDot> _traffic = new();
     [SerializeField] private CarPooler carPooler;
@@ -15,10 +13,12 @@ public class TrafficSystem : MonoBehaviour
     private DrivingState _drivingState;
     private AreaAbstract pastArea;
     private TrafficFactory _trafficFactory;
+    private CheckState _checkState;
 
     [Inject]
-    private void Construct(DrivingState drivingState, TrafficFactory trafficFactory) {
+    private void Construct(DrivingState drivingState, TrafficFactory trafficFactory, CheckState checkState) {
         _drivingState = drivingState;
+        _checkState = checkState;
         _trafficFactory = trafficFactory;
     }
     
@@ -26,6 +26,9 @@ public class TrafficSystem : MonoBehaviour
         _drivingState.AddState(_trafficFactory.CreateState<CarStateDriving>());
         _drivingState.AddState(_trafficFactory.CreateState<CarStateSlowDown>());
         _drivingState.AddState(_trafficFactory.CreateState<CarStatePowerUp>());
+        _checkState.AddState(_trafficFactory.CreateState<CarCheckCarState>());
+        _checkState.AddState(_trafficFactory.CreateState<CarCheckDotState>());
+        _checkState.AddState(_trafficFactory.CreateState<CarCheckStateDistanceCheckCar>());
     }
     
 

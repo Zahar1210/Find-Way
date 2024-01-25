@@ -57,9 +57,9 @@ public class TrafficDot : MonoBehaviour
         public Vector3 СonstantPos { get; set; }
         public TrafficDot DotTraffic { get; set; } 
         public DotType Type { get; }
-        public bool isCross;
-
         public bool CarSpawn { get; set; }
+        
+        public bool isCross;
         public Dot(Vector3 pos, DotType type, Quaternion rot, TrafficDot parentDot)
         {
             DotTraffic = parentDot;
