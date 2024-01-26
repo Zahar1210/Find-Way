@@ -5,13 +5,13 @@ using Zenject;
 public class TrafficSystem : MonoBehaviour
 {
     public float PivotDotDis;
+    public AreaAbstract pastArea;
     
     public Dictionary<int, TrafficDot> _traffic = new();
     [SerializeField] private CarPooler carPooler;
     [SerializeField] private CrossRoad crossRoad;
     
     private DrivingState _drivingState;
-    private AreaAbstract pastArea;
     private TrafficFactory _trafficFactory;
     private CheckState _checkState;
 
@@ -28,7 +28,8 @@ public class TrafficSystem : MonoBehaviour
         _drivingState.AddState(_trafficFactory.CreateState<CarStatePowerUp>());
         _checkState.AddState(_trafficFactory.CreateState<CarCheckCarState>());
         _checkState.AddState(_trafficFactory.CreateState<CarCheckDotState>());
-        _checkState.AddState(_trafficFactory.CreateState<CarCheckStateDistanceCheckCar>());
+        _checkState.AddState(_trafficFactory.CreateState<CarCheckDistanceCheckCarState>());
+        _checkState.AddState(_trafficFactory.CreateState<CarCheckExtraCarState>());
     }
     
 

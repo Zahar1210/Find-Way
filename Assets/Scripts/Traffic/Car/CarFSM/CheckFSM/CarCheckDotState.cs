@@ -2,28 +2,30 @@ using Zenject;
 
 public class CarCheckDotState : CheckFSM
 {
+    private CrossRoad _crossRoad;
     private DrivingState _drivingState;
     private TrafficDistanceTracker _trafficDistanceTracker;
 
     [Inject]
-    private void Construct(TrafficDistanceTracker trafficDistanceTracker, DrivingState drivingState)
-    {
+    private void Construct(TrafficDistanceTracker trafficDistanceTracker, DrivingState drivingState, CrossRoad crossRoad) {
+        _crossRoad = crossRoad;
         _trafficDistanceTracker = trafficDistanceTracker;
         _drivingState = drivingState;
     }
     public override void Enter(CarAbstract car)
     {
-        if (car.CheckDot != null)
-        {
-            float distance = _trafficDistanceTracker.GetDistance(car.transform.position, car.TargetDot.Pos);
-            ProcessingDistance(car, distance);
+        if (car.CheckDot != null) {
+            // float distance = _trafficDistanceTracker.GetDistance(car.transform.position, car.TargetDot.Pos);
+            // ProcessingDistance(car, distance);
         }
     }
     private void ProcessingDistance(CarAbstract car, float distance)
     {
-        if (distance < car.transform.localScale.y) {
-            if (TryState(car)) 
-                _drivingState.SetState<CarStateSlowDown>(car);
+        if (distance < car.transform.localScale.y + 1f) {
+            if (TryState(car) && _crossRoad._queueCars.Count > 0) {
+                car.TargetSpeed = 0.1f;
+                _drivingState.SetState<CarStateSlowDown>(new DrivingState.DrivingParams(car, car.TargetSpeed, 3f));
+            }
         }
     }
 

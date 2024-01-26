@@ -5,7 +5,7 @@ public class TrafficFactory
     private DiContainer _container;
 
     [Inject]
-    private void Cosnstruct(DiContainer container) {
+    private void Construct(DiContainer container) {
         _container = container;
     }
     public T CreateState<T>() {

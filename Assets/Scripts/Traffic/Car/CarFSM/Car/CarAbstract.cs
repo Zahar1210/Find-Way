@@ -2,18 +2,23 @@ using UnityEngine;
 
 public abstract class CarAbstract : MonoBehaviour
 {
+    public TrafficDot.Dot TargetDot { get; set; }
+    public TrafficDot CrossRoadDot { get; set; }
+    public ITrafficable CarArea { get; set; }
+    
     public DrivingFSM CurrentState;
     public CheckFSM CurrentCehckState;
-    public TrafficDot.Dot TargetDot { get; set; }
-    public ITrafficable CarArea;
     public CarTypes Type;
     public Transform RayDot;
-    public float TimeForMove; 
-    public float Speed; 
-    public float FixedSpeed;
-    public float RayDistance; 
-    public TrafficDot CrossRoadDot;
+    public DrivingState.DrivingParams DrivingParams;
+    
+    [Header("Check")]
     public CarAbstract CheckCar;
     public TrafficDot.Dot CheckDot;
+    public CarAbstract ExtraCheckCar;
+    
+    [Header("Speed")]
     public float TargetSpeed;
+    public float FixedSpeed;
+    public float Speed; 
 }

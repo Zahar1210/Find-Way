@@ -4,9 +4,10 @@ using Zenject;
 
 public class CarDriving: MonoBehaviour
 {
+    [SerializeField] private CarChecking _carChecking;
     private CrossRoad _crossRoad;
     private CheckState _checkState;
-    private DrivingState _drivingState;//
+    private DrivingState _drivingState;
     private CarStateDriving _carStateDriving;
     private TrafficDistanceTracker _trafficDistanceTracker;
 
@@ -22,16 +23,10 @@ public class CarDriving: MonoBehaviour
 
     public void Move(TrafficDot.Dot a, TrafficDot.Dot b, Vector3 center, CarAbstract car)
     {
-        car.TargetDot = b;
-        car.CarArea = b.DotTraffic.Area.GetComponent<ITrafficable>();
-        StartChecking(car);
-        if (car.CurrentCehckState != null) 
-            StartCoroutine(Checking(car));
-        
+        ResetCar(car);
+        SetCar(car,b);
+        StartMove(car, a);
         car.StartCoroutine(CarMove(new TrafficSystem.MoveDots(a,b, center),car));
-        // if (_crossRoad._crossRoadDots.Contains(a) && car.Speed != car.FixedSpeed) {
-        //     _state.SetState<CarStatePowerUp>(car);
-        // }
     }
     
     private IEnumerator CarMove(TrafficSystem.MoveDots moveParams,CarAbstract car)
@@ -58,17 +53,15 @@ public class CarDriving: MonoBehaviour
             yield return null;
         }
     }
-    
-    private void StartChecking(CarAbstract car)
+    private void StartMove(CarAbstract car, TrafficDot.Dot a)
     {
-        car.CheckCar = _trafficDistanceTracker.GetCarForCheck(car);
-        if (car.CheckCar != null) {
-            _checkState.SetState<CarCheckCarState>(car);
-            return;
+        if (_crossRoad._crossRoadDots.Contains(a)) {
+            car.TargetSpeed = car.FixedSpeed;
+            _drivingState.SetState<CarStatePowerUp>(new DrivingState.DrivingParams(car, car.TargetSpeed));
         }
-        car.CheckDot = _trafficDistanceTracker.GetDotForCheck(car);
-        if (car.CheckDot != null) { 
-            _checkState.SetState<CarCheckDotState>(car);
+        _carChecking.StartChecking(car);
+        if (car.CurrentCehckState != null) {
+            StartCoroutine(Checking(car));
         }
     }
     
@@ -77,5 +70,19 @@ public class CarDriving: MonoBehaviour
             car.CurrentCehckState.Enter(car);
             yield return new WaitForSeconds(0.3f);
         }
+    }
+    
+    private void SetCar(CarAbstract car, TrafficDot.Dot b)
+    {
+        car.TargetDot = b;
+        car.CarArea = b.DotTraffic.Area.GetComponent<ITrafficable>();
+    }
+
+    private void ResetCar(CarAbstract car)
+    {
+        car.CurrentCehckState = null;
+        car.ExtraCheckCar = null;
+        car.CheckCar = null;
+        car.CheckDot = null;
     }
 }

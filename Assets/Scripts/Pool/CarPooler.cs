@@ -61,7 +61,7 @@ public class CarPooler : MonoBehaviour
                 dot.CarSpawn = true;
                 car.transform.position = dot.Pos;
                 car.transform.rotation = dot.Rot;
-                _drivingState.SetState<CarStateDriving>(car, dot);
+                _drivingState.SetState<CarStateDriving>(new DrivingState.DrivingParams(car), dot);
             }
         }
     }
@@ -83,6 +83,7 @@ public class CarPooler : MonoBehaviour
     }
     private void EnableCar(CarAbstract car, ITrafficable area ,bool isActive)
     {
+        car.TargetSpeed = car.FixedSpeed;
         car.CrossRoadDot = null;
         car.CarArea = area;
         car.gameObject.SetActive(isActive);

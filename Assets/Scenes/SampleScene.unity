@@ -5857,8 +5857,9 @@ GameObject:
   - component: {fileID: 1225137751}
   - component: {fileID: 1225137750}
   - component: {fileID: 1225137749}
-  - component: {fileID: 1225137753}
   - component: {fileID: 1225137754}
+  - component: {fileID: 1225137755}
+  - component: {fileID: 1225137756}
   m_Layer: 0
   m_Name: TrafficSystem
   m_TagString: Untagged
@@ -5913,9 +5914,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PivotDotDis: 3
-  LayerMask:
-    serializedVersion: 2
-    m_Bits: 768
+  pastArea: {fileID: 0}
   carPooler: {fileID: 1225137741}
   crossRoad: {fileID: 1225137746}
 --- !u!114 &1225137746
@@ -5948,11 +5947,11 @@ MonoBehaviour:
   - {x: -4, y: 0, z: -1}
   - {x: 4, y: 0, z: -1}
   - {x: -19, y: 0, z: -1}
-  - {x: 10, y: 0, z: -1}
+  - {x: 18, y: 0, z: -1}
   - {x: -4, y: 0, z: 1}
   - {x: 4, y: 0, z: 1}
   - {x: -19, y: 0, z: 1}
-  - {x: 10, y: 0, z: 1}
+  - {x: 18, y: 0, z: 1}
   dotRotations:
   - {x: 0, y: 0, z: 90, w: 0}
   - {x: 0, y: 180, z: 90, w: 0}
@@ -5970,7 +5969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 504c254f49f974714acc6e2d73202a91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  carSlowSpeedModifier: {fileID: 1225137750}
+  carSpeedModifier: {fileID: 1225137750}
 --- !u!114 &1225137750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5999,6 +5998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e0632342e4543b78dd42d295871ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _carChecking: {fileID: 1225137756}
 --- !u!114 &1225137752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6011,19 +6011,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3329cf78ef0154b208fbbf2c3f2275f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1225137753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1225137738}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11a9a2a3cfccc48358c21b8c57fa2f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  canShootRay: 1
 --- !u!114 &1225137754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6038,6 +6025,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   checkInterval: 0.3
   carPooler: {fileID: 1225137741}
+--- !u!114 &1225137755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225137738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 178ba3d1656f449a9b8738ac23d4e994, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1225137756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225137738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b53544d3ebd7445799579d9caa4222d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1266466368
 GameObject:
   m_ObjectHideFlags: 0
@@ -6519,12 +6530,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db029676193ba4802ae9b47ca05bdbe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkState: {fileID: 1225137755}
   dotTransform: {fileID: 1225137747}
-  state: {fileID: 1225137749}
+  drivingState: {fileID: 1225137749}
   dotFinding: {fileID: 1225137752}
   carDriving: {fileID: 1225137751}
-  carSlowSpeedModifier: {fileID: 1225137750}
-  checkForward: {fileID: 1225137753}
+  carSpeedModifier: {fileID: 1225137750}
   trafficSystem: {fileID: 1225137745}
   crossRoad: {fileID: 1225137746}
   trafficDistanceTracker: {fileID: 1225137754}

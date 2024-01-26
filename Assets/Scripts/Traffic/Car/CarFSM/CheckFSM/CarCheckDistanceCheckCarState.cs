@@ -1,8 +1,7 @@
-using UnityEngine;
 using Zenject;
 
-public class CarCheckCarState : CheckFSM
-{
+public class CarCheckDistanceCheckCarState : CheckFSM
+{ 
     private CheckState _checkState;
     private DrivingState _drivingState;
     private TrafficDistanceTracker _trafficDistanceTracker;
@@ -14,15 +13,16 @@ public class CarCheckCarState : CheckFSM
         _drivingState = drivingState;
         _trafficDistanceTracker = trafficDistanceTracker;
     }
-    
+
     public override void Enter(CarAbstract car)
     {
         if (car.CheckCar != null) {
-            if (car.CheckCar.TargetDot == car.TargetDot) {
+            if (car.CheckCar.TargetDot == car.TargetDot || car.ExtraCheckCar != null) {
                 // float distance = _trafficDistanceTracker.GetDistance(car.transform.position, car.CheckCar.transform.position);
                 // ProcessingDistance(car, distance);
             }
             else {
+                car.ExtraCheckCar = null;
                 car.CheckCar = null;
             }
         }
@@ -36,26 +36,27 @@ public class CarCheckCarState : CheckFSM
             car.CurrentCehckState = null;
         }
     }
-
+    
     private void ProcessingDistance(CarAbstract car, float distance)
     {
         float targetDistance = _trafficDistanceTracker.GetTargetDistance(car, car.CheckCar);
-        if (distance < targetDistance) {
-            float t = (car.CheckCar.CheckDot != null) ? 0f : 0.5f;
-            car.TargetSpeed = car.CheckCar.TargetSpeed - t;
-            _checkState.SetState<CarCheckDistanceCheckCarState>(car);
-            _drivingState.SetState<CarStateSlowDown>(new DrivingState.DrivingParams(car, car.TargetSpeed, 0.5f));
-        }
-        else if(distance > (targetDistance + car.transform.localScale.y / 2)) {
-            if (!TryState(car)) {
-                car.TargetSpeed = car.FixedSpeed;
-                _checkState.SetState<CarCheckCarState>(car);
-                _drivingState.SetState<CarStatePowerUp>(new DrivingState.DrivingParams(car, car.TargetSpeed));
+        if (distance < (targetDistance - 0.3f)) {
+            if (!TryState(car.CheckCar) && TryState(car)) {
+                car.TargetSpeed = car.CheckCar.TargetSpeed;
+                _drivingState.SetState<CarStateSlowDown>(new DrivingState.DrivingParams(car, car.TargetSpeed));
+            }
+            else {
+                _drivingState.SetState<CarStateSlowDown>(new DrivingState.DrivingParams(car, car.CheckCar.Speed - 0.2f));
             }
         }
+        else if(distance > (targetDistance + 0.3f)) {
+            car.TargetSpeed = car.FixedSpeed;
+            _drivingState.SetState<CarStateSlowDown>(new DrivingState.DrivingParams(car, car.TargetSpeed));
+        }
     }
-
-    private bool TryState(CarAbstract car) {
-        return car.CheckCar.CurrentState is CarStateDriving || car.CheckCar.CurrentState is CarStatePowerUp;
+    
+    private bool TryState(CarAbstract car)
+    {
+        return car.CurrentState is CarStateDriving || car.CurrentState is CarStatePowerUp;
     }
 }

@@ -11,9 +11,12 @@ public class CrossRoad : MonoBehaviour
     public List<TrafficDot.Dot> _crossRoadDots = new();
     public Dictionary<CarAbstract, TrafficDot.Dot> _queueCars = new();
     private CarStateDriving _carStateDriving;
+    private DrivingState _drivingState;
     
     [Inject]
-    private void Construct(CarStateDriving carStateDriving) {
+    private void Construct(CarStateDriving carStateDriving, DrivingState drivingState)
+    {
+        _drivingState = drivingState;
         _carStateDriving = carStateDriving;
     }
     
@@ -87,16 +90,13 @@ public class CrossRoad : MonoBehaviour
                 _carStateDriving.EnterDriving(a, car);
             }
         }
-        else {
-            Debug.LogError("what a hell blyat");
-        }
     }
 
     public void NextCarToMove(CarAbstract previousCar) {
         _queueCars.Remove(previousCar);
         if (TryMove(previousCar, true)) {
             CarAbstract nextCar = GetRandomCar(previousCar.CrossRoadDot);
-            if (nextCar != null && _queueCars.TryGetValue(nextCar, out var dotA)) {
+            if (nextCar != null && _queueCars.TryGetValue(nextCar, out var dotA)) { 
                 _carStateDriving.EnterDriving(dotA, nextCar);
             }
         }

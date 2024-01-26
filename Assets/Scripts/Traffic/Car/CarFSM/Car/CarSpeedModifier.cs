@@ -19,12 +19,18 @@ public class CarSpeedModifier: MonoBehaviour
 
     public IEnumerator ChangeSpeed(CarAbstract car, float targetSpeed, float duration)
     {
+        DrivingFSM startState = car.CurrentState;
         float initialSpeed = car.Speed;
         float elapsedTime = 0f;
         while (elapsedTime < duration) {
-            car.Speed = Mathf.Lerp(initialSpeed, targetSpeed, elapsedTime / duration);
-            elapsedTime += Time.deltaTime;
-            yield return null;
+            if (car.CurrentState == startState) {
+                car.Speed = Mathf.Lerp(initialSpeed, targetSpeed, elapsedTime / duration);
+                elapsedTime += Time.deltaTime;
+                yield return null;
+            }
+            else {
+                yield break;
+            }
         }
         car.Speed = targetSpeed;
     }
@@ -32,8 +38,8 @@ public class CarSpeedModifier: MonoBehaviour
     public float GetTargetSpeed(CarAbstract currentCar)
     {
         if (currentCar.CheckCar != null) {
-            if (currentCar.CheckCar.CheckDot != null) {
-                return currentCar.CheckCar.TargetSpeed;
+            if (currentCar.CheckCar.CheckCar != null) {
+                return currentCar.CheckCar.DrivingParams.TargetSpeed;
             }
             else {
                 return currentCar.CheckCar.Speed;
@@ -52,6 +58,6 @@ public class CarSpeedModifier: MonoBehaviour
             return 3;
         }
 
-        return car.TimeForMove;
+        return car.DrivingParams.TimeForMove;
     }
 }

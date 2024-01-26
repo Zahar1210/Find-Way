@@ -14,8 +14,9 @@ public class DrivingState: MonoBehaviour
         }
     }
 
-    public void SetState<T>(CarAbstract car, TrafficDot.Dot a = null)where T: DrivingFSM
+    public void SetState<T>(DrivingParams drivingParams, TrafficDot.Dot a = null)where T: DrivingFSM
     {
+        CarAbstract car = drivingParams.Car;
         var type = typeof(T);
         if (car.CurrentState != null && car.CurrentState.GetType() == type) 
             return;
@@ -26,11 +27,36 @@ public class DrivingState: MonoBehaviour
                 car.CurrentState.EnterRowerUp(car, car.FixedSpeed);
             }
             else if (car.CurrentState is CarStateSlowDown) {
-                car.CurrentState.EnterSlowDown(car, carSpeedModifier.GetTargetSpeed(car), carSpeedModifier.GetTimeForSlowDown(car));
+                car.CurrentState.EnterSlowDown(car, car.DrivingParams.TargetSpeed, car.DrivingParams.TimeForMove);
             }
             else if (car.CurrentState is CarStateDriving) {
                 car.CurrentState.EnterDriving(a, car);
             }
+        }
+    }
+
+    public void Set<T>(CarAbstract car) where T: DrivingFSM 
+    {
+        var type = typeof(T);
+        if (car.CurrentState != null && car.CurrentState.GetType() == type) 
+            return;
+        if (_states.TryGetValue(type, out var newState)) {
+            car.CurrentState = newState;
+        }
+    }
+    
+    public class DrivingParams
+    {
+        public CarAbstract Car { get; set; } 
+        public float TargetSpeed { get; set; }
+        public float TimeForMove { get; set; }
+
+        public DrivingParams(CarAbstract car, float targetSpeed = 0, float timeForMove = 0)
+        {
+            Car = car;
+            car.DrivingParams = this;
+            TargetSpeed = targetSpeed;
+            TimeForMove = timeForMove;
         }
     }
 }

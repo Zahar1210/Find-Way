@@ -47,7 +47,7 @@ public class PlayerPath : MonoBehaviour
             playerMove.Move();
         }
         else {
-            Debug.Log("ураа порадуйся");
+            Debug.LogError("путь не был проложен должным образом или до того места куда кликнули нельзя дойти");
         }
     }
     private Surface GetTargetSurface()

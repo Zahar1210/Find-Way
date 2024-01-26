@@ -19,11 +19,11 @@ public class TrafficDistanceTracker : MonoBehaviour
         _trafficSystem = trafficSystem;
         _drivingState = drivingState;
     }
-    public CarAbstract GetCarForCheck(CarAbstract currentCar)
+    public CarAbstract GetCarForCheck(CarAbstract currentCar, TrafficDot.Dot checkDot)
     {
         List<CarAbstract> selectedCars = new();
         foreach (var car in carPooler._cars) {
-            if (car.TargetDot == currentCar.TargetDot && car != currentCar) { 
+            if (car.TargetDot == checkDot && car != currentCar) { 
                 selectedCars.Add(car);
             }
         }
@@ -57,32 +57,32 @@ public class TrafficDistanceTracker : MonoBehaviour
     
     
     
-    public IEnumerator CheckDistanceCoroutine(CarAbstract car)
-    {
-        while ((car.CheckCar != null && car.CheckCar.TargetDot != null) && car.CheckCar.TargetDot == car.TargetDot) {
-            float dis = CheckDistance(car);
-            if ((dis < 4 && dis != 0) && car.CheckCar != null && (car.CurrentState is CarStateDriving || car.CurrentState is CarStatePowerUp)
-                && car.CheckCar.FixedSpeed <= car.FixedSpeed) 
-            {
-                _drivingState.SetState<CarStateSlowDown>(car);
-            }
-            else if(car.Speed < car.FixedSpeed && car.CurrentState is CarStateSlowDown && dis > 4) {
-                _drivingState.SetState<CarStatePowerUp>(car);
-            }
-            yield return new WaitForSeconds(dis/10);
-        }
-    }
-    
-    public IEnumerator CheckDistanceToDotCoroutine(CarAbstract car)
-    {
-        while (car.CheckCar == null && (car.CurrentState is CarStateDriving || car.CurrentState is CarStatePowerUp)) {
-            float dis = CheckDistanceToTargetDot(car);
-            if ((dis < 3 && dis != 0) && _crossRoad._queueCars.Count > 0) {
-                _drivingState.SetState<CarStateSlowDown>(car);
-            }
-            yield return new WaitForSeconds(dis/10);
-        }
-    }
+    // public IEnumerator CheckDistanceCoroutine(CarAbstract car)
+    // {
+    //     while ((car.CheckCar != null && car.CheckCar.TargetDot != null) && car.CheckCar.TargetDot == car.TargetDot) {
+    //         float dis = CheckDistance(car);
+    //         if ((dis < 4 && dis != 0) && car.CheckCar != null && (car.CurrentState is CarStateDriving || car.CurrentState is CarStatePowerUp)
+    //             && car.CheckCar.FixedSpeed <= car.FixedSpeed) 
+    //         {
+    //             _drivingState.SetState<CarStateSlowDown>(car);
+    //         }
+    //         else if(car.Speed < car.FixedSpeed && car.CurrentState is CarStateSlowDown && dis > 4) {
+    //             _drivingState.SetState<CarStatePowerUp>(car);
+    //         }
+    //         yield return new WaitForSeconds(dis/10);
+    //     }
+    // }
+    //
+    // public IEnumerator CheckDistanceToDotCoroutine(CarAbstract car)
+    // {
+    //     while (car.CheckCar == null && (car.CurrentState is CarStateDriving || car.CurrentState is CarStatePowerUp)) {
+    //         float dis = CheckDistanceToTargetDot(car);
+    //         if ((dis < 3 && dis != 0) && _crossRoad._queueCars.Count > 0) {
+    //             _drivingState.SetState<CarStateSlowDown>(car);
+    //         }
+    //         yield return new WaitForSeconds(dis/10);
+    //     }
+    // }
     private float CheckDistance(CarAbstract car)
     {
         if (car.TargetDot == car.CheckCar.TargetDot && car.CheckCar != null) 
@@ -91,7 +91,7 @@ public class TrafficDistanceTracker : MonoBehaviour
         car.CheckCar = null;
         car.CheckDot = GetDotForCheck(car);
         if (car.CheckDot != null) { 
-            StartCoroutine(CheckDistanceToDotCoroutine(car));
+            // StartCoroutine(CheckDistanceToDotCoroutine(car));
         }
         // else {
         //     _state.SetState<CarStatePowerUp>(car);
@@ -108,6 +108,6 @@ public class TrafficDistanceTracker : MonoBehaviour
 
     public float GetTargetDistance(CarAbstract currentCar, CarAbstract checkCar)
     {
-        return (currentCar.transform.localScale.y / 2) + (checkCar.transform.localScale.y / 2) + Random.Range(0.5f, 2.0f);
+        return (currentCar.transform.localScale.y / 2) + (checkCar.transform.localScale.y / 2) + currentCar.transform.localScale.y;
     }
 }

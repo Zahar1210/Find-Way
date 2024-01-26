@@ -17,10 +17,10 @@ public class DotFinding : MonoBehaviour
 
     public TrafficDot.Dot GetDot(TrafficDot.Dot a) 
     {
-        return GetFinalDot(a);
+        return GetTargetDot(a);
     }
 
-    private TrafficDot.Dot GetFinalDot(TrafficDot.Dot a)
+    private TrafficDot.Dot GetTargetDot(TrafficDot.Dot a)
     {
         TrafficDot.Dot b = null;
         if (a.DotTraffic.Area.Type == AreaTypes.Traffic) {

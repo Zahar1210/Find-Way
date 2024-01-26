@@ -1,15 +1,16 @@
-using UnityEngine;
 using Zenject;
 
-public class CarCheckCarState : CheckFSM
+public class CarCheckExtraCarState : CheckFSM
 {
+    private CarChecking _carChecking;
     private CheckState _checkState;
     private DrivingState _drivingState;
     private TrafficDistanceTracker _trafficDistanceTracker;
     
     [Inject]
-    private void Construct(TrafficDistanceTracker trafficDistanceTracker, CheckState checkState, DrivingState drivingState)
+    private void Construct(TrafficDistanceTracker trafficDistanceTracker, CheckState checkState, DrivingState drivingState, CarChecking carChecking)
     {
+        _carChecking = carChecking;
         _checkState = checkState;
         _drivingState = drivingState;
         _trafficDistanceTracker = trafficDistanceTracker;
@@ -17,23 +18,18 @@ public class CarCheckCarState : CheckFSM
     
     public override void Enter(CarAbstract car)
     {
-        if (car.CheckCar != null) {
-            if (car.CheckCar.TargetDot == car.TargetDot) {
-                // float distance = _trafficDistanceTracker.GetDistance(car.transform.position, car.CheckCar.transform.position);
-                // ProcessingDistance(car, distance);
+        if (car.ExtraCheckCar != null) {
+            if (car.ExtraCheckCar.TargetDot != car.TargetDot) {
+                float distance = _trafficDistanceTracker.GetDistance(car.transform.position, car.CheckCar.transform.position);
+                ProcessingDistance(car, distance);
             }
             else {
-                car.CheckCar = null;
+                car.ExtraCheckCar = null;
             }
         }
         else {
-            _drivingState.SetState<CarStatePowerUp>(new DrivingState.DrivingParams(car, car.FixedSpeed));
-            car.CheckDot = _trafficDistanceTracker.GetDotForCheck(car);
-            if (car.CheckDot != null) {
-                _checkState.SetState<CarCheckDotState>(car);
-                return;
-            }
             car.CurrentCehckState = null;
+            _carChecking.StartChecking(car);
         }
     }
 
@@ -49,7 +45,7 @@ public class CarCheckCarState : CheckFSM
         else if(distance > (targetDistance + car.transform.localScale.y / 2)) {
             if (!TryState(car)) {
                 car.TargetSpeed = car.FixedSpeed;
-                _checkState.SetState<CarCheckCarState>(car);
+                _checkState.SetState<CarCheckExtraCarState>(car);
                 _drivingState.SetState<CarStatePowerUp>(new DrivingState.DrivingParams(car, car.TargetSpeed));
             }
         }
