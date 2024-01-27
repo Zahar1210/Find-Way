@@ -114,11 +114,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Type: 2
   RayDot: {fileID: 6109564632148986067}
-  TimeForMove: 0.2
-  Speed: 3.5
+  CheckCar: {fileID: 0}
+  ExtraCheckCar: {fileID: 0}
+  TargetSpeed: 0
   FixedSpeed: 3.5
-  RayDistance: 0.5
-  isCrossRoad: 0
+  Speed: 3.5
+  ColorCar: {r: 1, g: 0.9411765, b: 0, a: 0}
+  ColorExtraCar: {r: 0.14901961, g: 0.9411765, b: 1, a: 0}
+  ColorDot: {r: 0.8509804, g: 0.18431373, b: 0.99215686, a: 0}
 --- !u!1 &5231429903113648983
 GameObject:
   m_ObjectHideFlags: 0

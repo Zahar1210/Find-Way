@@ -27,8 +27,8 @@ public class CarChecking : MonoBehaviour
             if (extraCar != null) {
                 car.ExtraCheckCar = extraCar;
                 _checkState.SetState<CarCheckExtraCarState>(car);
+                return;
             }
-            return;
         }
         car.CheckDot = _trafficDistanceTracker.GetDotForCheck(car);
         if (car.CheckDot != null) { 

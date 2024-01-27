@@ -20,5 +20,10 @@ public abstract class CarAbstract : MonoBehaviour
     [Header("Speed")]
     public float TargetSpeed;
     public float FixedSpeed;
-    public float Speed; 
+    public float Speed;
+
+    [Header("GizmosDraw")]
+    public Color ColorCar;
+    public Color ColorExtraCar;
+    public Color ColorDot;
 }

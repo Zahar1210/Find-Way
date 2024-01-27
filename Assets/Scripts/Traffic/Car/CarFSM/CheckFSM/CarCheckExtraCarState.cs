@@ -19,9 +19,9 @@ public class CarCheckExtraCarState : CheckFSM
     public override void Enter(CarAbstract car)
     {
         if (car.ExtraCheckCar != null) {
-            if (car.ExtraCheckCar.TargetDot != car.TargetDot) {
-                float distance = _trafficDistanceTracker.GetDistance(car.transform.position, car.CheckCar.transform.position);
-                ProcessingDistance(car, distance);
+            if (car.ExtraCheckCar.TargetDot != car.TargetDot &&  TryCar(car)) {
+                // float distance = _trafficDistanceTracker.GetDistance(car.transform.position, car.ExtraCheckCar.transform.position);
+                // ProcessingDistance(car, distance);
             }
             else {
                 car.ExtraCheckCar = null;
@@ -35,10 +35,10 @@ public class CarCheckExtraCarState : CheckFSM
 
     private void ProcessingDistance(CarAbstract car, float distance)
     {
-        float targetDistance = _trafficDistanceTracker.GetTargetDistance(car, car.CheckCar);
+        float targetDistance = _trafficDistanceTracker.GetTargetDistance(car, car.ExtraCheckCar);
         if (distance < targetDistance) {
-            float t = (car.CheckCar.CheckDot != null) ? 0f : 0.5f;
-            car.TargetSpeed = car.CheckCar.TargetSpeed - t;
+            float t = (car.ExtraCheckCar.CheckDot != null) ? 0f : 0.5f;
+            car.TargetSpeed = car.ExtraCheckCar.TargetSpeed - t;
             _checkState.SetState<CarCheckDistanceCheckCarState>(car);
             _drivingState.SetState<CarStateSlowDown>(new DrivingState.DrivingParams(car, car.TargetSpeed, 0.5f));
         }
@@ -52,6 +52,12 @@ public class CarCheckExtraCarState : CheckFSM
     }
 
     private bool TryState(CarAbstract car) {
-        return car.CheckCar.CurrentState is CarStateDriving || car.CheckCar.CurrentState is CarStatePowerUp;
+        return car.ExtraCheckCar.CurrentState is CarStateDriving || car.ExtraCheckCar.CurrentState is CarStatePowerUp;
+    }
+
+    private bool TryCar(CarAbstract car)
+    {
+        return car.ExtraCheckCar.TargetDot.DotTraffic.Area.Type == AreaTypes.Mixed &&
+               car.ExtraCheckCar.TargetDot.Type == car.TargetDot.Type;
     }
 }

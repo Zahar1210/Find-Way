@@ -6530,6 +6530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db029676193ba4802ae9b47ca05bdbe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carChecking: {fileID: 1225137756}
   checkState: {fileID: 1225137755}
   dotTransform: {fileID: 1225137747}
   drivingState: {fileID: 1225137749}
