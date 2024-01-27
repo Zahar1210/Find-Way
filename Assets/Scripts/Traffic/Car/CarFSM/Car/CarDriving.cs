@@ -1,24 +1,22 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using Zenject;
 
 public class CarDriving: MonoBehaviour
-{
-    [SerializeField] private CarChecking _carChecking;
+{ 
     private CrossRoad _crossRoad;
-    private CheckState _checkState;
+    private CarChecking _carChecking;
     private DrivingState _drivingState;
     private CarStateDriving _carStateDriving;
-    private TrafficDistanceTracker _trafficDistanceTracker;
 
     [Inject]
-    private void Construct(CarStateDriving carStateDriving, CrossRoad crossRoad, TrafficDistanceTracker trafficDistanceTracker, DrivingState drivingState, CheckState checkState)
+    private void Construct(CarStateDriving carStateDriving, CrossRoad crossRoad, TrafficDistanceTracker trafficDistanceTracker, DrivingState drivingState, CheckState checkState, CarChecking carChecking)
     {
         _crossRoad = crossRoad;
-        _checkState = checkState;
+        _carChecking = carChecking;
         _drivingState = drivingState;
         _carStateDriving = carStateDriving;
-        _trafficDistanceTracker = trafficDistanceTracker;
     }
 
     public void Move(TrafficDot.Dot a, TrafficDot.Dot b, Vector3 center, CarAbstract car)
@@ -56,8 +54,7 @@ public class CarDriving: MonoBehaviour
     private void StartMove(CarAbstract car, TrafficDot.Dot a)
     {
         if (_crossRoad._crossRoadDots.Contains(a)) {
-            car.TargetSpeed = car.FixedSpeed;
-            _drivingState.SetState<CarStatePowerUp>(new DrivingState.DrivingParams(car, car.TargetSpeed));
+            _drivingState.SetState<CarStatePowerUp>(new DrivingState.DrivingParams(car, car.FixedSpeed, 2));
         }
         _carChecking.StartChecking(car);
         if (car.CurrentCehckState != null) {
@@ -82,6 +79,7 @@ public class CarDriving: MonoBehaviour
     {
         car.CurrentCehckState = null;
         car.ExtraCheckCar = null;
+        car.BehindCar = null;
         car.CheckCar = null;
         car.CheckDot = null;
     }

@@ -20,8 +20,8 @@ public class CarCheckExtraCarState : CheckFSM
     {
         if (car.ExtraCheckCar != null) {
             if (car.ExtraCheckCar.TargetDot != car.TargetDot &&  TryCar(car)) {
-                // float distance = _trafficDistanceTracker.GetDistance(car.transform.position, car.ExtraCheckCar.transform.position);
-                // ProcessingDistance(car, distance);
+                float distance = _trafficDistanceTracker.GetDistance(car.transform.position, car.ExtraCheckCar.transform.position);
+                ProcessingDistance(car, distance);
             }
             else {
                 car.ExtraCheckCar = null;
@@ -36,11 +36,12 @@ public class CarCheckExtraCarState : CheckFSM
     private void ProcessingDistance(CarAbstract car, float distance)
     {
         float targetDistance = _trafficDistanceTracker.GetTargetDistance(car, car.ExtraCheckCar);
-        if (distance < targetDistance) {
+        if (distance < targetDistance + 1.5) {
             float t = (car.ExtraCheckCar.CheckDot != null) ? 0f : 0.5f;
             car.TargetSpeed = car.ExtraCheckCar.TargetSpeed - t;
+            car.CheckCar = car.ExtraCheckCar;
             _checkState.SetState<CarCheckDistanceCheckCarState>(car);
-            _drivingState.SetState<CarStateSlowDown>(new DrivingState.DrivingParams(car, car.TargetSpeed, 0.5f));
+            _drivingState.SetState<CarStateSlowDown>(new DrivingState.DrivingParams(car, car.TargetSpeed, 0.2f));
         }
         else if(distance > (targetDistance + car.transform.localScale.y / 2)) {
             if (!TryState(car)) {

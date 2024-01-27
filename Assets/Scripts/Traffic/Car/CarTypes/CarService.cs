@@ -28,23 +28,22 @@ public class CarService : CarAbstract
         }
         void DrawState()
         {
-            if (CurrentCehckState is CarCheckCarState)
-            {
+            if (CurrentCehckState is CheckStateCar) {
                 Gizmos.color = Color.yellow;
             }
-            else if(CurrentCehckState is CarCheckDistanceCheckCarState)
-            {
+            else if(CurrentCehckState is CheckStateCarDistance) {
                 Gizmos.color = Color.red; 
             }
-            else if(CurrentCehckState is CarCheckDotState)
-            {
-                Gizmos.color = Color.cyan; 
-            }
-            else if(CurrentCehckState is CarCheckExtraCarState)
-            {
-                Gizmos.color = Color.magenta;
+            else if(CurrentCehckState is CarCheckDotState) {
+                Gizmos.color = Color.green; 
             }
             Gizmos.DrawCube(RayDot.transform.position, new Vector3(0.3f,0.7f,0.7f));
+        }
+
+        if (isDraw && CurrentCehckState is CheckStateCar)
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawSphere(RayDot.transform.position, 0.6f);
         }
     }
 }

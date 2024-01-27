@@ -17,12 +17,11 @@ public class CarCheckDistanceCheckCarState : CheckFSM
     public override void Enter(CarAbstract car)
     {
         if (car.CheckCar != null) {
-            if (car.CheckCar.TargetDot == car.TargetDot || car.ExtraCheckCar != null) {
-                // float distance = _trafficDistanceTracker.GetDistance(car.transform.position, car.CheckCar.transform.position);
-                // ProcessingDistance(car, distance);
+            if (car.CheckCar.TargetDot == car.TargetDot) {
+                float distance = _trafficDistanceTracker.GetDistance(car.transform.position, car.CheckCar.transform.position);
+                ProcessingDistance(car, distance);
             }
             else {
-                car.ExtraCheckCar = null;
                 car.CheckCar = null;
             }
         }
@@ -41,17 +40,17 @@ public class CarCheckDistanceCheckCarState : CheckFSM
     {
         float targetDistance = _trafficDistanceTracker.GetTargetDistance(car, car.CheckCar);
         if (distance < (targetDistance - 0.3f)) {
-            if (!TryState(car.CheckCar) && TryState(car)) {
+            if (!TryState(car.CheckCar)) {
                 car.TargetSpeed = car.CheckCar.TargetSpeed;
-                _drivingState.SetState<CarStateSlowDown>(new DrivingState.DrivingParams(car, car.TargetSpeed));
+                _drivingState.SetState<CarStateSlowDown>(new DrivingState.DrivingParams(car, car.TargetSpeed, 0.2f));
             }
             else {
                 _drivingState.SetState<CarStateSlowDown>(new DrivingState.DrivingParams(car, car.CheckCar.Speed - 0.2f));
             }
         }
-        else if(distance > (targetDistance + 0.3f)) {
+        else if(distance > (targetDistance + car.transform.localScale.y / 2)) {
             car.TargetSpeed = car.FixedSpeed;
-            _drivingState.SetState<CarStateSlowDown>(new DrivingState.DrivingParams(car, car.TargetSpeed));
+            _drivingState.SetState<CarStatePowerUp>(new DrivingState.DrivingParams(car, car.TargetSpeed));
         }
     }
     

@@ -2,7 +2,6 @@ using UnityEngine;
 
 public abstract class CarAbstract : MonoBehaviour
 {
-    public TrafficDot.Dot TargetDot { get; set; }
     public TrafficDot CrossRoadDot { get; set; }
     public ITrafficable CarArea { get; set; }
     
@@ -13,9 +12,11 @@ public abstract class CarAbstract : MonoBehaviour
     public DrivingState.DrivingParams DrivingParams;
     
     [Header("Check")]
+    public TrafficDot.Dot TargetDot;
     public CarAbstract CheckCar;
     public TrafficDot.Dot CheckDot;
     public CarAbstract ExtraCheckCar;
+    public CarAbstract BehindCar;
     
     [Header("Speed")]
     public float TargetSpeed;
@@ -26,4 +27,6 @@ public abstract class CarAbstract : MonoBehaviour
     public Color ColorCar;
     public Color ColorExtraCar;
     public Color ColorDot;
+
+    public bool isDraw;
 }

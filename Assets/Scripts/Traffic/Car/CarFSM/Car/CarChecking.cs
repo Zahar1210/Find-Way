@@ -18,21 +18,27 @@ public class CarChecking : MonoBehaviour
     }
     public void StartChecking(CarAbstract car)
     {
+        GetCheckCar(car);
+        if (car.CheckCar == null && car.ExtraCheckCar == null) {
+            car.CheckDot = _trafficDistanceTracker.GetDotForCheck(car);
+            if (car.CheckDot != null) { 
+                _checkState.SetState<CarCheckDotState>(car);
+            }
+        }
+    }
+
+    private void GetCheckCar(CarAbstract car)
+    {
         car.CheckCar = _trafficDistanceTracker.GetCarForCheck(car, car.TargetDot);
         if (car.CheckCar != null) {
-            _checkState.SetState<CarCheckCarState>(car);
+            _checkState.SetState<CheckStateCar>(car);
         }
         else {
             CarAbstract extraCar = GetExtraCheckCar(car);
             if (extraCar != null) {
                 car.ExtraCheckCar = extraCar;
-                _checkState.SetState<CarCheckExtraCarState>(car);
-                return;
+                _checkState.SetState<CheckStateCar>(car);
             }
-        }
-        car.CheckDot = _trafficDistanceTracker.GetDotForCheck(car);
-        if (car.CheckDot != null) { 
-            _checkState.SetState<CarCheckDotState>(car);
         }
     }
 

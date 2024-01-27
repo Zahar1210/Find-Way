@@ -24,7 +24,11 @@ public class CarSpeedModifier: MonoBehaviour
         float elapsedTime = 0f;
         while (elapsedTime < duration) {
             if (car.CurrentState == startState) {
-                car.Speed = Mathf.Lerp(initialSpeed, targetSpeed, elapsedTime / duration);
+                float t = Mathf.Lerp(initialSpeed, targetSpeed, elapsedTime / duration);
+                car.Speed = t;
+                if (car.BehindCar != null) {
+                    car.BehindCar.Speed = t;
+                }
                 elapsedTime += Time.deltaTime;
                 yield return null;
             }

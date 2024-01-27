@@ -26,10 +26,14 @@ public class TrafficSystem : MonoBehaviour
         _drivingState.AddState(_trafficFactory.CreateState<CarStateDriving>());
         _drivingState.AddState(_trafficFactory.CreateState<CarStateSlowDown>());
         _drivingState.AddState(_trafficFactory.CreateState<CarStatePowerUp>());
+        
         _checkState.AddState(_trafficFactory.CreateState<CarCheckCarState>());
         _checkState.AddState(_trafficFactory.CreateState<CarCheckDotState>());
         _checkState.AddState(_trafficFactory.CreateState<CarCheckDistanceCheckCarState>());
         _checkState.AddState(_trafficFactory.CreateState<CarCheckExtraCarState>());
+        
+        _checkState.AddState(_trafficFactory.CreateState<CheckStateCarDistance>());
+        _checkState.AddState(_trafficFactory.CreateState<CheckStateCar>());
     }
     
 
