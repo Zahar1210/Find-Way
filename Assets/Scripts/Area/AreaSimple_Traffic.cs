@@ -1,26 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class AreaSimple_Traffic : AreaAbstract,ITrafficable
+public class AreaSimple_Traffic : AreaAbstract, ITrafficable
 {
     [SerializeField] private TrafficDot _dot;
-    public TrafficDot Dot { get; set;}
+    public TrafficDot Dot { get; set; }
 
-    private void Awake() {
+    private void Awake()
+    {
         Dot = _dot;
     }
-    private void Start() {
-        foreach (Transform child in transform) {
+
+    private void Start()
+    {
+        foreach (Transform child in transform)
+        {
             Tile tile = child.GetComponent<Tile>();
-            if (tile) {
+            if (tile)
                 Tiles.Add(tile);
-            }
         }
     }
 
     public override void Action()
     {
-        
     }
 }

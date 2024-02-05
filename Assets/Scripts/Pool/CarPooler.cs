@@ -86,9 +86,8 @@ public class CarPooler : MonoBehaviour
         if (!isActive) {
             car.CurrentState = null;
             car.CurrentCehckState = null;
-            if (car.CrossRoadDot != null) {
+            if (car.CrossRoadDot != null) 
                 _crossRoad.NextCarToMove(car);
-            }
         }
         car.TargetSpeed = car.FixedSpeed;
         car.CrossRoadDot = null;
@@ -98,9 +97,8 @@ public class CarPooler : MonoBehaviour
     public void ReturnToPool(ITrafficable area)
     {
         foreach (var car in _cars) {
-            if (car.CarArea == area) {
+            if (car.CarArea == area) 
                 EnableCar(car, null, false);
-            }
         }
     }
 }

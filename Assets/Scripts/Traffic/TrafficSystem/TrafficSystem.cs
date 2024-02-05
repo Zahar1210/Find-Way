@@ -39,7 +39,8 @@ public class TrafficSystem : MonoBehaviour
 
     public void SetTraffic(AreaAbstract areaAbstract) {
         foreach (var dot in FindObjectsOfType<TrafficDot>()) {
-            if (!_traffic.TryGetValue(dot.Area.SpawnIndex, out var Dot)) {
+            if (!_traffic.TryGetValue(dot.Area.SpawnIndex, out var Dot)) 
+            {
                 dot.SetDot();
                 _traffic.Add(dot.Area.SpawnIndex, dot);
                 carPooler.SpawnCar(dot.Area);

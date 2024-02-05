@@ -82,9 +82,8 @@ public class CheckStateCarDistance : CheckFSM
 
     private bool TryDistance(CarAbstract car, CarAbstract checkCar)
     {
-        if (Math.Abs(car.Speed - checkCar.Speed) > 0.1f) {
+        if (Math.Abs(car.Speed - checkCar.Speed) > 0.1f) 
             return true;
-        }
         return false;
     }
 }

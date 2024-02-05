@@ -5878,7 +5878,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1328161406}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5998,7 +5999,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e0632342e4543b78dd42d295871ad5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _carChecking: {fileID: 1225137756}
 --- !u!114 &1225137752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6080,6 +6080,67 @@ Transform:
   m_Father: {fileID: 2040688804}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1328161405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1328161406}
+  - component: {fileID: 1328161408}
+  - component: {fileID: 1328161407}
+  m_Layer: 0
+  m_Name: TrainSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1328161406
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328161405}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.785512, y: 1.9522914, z: 4.8836246}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1225137740}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1328161407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328161405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e14a6d2e077bf45ebac09cd872547754, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trainPool: {fileID: 1328161408}
+--- !u!114 &1328161408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328161405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e7625ceefc9d4b48b62812033e857f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trainPrefab: {fileID: 6231859480942272981, guid: 12f9dbe36a29d459dabe70f0d041468e, type: 3}
+  maxCarriage: 3
+  minCarriage: 1
 --- !u!1001 &1675679362
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -75,8 +75,8 @@ public class PathFinding : MonoBehaviour
                         if (!path.Contains(surface) && surface.gameObject.activeSelf && !surface.barrier) {
                             selectTiles.Add(tile);
                             if (surface == a) {
-                                    path.Add(surface);
-                                    return path; 
+                                path.Add(surface);
+                                return path; 
                             }
                         }
                     }
