@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/UnityWorkspace/View/USS/Panel.uss?fileID=7433441132597879392&amp;guid=c26ff3d43f09b40459aaa5fa61ff0d28&amp;type=3#Panel" />
+    <Style src="project://database/Assets/UnityWorkspace/View/USS/Toolbar.uss?fileID=7433441132597879392&amp;guid=9fe8b9eaaae2c4990836d1e04bd4fca7&amp;type=3#Toolbar" />
+    <Style src="project://database/Assets/UnityWorkspace/View/USS/Asset.uss?fileID=7433441132597879392&amp;guid=add7db0b691df4afd9a5fc90c468ea5f&amp;type=3#Asset" />
+    <Style src="project://database/Assets/UnityWorkspace/View/USS/Title.uss?fileID=7433441132597879392&amp;guid=5979941d621274c79bd97d8419604ab3&amp;type=3#Title" />
+    <ui:VisualElement name="Panel" class="panel-default" style="left: 0; top: 0; position: absolute; width: 135px; height: 45px;">
+        <ui:VisualElement name="Toolbar" class="toolbar-default" style="height: 8px;" />
+        <UWAssetContainer name="Asset" class="asset-default" style="top: 12px; position: absolute; left: 4px; right: 4px; bottom: 4px; flex-direction: row; align-items: center; overflow: hidden;">
+            <ui:VisualElement name="AssetIcon" style="width: 18px; height: 18px; flex-shrink: 0; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; margin-left: 3px;" />
+            <ui:Label name="Title" text="Title" class="title-default" style="flex-grow: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; flex-shrink: 0; position: absolute; left: 23px; top: 0; right: 2px; bottom: 0; width: auto; height: auto;" />
+        </UWAssetContainer>
+    </ui:VisualElement>
+</ui:UXML>

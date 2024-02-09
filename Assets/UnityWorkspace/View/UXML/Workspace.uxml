@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/UnityWorkspace/View/USS/Workspace.uss?fileID=7433441132597879392&amp;guid=8fd59dc8ac0c647bfbe43c1cb070e1a9&amp;type=3#Workspace" />
+    <WorkspaceView style="flex-grow: 1;">
+        <UWGraph name="Graph" style="background-color: rgb(26, 26, 26); flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0;" />
+        <ui:VisualElement name="WorkspaceTabContainer" style="background-color: rgb(60, 60, 60); flex-direction: row; align-items: center; height: 25px; padding-right: 40px;">
+            <uie:ToolbarButton text="+" display-tooltip-when-elided="true" name="Add" focusable="false" style="font-size: 16px; width: 35px; -unity-text-align: middle-center; padding-top: 0; padding-bottom: 0; padding-left: 0; padding-right: 0; margin-left: -1px; height: 100%;" />
+            <uie:ToolbarButton parse-escape-sequences="true" display-tooltip-when-elided="true" focusable="false" name="Settings" style="position: absolute; right: 5px; left: auto; width: 20px; height: 20px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; background-image: url(&apos;project://database/Assets/UnityWorkspace/Sprites/arrow-right@2x.texture2D?fileID=2800000&amp;guid=f4974950146c541f081cf0605ad39271&amp;type=2#arrow-right@2x&apos;); rotate: 90deg;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Line" style="background-color: rgb(89, 89, 89); height: 1px;" />
+        <uie:Toolbar name="Toolbar">
+            <uie:ToolbarToggle focusable="false" name="Inspector" text="Inspector" style="-unity-text-align: upper-center;" />
+            <uie:ToolbarButton text="Fit" display-tooltip-when-elided="true" name="Fit" focusable="false" style="width: 50px; -unity-text-align: middle-center; padding-bottom: 1px; padding-top: 0; margin-left: -1px;" />
+            <uie:ToolbarMenu tabindex="-1" display-tooltip-when-elided="true" text="Settings" name="Settings" style="left: -1px; -unity-text-align: middle-center;" />
+            <ui:Slider picking-mode="Ignore" value="42" high-value="1" label="Zoom" name="Zoom" focusable="false" style="position: absolute; right: 5px; width: 150px;" />
+        </uie:Toolbar>
+        <UWInspectorView name="Inspector" picking-mode="Ignore" class="inspector-inactive" style="top: 47px; bottom: 0;">
+            <ui:VisualElement name="Container" style="background-color: rgb(56, 56, 56); border-bottom-right-radius: 10px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;">
+                <ui:Label tabindex="-1" text="Inspector" display-tooltip-when-elided="true" name="Label" style="background-color: rgba(0, 0, 0, 0.2); height: 30px; font-size: 16px; -unity-text-align: middle-left; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;" />
+                <ui:IMGUIContainer style="top: 5px; flex-grow: 1; border-bottom-right-radius: 50px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; overflow: hidden;" />
+            </ui:VisualElement>
+        </UWInspectorView>
+    </WorkspaceView>
+</ui:UXML>

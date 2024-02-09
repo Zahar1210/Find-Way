@@ -1,0 +1,33 @@
+.panel-default {
+    border-left-color: rgb(178, 178, 178);
+    border-right-color: rgb(178, 178, 178);
+    border-top-color: rgb(178, 178, 178);
+    border-bottom-color: rgb(178, 178, 178);
+    transition-duration: 0.1s;
+    background-color: rgb(38, 38, 38);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    overflow: hidden;
+}
+
+.panel-hover {
+    border-left-color: rgb(255, 255, 255);
+    border-right-color: rgb(255, 255, 255);
+    border-top-color: rgb(255, 255, 255);
+    border-bottom-color: rgb(255, 255, 255);
+    transition-duration: 0.1s;
+}
+
+.panel-selected {
+    border-left-color: rgb(128, 255, 128);
+    border-right-color: rgb(128, 255, 128);
+    border-top-color: rgb(128, 255, 128);
+    border-bottom-color: rgb(128, 255, 128);
+    transition-duration: 0.1s;
+}
